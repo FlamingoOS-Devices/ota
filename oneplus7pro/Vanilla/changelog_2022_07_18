@@ -1,0 +1,28 @@
+Source side changes:
+
+* Merged latest caf tags.
+* Fixed an selinux denial for updater.
+* Reworked media artwork and with a better fade filter.
+* Fixed updater notifications being silent.
+* Added a preference exposing the battery optimizations page.
+* Added support for viewing currently connected hotspot devices.
+* Added hotspot timeout feature.
+* Added support for limiting the number of connected hotspot devices.
+* Fixed a systemui crash with smartspace.
+* Fixed a system server crash with app lock.
+* Fixed a systemui crash with cat controls.
+* Improved GameSpace, MatlogX and Updater.
+* Removed leftover gms specific overlays from vanilla builds.
+* Fixed ugly settings search bar in vanilla builds.
+* Added ota support for vanilla builds (will only work for subsequent builds).
+* Possibly fixed volume dialog randomly not respecting user selected position.
+* Constrained alert slider text to a single line with ellipsize.
+* Fixed haptic feedback triggering on ringer mode change to vibrate from non ui interactions.
+* Fixed improper system insets calculations while creating task snapshots.
+* Fixed updater not checking for full ota in the absence of incremental ota json.
+* Fixed changelog text alignment in updater.
+* Updated translations.
+
+Device side changes:
+
+* Fixed NFC.
