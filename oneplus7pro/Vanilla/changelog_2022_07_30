@@ -1,0 +1,18 @@
+Source side changes:
+
+* Fixed system bars visibility in updater and gamespace.
+* Fixed media actions button border not being visible without background artwork.
+* Aligned song and artist name text in media notification.
+* Fixed wrong colors in app error dialog button text.
+* New wallpaper.
+* Added sim toolkit back.
+* Blacklisted CneApp from location privacy indicators.
+* Added missing settings overlays for oos icon pack.
+* Synced with upstreame gmscompat patches.
+* Fixed alarm icon visibility in status bar.
+* Fixed inactive volume rows color in light theme.
+* Updated translations.
+
+Device side changes:
+
+* Updated blobs from 11.0.9.1

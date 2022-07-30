@@ -1,10 +1,10 @@
 {
     "version": "1.0",
-    "date": "1658154786000",
+    "date": "1659202330000",
     "download_sources": {
-        "OneDrive": "https://flamingo.e11z.net/d/A12.1/oneplus7pro/Vanilla/FlamingoOS-v1.0-oneplus7pro-user-Official-Vanilla-20220718-2025-full.zip"
+        "OneDrive": "https://flamingo.e11z.net/d/A12.1/oneplus7pro/Vanilla/FlamingoOS-v1.0-oneplus7pro-user-Official-Vanilla-20220730-2329-full.zip"
     },
-    "file_name": "FlamingoOS-v1.0-oneplus7pro-user-Official-Vanilla-20220718-2025-full.zip",
-    "file_size": "938503771",
-    "sha_512": "f26f52abcf778c3deb45fd760fe931a8b086a404614bf091cabd5f3c99c5a53114adc3a506dde018036653fd0f788310a7483d3f4bcdf6c718020918d50872f8"
+    "file_name": "FlamingoOS-v1.0-oneplus7pro-user-Official-Vanilla-20220730-2329-full.zip",
+    "file_size": "942971421",
+    "sha_512": "7229401ccf437849cc699fc9872d26beabaf084fe43523b8435e80f094190f92e8bfe182f958855606a292cd20513062d9dadca66e38809f01fca7487cce8705"
 }
