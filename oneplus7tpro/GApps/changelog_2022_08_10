@@ -1,0 +1,169 @@
+Source side Changes
+
+vendor/flamingo
+* flamingo: Move Qualcomm specific configs to qcom/common
+
+
+frameworks/base
+* SystemUI: BrighntessSlider: use OOS icons
+* Change the wakeup alarms for "light-doze-maintenance step" to non-wakeup alarms
+* Immediately notify VM of TOP process state
+* Store pending override config instead of creating ActivityClientRecord
+* [BugFix] acquireProvider maybe wait for timeout
+* Require CONFIG_HID_PLAYSTATION for DualSense key layout
+* base: Grant battery stats reset permission to Settings
+* SystemUI: GameSpaceServiceDelegate: hold lock outside loadSettingsLocked() and use IO dispatcher for saving packages
+* SystemUI: GameSpaceServiceDelegate: prevent a deadlock when disabling game mode
+* SystemUI: allow hiding privacy dot while gaming [1/2]
+* bluetooth: gmscompat
+* bluetooth: add BluetoothAdapter#getConnectionStateLeAware()
+* SystemUI: VolumeDialogImpl: Change bg tint for inactive rows
+* PermissionManager: exempt cne app from location privacy indicator
+
+
+vendor/qcom/opensource/power
+* Power: Up/down scheduler Tuning for  480FPS use-case
+* Power: Update powerhint with CPU,Bus DCVS settings
+* Power: Update powerhint.xml for Waipio with HFR480 config
+* Power : Add tunings for 240FPS decode cases.
+* Power: Add powerhint.xml for waipio
+* [Power] : Changes to resolve compiler warnings
+* Power: Tuned  scheduler for  480FPS use-case
+* power: update power hint data for lagoon
+* Power: Updating camera settings
+* Kona Powerhint: Change the VR hints
+* qvr powerhints
+* power : opcode for sample_ms
+* power: Modify powerhint for encode case
+* power: Enable powerhint for khaje
+* Power:Changes made for Bengal powerhint.xml
+* Power: update powerhint for Single rank DDR
+* Power : Modified make file to include Bengal
+* power : Modified make file to include Talos
+
+
+packages/apps/Settings
+* Settings: sound_settings: keep volume panel position pref above zen mode
+
+
+packages/apps/FlamingoSettings
+* FlamingoSettings: Update Chinese translations (#5)
+
+
+vendor/support
+* compose: upgrade AGP
+* compose: add function for acquiring bound service handles
+* preferences: fix padding of preferences and increase min height of PrimarySwitchPreference
+* DiscreteSeekbarPreference: add a default modifier
+* CollapsigToolbarLayout: mask statusbar background with top app bar color
+* preferences: adapt for new changes in Preference
+* Preference: pass in press offset to callbacks
+* Preference: add long click support
+* Preference: align start widget by CenterStart
+* PreferenceGroupHeader: fill max width
+* TopIntroPreference: fill max width
+* SizeDefaults: reduce min height of preferences
+* compose: adjust padding and set min size for preference
+* CollapsingToolbarLayout: align title with content
+* compose: bump target sdk version and upgrade dependencies
+
+
+vendor/lawnchair
+* lawnchair: Update to Alpha 4
+
+
+packages/apps/MatlogX
+* MatlogX: upgrade AGP
+* MatlogX: upgrade accompanist dependencies
+* MatlogX: Update Chinese translations (#3)
+* MatlogX: allow copying logs
+* LogcatScreenState: do not restart job if paused
+* MatlogX: start collecting only when lifecycle is in resumed state
+* MatlogX: record only recent logs and do not buffer
+* MatlogX: switch to datastore for recent suggestions
+* MatlogX: drop LogcatReader object
+* MatlogX: simplify DeviceInfo
+* MatlogX: move log recording code to LogRecordService
+* MatlogX: switch to koin di framework and improve by a huge factor
+* LogRecordService: extend LifecycleService
+* MatlogX: use IO dispatcher for recording logs
+* MatlogX: bump target sd, upgrade dependencies and resolve a deprecation
+
+
+packages/apps/Launcher3
+* quickstep: SystemUiProxy: add a null check on getRecentTask(*) method
+
+
+vendor/themes
+* themes: Add correct overlays for OOS icon pack (#3)
+
+
+packages/apps/Updater
+* Updater: parse pre_build_incremental prop as a string
+* Updater: upgrade AGP
+* Updater: upgrade accompanist dependencies
+* Updater: Update Chinese translations (#3)
+* Updater: mark activity as single top
+* Updater: extend LifecycleService when possible and update notification channels on locale change
+* Updater: monitor battery stateflow only when updating
+* Updater: use a sealed interface for update result
+* Updater: switch to koin di framework
+* Updater: reschedule alarm on boot and hold a wakelock in boot complete receiver
+* Updater: only show up for primary profile
+* Updater: add READ_EXTERNAL_STORAGE permission
+* MainScreen: opt in for experimental top app bar api
+* Updater: bump target sdk version and upgrade dependencies
+
+
+device/qcom/common
+* perf: Upgrade perf configs to LA.UM.9.11.r1-05600-NICOBAR.QSSI12.0-1
+* perf: copy task_profiles from system/core for 5.4
+* vendor: Build bt and telephony HIDL vendor variants on qcom/common
+* display: separate into system and vendor components
+* gps: separate into system and vendor components
+* bt: Move board makefile inclusion back to system component
+* bt: separate into system and vendor components
+* audio: separate audio into system and vendor
+* config.fs: qcc-tr: define new AID for qcc-trd
+* vendor: init: common: Fix DCVS settings for Gen3 targets
+* telephony: Enable SIP based VoIP feature
+* vendor: init: Remove code for starting legacy ril
+* common: Move seccomp to vendor folder
+* common: Do not generate DTBO for prebuilt kernel
+* common: move config.fs declaration outside of BoardConfig
+* common: Import Qualcomm specific configs from aospa vendor
+* vendor: init: init.qcom.post_boot: Enable support for divar apq
+* vendor: init: early-boot: add socid for Diwar APQ
+* vendor: init: common: Remove media netflix prop
+* vendor: perf: Update bengal perf configs
+* vendor: init: rootdir: Replace usage of ro.build.product with ro.board.platform
+* vendor: init: init: remove getprop commands for fixing avc denials
+* vendor: init: Set property to disable cdsprpcd daemon in post boot
+* vendor: init: ueventd: Add support for ipa_lnx_stats_ioctl
+* vendor: init: ueventd: Set permissions for KGSL sysfs node
+* vendor: init: init_qcom.rc: Set permission to access panel boot param node
+* vendor: init: Enforce android-S new launch debugfs restrictions.
+* vendor: init: ueventd: set permissions to rawdump node
+* common: fix symlinks once and for all
+* media-legacy: copy media_profiles to vendor/etc as well
+* common: Move all system side properties to /system_ext
+* PRODUCT_PROPERTY_OVERRIDES -> PRODUCT_VENDOR_PROPERTIES
+* system: display: Setup soong configs for lights aidl
+
+
+packages/apps/GameSpace
+* GameSpace: upgrade AGP
+* GameSpace: upgrade accompanist dependencies
+* GameSpace: Update Chinese translations (#12)
+* GameSpace: constrain all text to a single line in tools dialog
+* GameSpace: respect lifecycle when collecting flows or registering contentobservers
+* GameSpace: target sdk ver 33
+* GameSpaceServiceImpl: remove unused import
+* GameSpace: allow hiding privacy indicators [2/2]
+* GameSpace: adapt for support library changes and animate item placement
+* MainScreen: use the new TopIntroPreference
+* GameSpace: upgrade dependencies
+
+Device side changes
+* Switch to an entirely new kernel. 
+
