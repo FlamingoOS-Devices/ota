@@ -1,0 +1,1577 @@
+Source side changes
+
+vendor/flamingo
+* vendor: soong: Add target_alternative_futex_waiters
+* vendor: soong: Fix derps in https://github.com/Flamingo-OS/vendor_flamingo/commit/f145853eb359c52c111d244f52260857531aa76e https://github.com/Flamingo-OS/vendor_flamingo/commit/b862e5debab8bd39835204b8c7068e7b61f06c32
+* flamingo: Move Qualcomm specific configs to qcom/common
+
+frameworks/base
+* SystemUI: AmbientDisplayTile: fix state in secondary users and cleanup
+* SystemUI: statusbar: fix empty space in statusbar with hidden clock
+* Add a config to state whether a device supports increased touch sensitivity. (#2)
+* SystemUI: BrighntessSlider: use OOS icons
+* Change the wakeup alarms for "light-doze-maintenance step" to non-wakeup alarms
+* Immediately notify VM of TOP process state
+* Store pending override config instead of creating ActivityClientRecord
+* [BugFix] acquireProvider maybe wait for timeout
+* Require CONFIG_HID_PLAYSTATION for DualSense key layout
+* base: Grant battery stats reset permission to Settings
+* SystemUI: GameSpaceServiceDelegate: hold lock outside loadSettingsLocked() and use IO dispatcher for saving packages
+* SystemUI: GameSpaceServiceDelegate: prevent a deadlock when disabling game mode
+
+vendor/qcom/opensource/power
+* Power: Up/down scheduler Tuning for  480FPS use-case
+* Power: Update powerhint with CPU,Bus DCVS settings
+* Power: Update powerhint.xml for Waipio with HFR480 config
+* Power : Add tunings for 240FPS decode cases.
+* Power: Add powerhint.xml for waipio
+* [Power] : Changes to resolve compiler warnings
+* Power: Tuned  scheduler for  480FPS use-case
+* power: update power hint data for lagoon
+* Power: Updating camera settings
+* Kona Powerhint: Change the VR hints
+* qvr powerhints
+* power : opcode for sample_ms
+* power: Modify powerhint for encode case
+* power: Enable powerhint for khaje
+* Power:Changes made for Bengal powerhint.xml
+* Power: update powerhint for Single rank DDR
+* Power : Modified make file to include Bengal
+* power : Modified make file to include Talos
+
+packages/apps/Settings
+* Settings: remove security status group if empty
+* Settings: sound_settings: keep volume panel position pref above zen mode
+
+bionic
+* libc: Add TARGET_ALTERNATIVE_FUTEX_WAITERS
+
+packages/apps/FlamingoSettings
+* FlamingoSettings: Update Chinese translations (#5)
+
+frameworks/av
+* (FixUp)libcameraservice: add TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB (#2)
+
+vendor/support
+* compose: upgrade AGP
+* compose: add function for acquiring bound service handles
+
+vendor/lawnchair
+* lawnchair: Update to Alpha 4
+
+packages/apps/MatlogX
+* MatlogX: upgrade AGP
+* MatlogX: upgrade accompanist dependencies
+* MatlogX: Update Chinese translations (#3)
+* MatlogX: allow copying logs
+* LogcatScreenState: do not restart job if paused
+* MatlogX: start collecting only when lifecycle is in resumed state
+* MatlogX: record only recent logs and do not buffer
+* MatlogX: switch to datastore for recent suggestions
+* MatlogX: drop LogcatReader object
+* MatlogX: simplify DeviceInfo
+* MatlogX: move log recording code to LogRecordService
+* MatlogX: switch to koin di framework and improve by a huge factor
+
+packages/apps/Launcher3
+* quickstep: SystemUiProxy: add a null check on getRecentTask(*) method
+
+packages/apps/Updater
+* UpdateCardState: use rememberBoundService from support library
+* Updater: drop DeviceInfo object
+* Updater: drop objects from util classes
+* Updater: parse pre_build_incremental prop as a string
+* Updater: upgrade AGP
+* Updater: upgrade accompanist dependencies
+* Updater: Update Chinese translations (#3)
+* Updater: mark activity as single top
+* Updater: extend LifecycleService when possible and update notification channels on locale change
+* Updater: monitor battery stateflow only when updating
+
+device/qcom/common
+* perf: Upgrade perf configs to LA.UM.9.11.r1-05600-NICOBAR.QSSI12.0-1
+* perf: copy task_profiles from system/core for 5.4
+* vendor: Build bt and telephony HIDL vendor variants on qcom/common
+* display: separate into system and vendor components
+* gps: separate into system and vendor components
+* bt: Move board makefile inclusion back to system component
+* bt: separate into system and vendor components
+* audio: separate audio into system and vendor
+* config.fs: qcc-tr: define new AID for qcc-trd
+* vendor: init: common: Fix DCVS settings for Gen3 targets
+* telephony: Enable SIP based VoIP feature
+* vendor: init: Remove code for starting legacy ril
+* common: Move seccomp to vendor folder
+* common: Do not generate DTBO for prebuilt kernel
+* common: move config.fs declaration outside of BoardConfig
+* common: Import Qualcomm specific configs from aospa vendor
+* vendor: init: init.qcom.post_boot: Enable support for divar apq
+* vendor: init: early-boot: add socid for Diwar APQ
+* vendor: init: common: Remove media netflix prop
+* vendor: perf: Update bengal perf configs
+* vendor: init: rootdir: Replace usage of ro.build.product with ro.board.platform
+* vendor: init: init: remove getprop commands for fixing avc denials
+* vendor: init: Set property to disable cdsprpcd daemon in post boot
+* vendor: init: ueventd: Add support for ipa_lnx_stats_ioctl
+* vendor: init: ueventd: Set permissions for KGSL sysfs node
+* vendor: init: init_qcom.rc: Set permission to access panel boot param node
+* vendor: init: Enforce android-S new launch debugfs restrictions.
+* vendor: init: ueventd: set permissions to rawdump node
+* common: fix symlinks once and for all
+* media-legacy: copy media_profiles to vendor/etc as well
+* common: Move all system side properties to /system_ext
+* PRODUCT_PROPERTY_OVERRIDES -> PRODUCT_VENDOR_PROPERTIES
+* system: display: Setup soong configs for lights aidl
+
+packages/apps/GameSpace
+* GameSpace: fix underlying window being untouchable when handle is disabled
+* GameSpace: upgrade AGP
+* GameSpace: upgrade accompanist dependencies
+* GameSpace: Update Chinese translations (#12)
+* GameSpace: constrain all text to a single line in tools dialog
+* GameSpace: respect lifecycle when collecting flows or registering contentobservers
+* GameSpace: target sdk ver 33
+* GameSpaceServiceImpl: remove unused import
+
+
+Device side changes
+
+
+device/oneplus/oneplus7
+* oneplus7: Ship Oneplus apps
+
+device/oneplus/sm8150-common
+* sm8150-common: Add TARGET_ALTERNATIVE_FUTEX_WAITERS
+* DeviceSettings: use io thread for writing vibrator strength
+* DeviceSettings: Use a more generic way to tell if we have a popup camera
+* DeviceSettings: DeviceSettingsFragment: use a generic check for vibrator category
+* Boardconfig: Swicth default kernel
+* sm8150-common: Drop atrace HIDL
+
+kernel/oneplus/sm8150
+* Merge branch '12-inline' of github.com:npv12/strix_kernel_oneplus_sm8150 into 12
+* Fix power delivery once and for all (#55)
+* power: smb-lib: Force suspend when cable out
+* power: smb5: Rerun APSD to ensure proper charger detection
+* Backport cgroup improvements (#54)
+* include/linux: Drop clean OEM folder
+* aigov: Drop CONFIG_AIGOV
+* treewide: Drop CONFIG_HOUSTAN
+* BACKPORT: cgroup: Remove unused cgrp variable
+* BACKPORT: cgroup: freezer: call cgroup_enter_frozen() with preemption disabled in ptrace_stop()
+* BACKPORT: cgroup: freezer: fix frozen state inheritance
+* BACKPORT: signal: unconditionally leave the frozen state in ptrace_stop()
+* BACKPORT: cgroup: cgroup v2 freezer
+* BACKPORT: cgroup: implement __cgroup_task_count() helper
+* BACKPORT: cgroup: rename freezer.c into legacy_freezer.c
+* BACKPORT: cgroup: remove extra cgroup_migrate_finish() call
+* BACKPORT: cgroup: saner refcounting for cgroup_root
+* BACKPORT: cgroup: Add named hierarchy disabling to cgroup_no_v1 boot param
+* BACKPORT: cgroup: remove unnecessary unlikely()
+* BACKPORT: cgroup: Simplify cgroup_ancestor
+* BACKPORT: cgroup: Explicitly remove core interface files
+* BACKPORT: cgroup: Update documentation reference
+* BACKPORT: cgroup: make cgroup.threads delegatable
+* BACKPORT: string: drop __must_check from strscpy() and restore strscpy() usages in cgroup
+* BACKPORT: cgroup: use strlcpy() instead of strscpy() to avoid spurious warning
+* BACKPORT: cgroup: avoid copying strings longer than the buffers
+* BACKPORT: cgroup: export list of cgroups v2 features using sysfs
+* BACKPORT: cgroup: export list of delegatable control files using sysfs
+* BACKPORT: cgroup: statically initialize init_css_set->dfl_cgrp
+* strix: Regenerate and save
+* fs: pstore: Add support to get last_kmsg
+* sched: fair: consider all running tasks in cpu for load balance
+* sched: walt: Improve the scheduler
+* sched/deadline: Fix stale throttling on de-/boosted tasks
+* sched/fair: Reduce minimal imbalance threshold
+* sched/fair: Minimize concurrent LBs between domain level
+* sched/fair: Reduce busy load balance interval
+* strix: Regenerate and save
+* [RELAND] Backport EROFS support for 4.14 (#53)
+* defconfig: Debloat and optimise
+* block: zram_drv: always reset zram bdev
+* block: zram_drv: Expose zram_compact() for zram0
+* block: zram_drv: Allow creation of only one ZRAM device
+* strix: Regenerate and save
+* arm64: Inline the spin lock function family
+* fixup! Fix misimport in `power/supply/qcom/qpnp-smb5.c`
+* drivers/(power || prox): kill more logging on release
+* bq27541: don't queue battery resume on specific CPU
+* bq27541: optimize a bit
+* bq27541: fix improper timer operations - 2
+* bq27541: fix improper timer operations
+* defconfig: Enable Full LTO
+* lib/string.c: implement stpcpy
+* Revert "Makefile: Don't use built in stpcpy for clang"
+* defconfig: Enable erofs
+* arm64: dts: sm8150: Move to EROFS
+* erofs: do not prompt for risk any more when using big pcluster
+* xarray: add the xa_lock to the radix_tree_root
+* idr: Rename idr_for_each_entry_ext
+* idr: Add idr_alloc_u32 helper
+* fscache: use appropriate radix tree accessors
+* export __set_page_dirty
+* radix tree: use GFP_ZONEMASK bits of gfp_t for flags
+* erofs: fix use-after-free of on-stack io[]
+* erofs: remove the fast path of per-CPU buffer decompression
+* erofs: clear compacted_2b if compacted_4b_initial > totalidx
+* erofs: remove the mapping parameter from erofs_try_to_free_cached_page()
+* erofs: directly use wrapper erofs_page_is_managed() when shrinking
+* erofs: remove the occupied parameter from z_erofs_pagevec_enqueue()
+* erofs: fix 1 lcluster-sized pcluster for big pcluster
+* erofs: enable big pcluster feature
+* erofs: support decompress big pcluster for lz4 backend
+* erofs: support parsing big pcluster compact indexes
+* erofs: support parsing big pcluster compress indexes
+* erofs: adjust per-CPU buffers according to max_pclusterblks
+* erofs: add big physical cluster definition
+* erofs: fix up inplace I/O pointer for big pcluster
+* erofs: introduce physical cluster slab pools
+* erofs: introduce multipage per-CPU buffers
+* erofs: reserve physical_clusterbits[]
+* erofs: Clean up spelling mistakes found in fs/erofs
+* erofs: add on-disk compression configurations
+* erofs: introduce on-disk lz4 fs configurations
+* erofs: support adjust lz4 history window size
+* erofs: introduce erofs_sb_has_xxx() helpers
+* erofs: don't use erofs_map_blocks() any more
+* erofs: complete a missing case for inplace I/O
+* erofs: use workqueue decompression for atomic contexts only
+* erofs: avoid memory allocation failure during rolling decompression
+* erofs: force inplace I/O under low memory scenario
+* erofs: simplify try_to_claim_pcluster()
+* erofs: insert to managed cache after adding to pcl
+* erofs: get rid of magical Z_EROFS_MAPPING_STAGING
+* erofs: remove a void EROFS_VERSION macro set in Makefile
+* erofs: move from drivers/staging/ to fs/
+* erofs: sync up with kernel 5.10
+* erofs: add unsupported inode i_format check
+* erofs: fix extended inode could cross boundary
+* erofs: derive atime instead of leaving it empty
+* erofs: fix partially uninitialized misuse in z_erofs_onlinepage_fixup
+* erofs: correct the remaining shrink objects
+* erofs: zero out when listxattr is called with no xattr
+* staging: erofs: detect potential multiref due to corrupted images
+* staging: erofs: add two missing erofs_workgroup_put for corrupted images
+* staging: erofs: some compressed cluster should be submitted for corrupted images
+* staging: erofs: fix an error handling in erofs_readdir()
+* staging: erofs: add requirements field in superblock
+* staging: erofs: keep corrupted fs from crashing kernel in erofs_readdir()
+* staging: erofs: fix error handling when failed to read compresssed data
+* staging: erofs: fix to handle error path of erofs_vmap()
+* staging: erofs: fix race when the managed cache is enabled
+* staging: erofs: keep corrupted fs from crashing kernel in erofs_namei()
+* staging: erofs: fix race of initializing xattrs of a inode at the same time
+* staging: erofs: fix memleak of inode's shared xattr array
+* staging: erofs: fix fast symlink w/o xattr when fs xattr is on
+* staging: erofs: add error handling for xattr submodule
+* staging: erofs: compressed_pages should not be accessed again after freed
+* staging: erofs: fix illegal address access under memory pressure
+* staging: erofs: fix mis-acted TAIL merging behavior
+* staging: erofs: unzip_vle_lz4.c,utils.c: rectify BUG_ONs
+* staging: erofs: unzip_{pagevec.h,vle.c}: rectify BUG_ONs
+* staging: erofs: {dir,inode,super}.c: rectify BUG_ONs
+* staging: erofs: add a full barrier in erofs_workgroup_unfreeze
+* staging: erofs: fix `erofs_workgroup_{try_to_freeze, unfreeze}'
+* staging: erofs: atomic_cond_read_relaxed on ref-locked workgroup
+* staging: erofs: remove the redundant d_rehash() for the root dentry
+* staging: erofs: drop multiref support temporarily
+* staging: erofs: replace BUG_ON with DBG_BUGON in data.c
+* staging: erofs: complete error handing of z_erofs_do_read_page
+* staging: erofs: fix a bug when appling cache strategy
+* staging: erofs: fix the definition of DBG_BUGON
+* staging: erofs: fix use-after-free of on-stack `z_erofs_vle_unzip_io'
+* staging: erofs: fix a missing endian conversion
+* staging: erofs: rename superblock flags (MS_xyz -> SB_xyz)
+* Revert "staging: erofs: disable compiling temporarile"
+* staging: erofs: remove an extra semicolon in z_erofs_vle_unzip_all
+* staging: erofs: fix if assignment style issue
+* staging: erofs: disable compiling temporarile
+* staging: erofs: remove a redundant marco in xattr
+* staging: erofs: add the missing break in z_erofs_map_blocks_iter
+* staging: erofs: use the wrapped PTR_ERR_OR_ZERO instead of open code
+* staging: erofs: fix conditional uninitialized `pcn' in z_erofs_map_blocks_iter
+* staging: erofs: fix compile error without built-in decompression support
+* staging: erofs: fix a compile warning of Z_EROFS_VLE_VMAP_ONSTACK_PAGES
+* staging: erofs: add a TODO and update MAINTAINERS for staging
+* staging: erofs: introduce cached decompression
+* staging: erofs: introduce VLE decompression support
+* staging: erofs: introduce workstation for decompression
+* staging: erofs: introduce erofs shrinker
+* staging: erofs: introduce superblock registration
+* staging: erofs: add a generic z_erofs VLE decompressor
+* staging: erofs: introduce a customized LZ4 decompression
+* staging: erofs: globalize prepare_bio and __submit_bio
+* staging: erofs: add erofs_allocpage
+* staging: erofs: add erofs_map_blocks_iter
+* staging: erofs: introduce pagevec for unzip subsystem
+* staging: erofs: <linux/tagptr.h>: introduce tagged pointer
+* staging: erofs: support tracepoint
+* staging: erofs: introduce error injection infrastructure
+* staging: erofs: support special inode
+* staging: erofs: introduce xattr & acl support
+* staging: erofs: update Kconfig and Makefile
+* staging: erofs: add namei functions
+* staging: erofs: add directory operations
+* staging: erofs: add inode operations
+* staging: erofs: add raw address_space operations
+* staging: erofs: add super block operations
+* staging: erofs: add erofs in-memory stuffs
+* staging: erofs: add on-disk layout
+* lz4: allow LZ4_decompress_safe_partial to be used
+* lz4: Revert "lz4: remove unused functions"
+* include/linux: lz4: Increase LZ4 memory usage to 64KB
+* BACKPORT: lib/lz4: explicitly support in-place decompression
+* BACKPORT: lz4: fix kernel decompression speed
+* BACKPORT: lib/lz4/lz4_decompress.c: document deliberate use of `&'
+* lz4: remove unused functions
+* include/linux/lz4.h: fix spelling and copy-paste errors in documentation
+* lz4: staticify functions
+* lib/lz4: update LZ4 decompressor module
+* Revert "Backport EROFS support for 4.14 (#51)"
+* arm64: Change .weak to WEAK
+* arm64: lib: memory utilities optimization
+* BACKPORT: crypto: arm64/aes-modes - get rid of literal load of addend vector
+* crypto: arm64/aes-blk - add 4 way interleave to CBC-MAC encrypt path
+* crypto: arm64/aes-blk - add 4 way interleave to CBC encrypt path
+* crypto: arm64/aes-blk - remove configurable interleave
+* crypto: arm64/aes-blk - move kernel mode neon en/disable into loop
+* arm64: Disable -fwhole-program for vDSO
+* UPSTREAM: ARM64: vdso32: Install vdso32 from vdso_install
+* FROMLIST: arm64: Build vDSO with -ffixed-x18
+* ANDROID: turn on VCT access from 32-bit applications
+* vdso32: Invoke clang with correct path to GCC toolchain
+* FROMLIST: arm64: vdso32: Use full path to Clang instead of relying on PATH
+* ANDROID: clock_gettime(CLOCK_BOOTTIME,) slows down >20x
+* ANDROID: CROSS_COMPILE_ARM32 must work if CONFIG_COMPAT_VDSO
+* FROMLIST: BACKPORT: [PATCH 6/6] arm64: Wire up and expose the new compat vDSO
+* FROMLIST: [PATCH 5/6] arm64: compat: 32-bit vDSO setup
+* FROMLIST: [PATCH 4/6] arm64: compat: Add a 32-bit vDSO
+* FROMLIST: BACKPORT: [PATCH 3/6] arm64: Refactor vDSO init/setup
+* FROMLIST: [PATCH 2/6] arm64: elf: Set AT_SYSINFO_EHDR in compat processes
+* FROMLIST: [PATCH 1/6] arm64: compat: Use vDSO sigreturn trampolines if available
+* FROMLIST: lib: vdso: add support for time
+* FROMLIST: [PATCH] arm64: compat: Expose offset to registers in sigframes
+* FROMLIST: [PATCH v5 12/12] lib: vdso: do not expose gettimeofday, if no arch supported timer
+* FROMLIST: [PATCH v5 11/12] lib: vdso: Add support for CLOCK_BOOTTIME
+* FROMLIST: [PATCH v5 10/12] arm64: vdso: replace gettimeofday.S with global vgettimeofday.C
+* FROMLIST: [PATCH v5 09/12] arm: vdso: move vgettimeofday.c to lib/vdso/
+* FROMLIST: [PATCH v5 08/12] arm: vdso: Add ARCH_CLOCK_FIXED_MASK
+* FROMLIST: [PATCH v5 07/12] arm: vdso: disable profiling
+* FROMLIST: [PATCH v5 06/12] arm: vdso: add support for clock_getres
+* FROMLIST: [PATCH v6 05/12] arm: vdso: Add support for CLOCK_MONOTONIC_RAW
+* FROMLIST: [PATCH v5 04/12] arm: vdso: do calculations outside reader loops
+* FROMLIST: [PATCH v5 03/12] arm: vdso: inline assembler operations to compiler.h
+* FROMLIST: [PATCH v5 02/12] arm: vdso: add include file defining __get_datapage()
+* FROMLIST: [PATCH v5 01/12] arm: vdso: rename vdso_datapage variables
+* FROMLIST: [PATCH v3 3/3] arm64: compat: Add CONFIG_KUSER_HELPERS
+* FROMLIST: [PATCH v3 2/3] arm64: compat: Split the sigreturn trampolines and kuser helpers (assembler sources)
+* FROMLIST: [PATCH v3 1/3] arm64: compat: Split the sigreturn trampolines and kuser helpers (C sources)
+* Revert "ARM: vdso: Remove dependency with the arch_timer driver internals"
+* Revert "arm64: vdso: Fix clock_getres() for CLOCK_REALTIME"
+* Makefile: force usage of LLVM IAS
+* Makefile: Avoid setting any optimisation flag when linking with LLD
+* ANDROID: clang: update to 12.0.7
+* gen_headers: Add missing f2fs headers
+* Change the subprocess argument to fix the build issue
+* Use environment variable to find unifdef tool
+* kernel_headers: Explicitly run headers_install under 'sh'
+* Android.bp: allow system to use generated kernel headers
+* Revert "headers_lib: rename Android.bp"
+* strix: Regenerate and save
+* Full LTO and optimisations (#52)
+* strix: Regenerate and save
+* Makefile: Don't use built in stpcpy for clang
+* Makefile: strip debug always
+* kbuild: use LLVM integrated assembler for C files
+* kbuild: add forward declaration of default target to Makefile.asm-generic
+* arm64: relocatable: Tweak linker flags to yield a smaller Image with LLD
+* Backport EROFS support for 4.14 (#51)
+* BACKPORT: arm64: link with -z norelro for LLD or aarch64-elf
+* Revert "ARM64: Makefile: Remove "-z norelro" from vmlinux ldflags"
+* bpf: Eliminate CONFIG_MODULES limitation from JIT for arm64
+* ARM64: Makefile: Use aarch64elf and aarch64elfb emulation mode variants
+* kernel: do not build modules.order
+* ANDROID: kbuild: merge module sections with LTO
+* kbuild: remove redundant 'set -e' from cmd_* defines
+* kbuild: refactor if_changed
+* kbuild: /bin/pwd -> pwd
+* selinux: remove unnecessary assignment to subdir-
+* kbuild: remove redundant mkdir from ./Kbuild
+* kbuild: optimize object directory creation for incremental build
+* kbuild: create object directories simpler and faster
+* kbuild: filter-out PHONY targets from "targets"
+* kbuild: remove redundant $(wildcard ...) for cmd_files calculation
+* kbuild: create directory for make cache only when necessary
+* kbuild: shrink .cache.mk when it exceeds 1000 lines
+* kbuild: Cache a few more calls to the compiler
+* kbuild: Add a cache for generated variables
+* kbuild: clear LDFLAGS in the top Makefile
+* Makefile: Remove obsolete -fno-builtin flag
+* Makefile: Set --lto-O3 LLD linker flag when building with clang LTO
+* scripts: Remove gcc-wrapper.py
+* Makefile: Force usage of llvm assembler
+* Makefile: lto tweaks:
+* Makefile: optimize for cortex-a76 on clang
+* Makefile: Prohibit VLA
+* Makefile: Use O3 flags
+* kbuild: Add support for LLVM's Polly optimizer
+* Makefile: Use -O3 on Clang
+* Makefile: Optimize for sm8150's Kryo 485 CPU setup
+* Makefile: Use -O3 optimization for CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE
+* Makefile: Force ARCH to be arm64
+* gpu: adreno: Increase data processing limit
+* touchscreen: Correct names for gesture nodes
+* Revert "arm64: dts: sm8150: Optimize frequency tables and energy model"
+* Revert "dtsi: Import energy/freq table from dora"
+* erofs: directly use wrapper erofs_page_is_managed() when shrinking
+* erofs: remove the mapping parameter from erofs_try_to_free_cached_page()
+* erofs: clear compacted_2b if compacted_4b_initial > totalidx
+* erofs: remove the fast path of per-CPU buffer decompression
+* erofs: do not prompt for risk any more when using big pcluster
+* fs: Add aio iopriority support
+* block: add ioprio_check_cap function
+* fs: Convert kiocb rw_hint from enum to u16
+* aio: refactor read/write iocb setup
+* aio: remove the extra get_file/fput pair in io_submit_one
+* xarray: add the xa_lock to the radix_tree_root
+* idr: Rename idr_for_each_entry_ext
+* idr: Add idr_alloc_u32 helper
+* fscache: use appropriate radix tree accessors
+* export __set_page_dirty
+* radix tree: use GFP_ZONEMASK bits of gfp_t for flags
+* erofs: remove useless cache strategy of DELAYEDALLOC
+* erofs: fix unsafe pagevec reuse of hooked pclusters
+* erofs: fix use-after-free of on-stack io[]
+* erofs: remove the occupied parameter from z_erofs_pagevec_enqueue()
+* erofs: fix 1 lcluster-sized pcluster for big pcluster
+* erofs: enable big pcluster feature
+* erofs: support decompress big pcluster for lz4 backend
+* erofs: support parsing big pcluster compact indexes
+* erofs: support parsing big pcluster compress indexes
+* erofs: adjust per-CPU buffers according to max_pclusterblks
+* erofs: add big physical cluster definition
+* erofs: fix up inplace I/O pointer for big pcluster
+* erofs: introduce physical cluster slab pools
+* arm64: dts: sm8150: Move to EROFS
+* defconfig: Enable erofs
+* erofs: introduce multipage per-CPU buffers
+* erofs: reserve physical_clusterbits[]
+* erofs: Clean up spelling mistakes found in fs/erofs
+* erofs: add on-disk compression configurations
+* erofs: introduce on-disk lz4 fs configurations
+* erofs: support adjust lz4 history window size
+* erofs: introduce erofs_sb_has_xxx() helpers
+* erofs: don't use erofs_map_blocks() any more
+* erofs: complete a missing case for inplace I/O
+* erofs: use workqueue decompression for atomic contexts only
+* erofs: avoid memory allocation failure during rolling decompression
+* lz4: allow LZ4_decompress_safe_partial to be used
+* erofs: force inplace I/O under low memory scenario
+* erofs: simplify try_to_claim_pcluster()
+* erofs: insert to managed cache after adding to pcl
+* erofs: get rid of magical Z_EROFS_MAPPING_STAGING
+* erofs: remove a void EROFS_VERSION macro set in Makefile
+* erofs: move from drivers/staging/ to fs/
+* erofs: sync up with kernel 5.10
+* erofs: add unsupported inode i_format check
+* erofs: fix extended inode could cross boundary
+* erofs: derive atime instead of leaving it empty
+* erofs: fix partially uninitialized misuse in z_erofs_onlinepage_fixup
+* erofs: correct the remaining shrink objects
+* erofs: zero out when listxattr is called with no xattr
+* staging: erofs: detect potential multiref due to corrupted images
+* staging: erofs: add two missing erofs_workgroup_put for corrupted images
+* staging: erofs: some compressed cluster should be submitted for corrupted images
+* staging: erofs: fix an error handling in erofs_readdir()
+* staging: erofs: add requirements field in superblock
+* staging: erofs: keep corrupted fs from crashing kernel in erofs_readdir()
+* staging: erofs: fix error handling when failed to read compresssed data
+* staging: erofs: fix to handle error path of erofs_vmap()
+* staging: erofs: fix race when the managed cache is enabled
+* staging: erofs: keep corrupted fs from crashing kernel in erofs_namei()
+* staging: erofs: fix race of initializing xattrs of a inode at the same time
+* staging: erofs: fix memleak of inode's shared xattr array
+* staging: erofs: fix fast symlink w/o xattr when fs xattr is on
+* staging: erofs: add error handling for xattr submodule
+* staging: erofs: compressed_pages should not be accessed again after freed
+* staging: erofs: fix illegal address access under memory pressure
+* staging: erofs: fix mis-acted TAIL merging behavior
+* staging: erofs: unzip_vle_lz4.c,utils.c: rectify BUG_ONs
+* staging: erofs: unzip_{pagevec.h,vle.c}: rectify BUG_ONs
+* staging: erofs: {dir,inode,super}.c: rectify BUG_ONs
+* staging: erofs: add a full barrier in erofs_workgroup_unfreeze
+* staging: erofs: fix `erofs_workgroup_{try_to_freeze, unfreeze}'
+* staging: erofs: atomic_cond_read_relaxed on ref-locked workgroup
+* staging: erofs: remove the redundant d_rehash() for the root dentry
+* staging: erofs: drop multiref support temporarily
+* staging: erofs: replace BUG_ON with DBG_BUGON in data.c
+* staging: erofs: complete error handing of z_erofs_do_read_page
+* staging: erofs: fix a bug when appling cache strategy
+* staging: erofs: fix the definition of DBG_BUGON
+* staging: erofs: fix use-after-free of on-stack `z_erofs_vle_unzip_io'
+* staging: erofs: fix a missing endian conversion
+* staging: erofs: rename superblock flags (MS_xyz -> SB_xyz)
+* Revert "staging: erofs: disable compiling temporarile"
+* staging: erofs: remove an extra semicolon in z_erofs_vle_unzip_all
+* staging: erofs: fix if assignment style issue
+* staging: erofs: disable compiling temporarile
+* staging: erofs: remove a redundant marco in xattr
+* staging: erofs: add the missing break in z_erofs_map_blocks_iter
+* staging: erofs: use the wrapped PTR_ERR_OR_ZERO instead of open code
+* staging: erofs: fix conditional uninitialized `pcn' in z_erofs_map_blocks_iter
+* staging: erofs: fix compile error without built-in decompression support
+* staging: erofs: fix a compile warning of Z_EROFS_VLE_VMAP_ONSTACK_PAGES
+* staging: erofs: add a TODO and update MAINTAINERS for staging
+* staging: erofs: introduce cached decompression
+* staging: erofs: introduce VLE decompression support
+* staging: erofs: introduce workstation for decompression
+* staging: erofs: introduce erofs shrinker
+* staging: erofs: introduce superblock registration
+* staging: erofs: add a generic z_erofs VLE decompressor
+* staging: erofs: introduce a customized LZ4 decompression
+* staging: erofs: globalize prepare_bio and __submit_bio
+* staging: erofs: add erofs_allocpage
+* staging: erofs: add erofs_map_blocks_iter
+* staging: erofs: introduce pagevec for unzip subsystem
+* staging: erofs: <linux/tagptr.h>: introduce tagged pointer
+* staging: erofs: support tracepoint
+* staging: erofs: introduce error injection infrastructure
+* staging: erofs: support special inode
+* staging: erofs: introduce xattr & acl support
+* staging: erofs: update Kconfig and Makefile
+* staging: erofs: add namei functions
+* staging: erofs: add directory operations
+* staging: erofs: add inode operations
+* staging: erofs: add raw address_space operations
+* staging: erofs: add super block operations
+* staging: erofs: add erofs in-memory stuffs
+* staging: erofs: add on-disk layout
+* BACKPORT: lib/lz4: explicitly support in-place decompression
+* BACKPORT: lz4: fix kernel decompression speed
+* BACKPORT: lib/lz4/lz4_decompress.c: document deliberate use of `&'
+* lz4: staticify functions
+* lib/lz4: update LZ4 decompressor module
+* msm/vidc: Fix vmlinux linking
+* Merge tag 'LA.UM.9.1.r1-12100.01-SMxxx0.QSSI13.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0 into 12
+* Merge tag 'LA.UM.9.1.r1-12100.01-SMxxx0.QSSI13.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn into 12
+* Merge tag 'LA.UM.9.1.r1-12100.01-SMxxx0.QSSI13.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/wlan/fw-api into 12
+* Merge tag 'LA.UM.9.1.r1-12100.01-SMxxx0.QSSI13.0' of https://git.codelinaro.org/clo/la/kernel/msm-4.14 into 12
+* strix: Debloat & Optimize
+* defconfig: Debloat
+* defconfig: Enable USB OTG support
+* strix: Regenerate and save
+* treewide: Reduce log verbosity (#47)
+* walt/sched improvements (#48)
+* Freq table improvements/import from dora (#49)
+* Further msm improvements (#50)
+* strix: Regenerate and save
+* Some F2FS specific improvements (#46)
+* More thermal improvements (#45)
+* sched/core: Free dead mm structs asynchronously in finish_task_switch()
+* sched/core: Free dead tasks asynchronously in finish_task_switch()
+* drivers: thermal: limits-dcvs: Always build driver
+* msm: kgsl: Omit GPU CoreSight code if !CORESIGHT
+* msm: msm_bus: Don't enable QoS clocks when none are present
+* msm: adreno: Relax CPU latency requirements to save power
+* msm_geni_serial: Make ioctl always exclusive
+* msm_geni_serial: Reduce ISR wakelock timeout to 100ms
+* msm: ipa_v3: Mitigate usleep_range calls
+* thermal: add a no-lock version of get_temp for virtual sensors
+* thermal: tsens: Fix exported function marked as static
+* arm64: dts: sm8150: Disable broken IRQ detection
+* arm64: dts: sm8150: Power off DSI PHY during idle PC
+* arm64: dts: qcom: Disable CoreSight DT entries for msmnile
+* soc: qcom: ssr: Prevent kernel panic caused by modem crash
+* esoc: dont panic on BOOT_FAIL_ACTION_PANIC
+* arm64: dts: sm8150: Fix path & disable avb
+* ARM64: dts: Correct node name of msm-therm
+* tri_state_key: Reduce verbosity of logging
+* irqchip/gic-v3: Remove remaining `_no_log()` usage
+* treewide: Suppress logspam
+* fs/overlayfs: Supress logspam
+* schedutil: Avoid dumb priority calculation
+* thermal: Increase thermal trip points to 16
+* treewide: remove remaining _no_log() usage
+* msm: camera: icp: fix -Wunsequenced
+* Revert "msm: camera: crm: Reset the pd table slots during flush"
+* msm: camera: Fix memory leak in cam_res_mgr_probe()
+* msm: camera: smmu: Unmap and detach secure DMA attachments to fix leaks
+* msm: camera: Fix memory leak
+* msm: camera: Stub out the camera_debug_util API and compile it out
+* treewide: Reduce verbosity of logging
+* Revert "drivers: GICv3: Enable logging of interrupts that triggered wakeup"
+* devfreq_boost: Handle last_input_time if CIB is disabled
+* drm/drm_atomic: Fallback to boosting within 3s of last interaction
+* cpuidle: lpm-levels: decrease reported deep idle latency
+* msm: camera: properly kill debug logging
+* msm: vidc: Reduce max_packets count to 480
+* msm: camera: cci: Fix logic to update cci clk freq
+* msm: camera: Fix EEPROM device handle leak.
+* Revert "msm: vidc: Inline HAL_FLIP value with omx counterpart"
+* Revert "msm: vidc: Restrict secure buffer size optimization for higher resolution"
+* msm: vidc: Fix iteration over vote data
+* msm: vidc: Adding check for unsuccessful CMA enablement and VMID switch
+* msm: vidc: Add null to context bank mapping pointer after release
+* msm: vidc: send mask along with source SID
+* msm: vidc: Correct heap masks for video secure context banks
+* msm: vidc: correct ion flags for CP_CAMERA_ENCODE context bank
+* msm: vidc: Add new video driver to support CMA buffers
+* msm: vidc: Add changes to read video CMA configuration information
+* msm: vidc: populate sid list for each context bank
+* msm: ais: Stub out the camera_debug_util API and compile it out
+* media/vidc/msm_venc: changes to improve quality
+* drivers/input: misc: Suppress spammy qti-haptics logging
+* drm: strip text from panel modes sysfs
+* treewide: Cleanup bunch of logging
+* power/supply: qcom: nuke logging
+* rmnet: Disable logging
+* drm/msm: dsi-staging: dsi_ctrl: nuke logging
+* kernel/irq: silence irq no longer affine to cpu logspam
+* cpu: Silence log spam when a CPU is brought up
+* iommu: Silence logging
+* core_ctl: Silence logging
+* i2c_geni: Kill error code spam
+* dwc3/core: Fix logspam with !IPC_LOGGING and !DEBUG_FS
+* platform: msm: sps: silence ipc log spam when ipc logging is disabled
+* msm_geni_serial: Fix logspam with !IPC_LOGGING
+* soc/qcom: msm_bus: msm_bus_fabric_rpmh: Reduce verbosity of logging
+* platform: msm: sps: silence ipc log spam when ipc logging is disabled
+* soc/qcom: peripheral-loader: Guard with CONFIG_IPC_LOGGING
+* media/usb: uvc: Fix build when uvc_debugfs.c is not compiled
+* media/usb: uvc: Build uvc_debugfs if CONFIG_DEBUG_FS is enabled
+* net/cnss_utils: Guard debugfs bits with CONFIG_DEBUG_FS
+* net/cnss_prealloc: Guard debugfs bits with CONFIG_DEBUG_FS
+* icnss: Only use CONFIG_DEBUG_FS for creation debugfs file
+* icnss: Don't create debugfs when ICNSS_DEBUG and DEBUG_FS is disabled
+* msm: vidc: Opt out debug module from compilation
+* kernel/power: Reduce verbosity of logging
+* irqchip: Reduce verbosity of logging
+* infrared_proximity: Reduce verbosity of logging
+* drm/msm: Reduce verbosity of logging
+* arm64/kernel: Reduce verbosity of logging
+* kernel/cpu: Silence abundance of logspam
+* msm: gsi: Make debug code depend on DEBUG_FS
+* wakeup_stats: Don't export device info to sysfs
+* power: Silence additional charging loggers
+* power: supply: Silence useless log spam
+* pci/setup-res: Nuke logspam
+* dtsi: Import energy/freq table from dora
+* arm64: dts: sm8150: Optimize frequency tables and energy model
+* clk: qcom: clk-cpu-osm: Allow overriding CPU frequency tables in DT
+* cpuidle: lpm-levels: get bias time from scheduler
+* cpuidle: lpm-levels: Allow exit latencies equal to target latencies
+* cpuidle: lpm-levels: Remove ipi tracking and prediction
+* cpuidle: lpm-levels: Only cancel the bias timer when it's used
+* lpm-levels: Optimize and make way for upstream changes
+* sched/core: Always panic when scheduling in atomic context
+* sched/energy: Checkout to branch android-4.14 of https://android.googlesource.com/kernel/common
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched: Add support to spread tasks
+* sched/fair: Avoid force newly idle load balance if have iowait task
+* sched/fair: Force gold cpus to do idle lb when silver has big tasks
+* sched/fair: Cleanup for incoming upstream changes
+* sched/fair: Cleanup for incoming upstream changes
+* sched/fair: remove unused variable
+* sched: fair: Improve the scheduler
+* sched: Improve the scheduler
+* sched: fair: Stop running idle_balance on active migration kick
+* cpufreq: Avoid leaving stale IRQ work items during CPU offline
+* cpufreq: schedutil: Queue sugov irq work on policy online cpu
+* sched/cpufreq_schedutil: create a function for common steps
+* sched/fair: Don't place wakee on waker cpu if colocate enabled
+* sched: core_ctl: Improve the scheduler
+* sched/walt: Fix kernel panic issue by uninitialized data
+* sched: walt: Improve the scheduler
+* sched: walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched: walt: improve the scheduler
+* sched/walt: cleanup unused code
+* sched/walt: Improve the scheduler
+* sched/walt: Avoid walt irq work in offlined cpu
+* sched: walt: Improve the scheduler
+* sched: core: Use sched_clusters for updown migration handler
+* sched: walt: fix sched_cluster initialization
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched: walt: Dump walt status on BUG_ON
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched: improve the scheduler
+* sched: walt: remove unused variable
+* sched: walt: Improve the Scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched: Remove unused code in sched_avg.c
+* sched: Use bitmask for sched_busy_hysteresis_enable_cpus tunable
+* sched: Introduce sched_busy_hysteresis_enable_cpus tunable
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched: core: Fix usage of cpu core group mask
+* arch_topology: Add possible sibling cpu mask for cpu_topology
+* sched: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched: Improve the scheduler
+* sched/core_ctl: Improve the scheduler
+* sched/core_ctl: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: drop preferred_cluster from rtg
+* sched/isolcpus: Fix "isolcpus=" boot parameter handling when !CONFIG_CPUMASK_OFFSTACK
+* sched/fair: Fix incorrect CPU access in check_for_migration()
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched/walt: Improve the scheduler
+* sched: Improve the scheduler
+* sched: Improve the scheduler
+* sched: Improve the scheduler
+* sched: Improve the scheduler
+* sched: Improve the scheduler
+* sched: Cleanup unused variables in walt
+* sched: walt: Improve the scheduler
+* sched: Improve the scheduler
+* sched: clean-up unused/duplicate functions & variables
+* sched/fair: upadte adjust_cpus_for_packing()
+* sched/fair: Fix excessive packing on the max capacity CPU
+* sched/fair: Allow prev cpu in find best target
+* sched: improve the scheduler
+* sched/fair: Refactor packing eligible test
+* sched/walt: Improve the scheduler
+* sched/fair: Derive the downmigration margin wrt the destination CPU
+* Revert "sched/core: Fix migration to invalid CPU in __set_cpus_allowed_ptr()"
+* sched: reduce softirq conflicts with RT
+* trace: Lets also track flags when a task is skipped for load balancing
+* ANDROID: sched: fair: balance for single core cluster
+* sched/idle: Micro-optimize the idle loop
+* sched/core: Optimize sched_feat() for !CONFIG_SCHED_DEBUG builds
+* exec: Extend task_is_booster check to cover OxygenOS userspace HALs
+* arm64: use WFE for long delays
+* arm_arch_timer: Expose event stream status
+* gpu: adreno: only compile Adreno 6xx driver
+* Revert "Perf: arm64: Add Snapshot of perf tracepoints"
+* init: Kconfig: Don't force DEBUG_KERNEL when EXPERT is enabled
+* BACKPORT: sched: promote nodes out of CONFIG_SCHED_DEBUG
+* f2fs: Add support for reporting a fake kernel version to fsck
+* f2fs: Demote GC thread to idle scheduler class
+* f2fs: set ioprio of GC kthread to idle
+* f2fs/sysfs: Apply RO macro on gc_urgent_sleep_time
+* f2fs/sysfs: Introduce a Read-Only attribute macro
+* f2fs/gc: Reduce GC thread urgent sleep time to 50ms
+* f2fs: reduce timeout for uncongestion
+* Allow setting a vmstat interval (#43)
+* msm/kgsl improvements (#42)
+* strix: Regenerate and save
+* Wireguard support for kernel (#44)
+* treewide: Fix errors with using newer llvm
+* kgsl: Drop usage of current_pid
+* Merge commit '18fbcd68a35a892527345dc5679d0b2d860ee004' into 12-wireguard
+* strix: Regenerate and save
+* defconfig: Enable wireguard
+* drivers: net: Build wireguard inline
+* Add 'drivers/net/wireguard/' from commit '743eef2350294de37411d2492d03edf0d913af31'
+* defconfig: Set vmstat interval
+* mm: add Kconfig interface for vmstat interval
+* irqship: Disable msm_show_resume_irq_mask by default
+* msm: kgsl: Affine kgsl_3d0_irq and worker kthread to the big CPU cluster
+* msm/kgsl: Mark worker thread as perf critical
+* msm/kgsl: Run kgsl-workqueue as high priority
+* drivers: adreno: fixup mutex usage
+* msm/kgsl: drop unused cpu var
+* msm/adreno_dispatch: Silence warnings about "unused" variables
+* Reapply ebcf14b: ("gpu: kgsl: Place worker thread on SCHED_RR")
+* kgsl: add low_prio_worker thread
+* Revert "msm: kgsl: Use event workqueue for event work instead of RT Kthread worker"
+* msm: kgsl: Remove unneeded time profiling from ringbuffer submission
+* msm: kgsl: Use lock-less list for page pools
+* msm: kgsl: Remove L2PC PM QoS feature
+* msm: kgsl: Increase worker thread priority
+* msm: kgsl: Stop slab shrinker when no more pages can be reclaimed
+* Revert "msm: kgsl: Add gpu_frequency tracepoint to power trace system"
+* Revert "msm: kgsl: Add gpu_frequency trace during SLUMBER entry and exit"
+* msm: kgsl: use kmem_cache pool for draw objects
+* msm: kgsl: Avoid dynamically allocating small command buffers
+* msm: kgsl: Don't allocate memory dynamically for temp command buffers
+* msm: kgsl: Put a keep alive vote before updating CP_RB_WPTR
+* msm: kgsl: Avoid busy waiting for fenced GMU writes
+* msm: kgsl: Relax CPU latency requirements to save power
+* msm: kgsl : Hardcode for A640
+* msm: kgsl: Report correct GPU frequency in sysfs
+* msm: kgsl: move kgsl_3d_init to async probe
+* msm: kgsl: Increase events worker thread priority
+* msm: kgsl: Reduce latency while processing ioctls
+* msm: kgsl: Don't allocate memory dynamically for drawobj sync structs
+* msm: kgsl: Don't try to wait for fences that have been signaled
+* msm: kgsl: Remove sync fence names
+* msm: kgsl: Remove POPP
+* msm: kgsl: Wake GPU upon receiving an ioctl rather than upon touch input
+* drm/msm: Recycle atomic state allocations to speed up atomic commits
+* drm/msm: Remove bogus NULL check in _msm_drm_commit_work_cb()
+* drm/msm/atomic: Fix build errors
+* input/fp/goodix: boost earlier on down press
+* drm/sde: add some bp hints to hot paths
+* drivers/gpu/drm/msm: kill sde tracing entirely
+* drm/sde_crtc: Boost DDR bus on FOD press
+* drivers: gpu: drm-msm: Enforce ULPS Suspend feature as well
+* drm/msm/sde: init IRQ lists after allocated node
+* treewide: Silence loggers
+* drm/sde: hardcode for sm8150 v2.0
+* drm/msm: dsi-ctrl: remove extra buffer copy
+* drm/msm/dsi-staging: allow multiple listeners on TE
+* drm/msm/dsi-staging: Fix transposed panel_switch and panel_post_switch
+* drm/msm/sde: Remove unneeded PM QoS requests
+* drm/msm/sde: use kmem_cache pool for struct sde_fence
+* sde_crtc: Silence more logspam
+* drm/msm/sde: Stub out debug log macros and compile them out
+* drm: Set proper value if fp mode on
+* drm/msm/dsi-staging: Refactor
+* drm/msm: minimize qos remap updates
+* drm/msm/sde: allocate kmem_fence_pool once
+* drm/msm/sde: Wait for ctl_start asynchronously on cmd mode panels
+* drm/msm/dsi-staging: remove buf_id[32]
+* drm/msm: do not notify events when the system is shutting down
+* drm/msm/dsi-staging: allow physical power-off
+* drm/msm/dsi-staging: enable ULPS
+* drm/msm: Mark _sde_hw_rot_reg_dump as __maybe_unused
+* drm/msm/dsi-staging: Don't bail out when debugfs creation fails
+* disp: msm: Use the PM_QOS_REQ_AFFINE_IRQ feature to control SDE PM QoS
+* disp: msm: sde: add dt based support for pm qos irq latency
+* disp: msm: sde: modify Qos vote for irq latency during idle cases
+* disp: msm: sde: add pm QoS vote on CPU receiving display IRQ
+* drm/msm: skip sde_dbg compilation altogether
+* drm/msm/sde: use kmem_cache pool for struct sde_fence
+* drm/msm: use kmem_cache pool for struct vblank_work
+* drm/msm/sde: Don't read and clear VBIF errors upon commit
+* drm/msm: Reduce latency while completing non-blocking commits
+* drm: Reduce latency while processing atomic ioctls
+* drm/msm/sde: Remove redundant write memory barriers from IRQ routines
+* drm/msm/sde: Consolidate IRQ status reads into IRQ dispatcher
+* drm/msm: Reduce verbose logging
+* drm/msm: move msm_drm_register to async probe
+* drm/msm/sde: Don't clear dim layers when there aren't any applied
+* drm/msm/sde: Don't allocate memory dynamically for plane states
+* drm/msm/sde: Skip unneeded register reads when getting write line count
+* drm/msm/sde: Skip prefill calculations on command mode panels
+* drm/msm/sde: Skip heavy autorefresh checks when it's not enabled
+* drm/msm/sde: Cache register values when performing clock control
+* disp: msm: Silence useless log spam
+* Enable Dead Code Elimination (#41)
+* Merge branch 'aosp-new/upstream-f2fs-stable-linux-4.14.y' from CLO (#40)
+* strix: Enable DCE
+* kbuild: Fix asm-generic/vmlinux.lds.h for LD_DEAD_CODE_DATA_ELIMINATION
+* vmlinux.lds.h: Coalesce LLVM dead code elimination sections
+* FROMLIST: arm64: keep .altinstructions and .altinstr_replacement
+* ANDROID: generate_initcall_order.pl: Use two dash long options for llvm-nm
+* arm64: Allow LD_DEAD_CODE_DATA_ELIMINATION to be selected
+* kbuild: Allow LD_DEAD_CODE_DATA_ELIMINATION to be selectable if enabled
+* strix: Regenerate and save
+* defconfig: Enable F2FS Compression
+* strix: Regenerate and save
+* f2fs: Enable ATGC and GC_MERGE by default
+* f2fs: Fix kernel panic after `f2fs-stable` merge
+* f2fs: Fix deadlock between f2fs_quota_sync and block_operation
+* [FIXUP] 4200d6e ("FROMLIST: Add standard casefolding support")
+* Merge branch 'aosp-new/upstream-f2fs-stable-linux-4.14.y' of https://git.codelinaro.org/clo/la/kernel/msm-4.14 into 12
+* Rewrite ashmem/ion/iommu and ion improvements (#39)
+* icnss: Fix log spam caused by wrong paired PM operation for ICNSS
+* Introduce and set cpu set assists (#38)
+* ion: Fix partial cache maintenance operations
+* ion: Restore ION_IOC_HEAP_QUERY ioctl command
+* ion: Further optimize ioctl handler
+* ion: Remove unneeded rwsem for the heap priority list
+* staging: android: Kconfig; Remove excessive hyphens
+* staging: android: ion: Update wording in drivers/staging/android/ion/Kconfig
+* staging: android: ion: Cleanup ion_page_pool_alloc_pages
+* staging: android: ion: Remove dead code in ion_page_pool_free
+* staging: android: ion: Nuke ion_page_pool_init
+* staging: android: ion: Remove unused include files for ion_page_pool.c
+* staging: android: ion: Remove unused declaration ion_buffer_fault_user_mappings
+* ion: system_heap: Speed up system heap allocations
+* ion/msm: move msm_ion_init to async probe
+* ashmem: Rewrite to improve clarity and performance
+* ion: Mark workqueues freeing buffers asynchronously as CPU intensive
+* ion: Rewrite to improve clarity and performance
+* iommu: msm: Rewrite to improve clarity and performance
+* strix: Enable and set cpu assist
+* cpuset: Introduce display cpuset control via CPUSET_ASSIST
+* cpuset: Refactor cpuset assist code
+* kernel: introduce CPUSets Assist
+* Further mm improvements (#37)
+* mailbox: qcom-rpmh: Remove debug cruft
+* drivers: mailbox: rpmh: Silence useless log spam
+* vfs: mount: prevent /dev/op_cgroup's creation
+* fs: add ksys_rmdir() wrapper; remove in-kernel calls to sys_rmdir()
+* mm: expose struct file_system_type for tmpfs
+* mm: Only drain per-cpu pagevecs once per pagevec usage
+* mm/oom_kill: mark kthread as perf critical (big cluster)
+* vmscan: fix CONFIG_KSWAPD_CPU_AFFINITY_MASK
+* mm, page_alloc: avoid expensive reclaim when compaction may not succeed
+* mm/page_alloc: boost CPU/RAM a bit earlier in slowpath
+* mm: Boost when memory pressure becomes high
+* defconfig: Enable CONFIG_KSWAPD_CPU_AFFINITY_MASK
+* sched/core: Fix rq clock warning in sched_migrate_to_cpumask_end()
+* sched: Add API to migrate the current process to a given cpumask
+* mm: Eliminate d_path_outlen() and further speed up show_map_vma()
+* mm: Perform PID map reads on the little CPU cluster
+* mm: zero-seek shrinkers
+* mm: Micro-optimize PID map reads for arm64 while retaining output format
+* Various mm optimisations (#36)
+* rcu: Eliminate cond_resched_rcu_qs() in favor of cond_resched()
+* mm/page_alloc: mark kthread as perf critical (big cluster)
+* mm/vmscan: mark kthread as perf critical (big cluster)
+* mm/compaction: mark kthread as perf critical (big cluster)
+* mm: vmscan: support setting of kswapd cpu affinity
+* zsmalloc: reorganize struct size_class to pack 4 bytes hole
+* [BACKPORT]mm, thp: tweak reclaim/compaction effort of local-only and all-node allocations
+* [BACKPORT]mm, page_alloc: allow hugepage fallback to remote nodes when madvised
+* mm/page_alloc.c: free order-0 pages through PCP in page_frag_free()
+* mm, hugetlb: allow hugepage allocations to reclaim as needed
+* BACKPORT: mm: fix pageblock heuristic
+* mm/vunmap: add cond_resched() in vunmap_pmd_range
+* mm: vmpressure: use mem_cgroup_is_root API
+* mm/memcontrol.c: export mem_cgroup_is_root()
+* mm: vmpressure: don't need call kfree if kstrndup fails
+* mm/vmpressure.c: fix a signedness bug in vmpressure_register_event()
+* mm/vmpressure.c: convert to use match_string() helper
+* mm/vmpressure.c: use kstrndup instead of kmalloc+strncpy
+* mm, page_alloc: avoid expensive reclaim when compaction may not succeed
+* mm: compaction: avoid 100% CPU usage during compaction when a task is killed
+* UPSTREAM: mm/slab: add naive detection of double free
+* mm: reclaim more pages to find free pages in compaction
+* printk: disable console suspend by default
+* mm: skip swap readahead when process is exiting
+* mm: compaction: Fix bad logging
+* mm: compaction: switch FB notifier API to MSM DRM notifier
+* mm: compaction: Add automatic compaction mechanism
+* workqueue: Implement delayed_work_busy()
+* kernel: time: reduce ntp wakeups
+* BACKPORT: mm/vmscan: count layzfree pages and fix nr_isolated_* mismatch
+* arm64: cpufeature: introduce helper cpu_has_hw_af()
+* strix: Regenerate and save
+* mm: speedup mremap on 1GB or larger regions
+* mremap: don't allow MREMAP_DONTUNMAP on special_mappings and aio
+* mm/mremap: for MREMAP_DONTUNMAP check security_vm_enough_memory_mm()
+* mm/mremap: account memory on do_munmap() failure
+* mm/mmap.c: fix mmap return value when vma is merged after call_mmap()
+* mm: mmap: fix fput in error path v2
+* mm/mmap: add inline munmap_vma_range() for code readability
+* mm/mmap: add inline vma_next() for readability of mmap code
+* mm/mmap.c: replace do_brk with do_brk_flags in comment of insert_vm_struct()
+* mm/mmap.c: use helper function allow_write_access() in __remove_shared_vm_struct()
+* mm: use helper function mapping_allow_writable()
+* mm/mmap: check on file instead of the rb_root_cached of its address_space
+* mm/mmap: not necessary to check mapping separately
+* mm/mmap: leave adjust_next as virtual address instead of page frame number
+* mm/mmap: rename __vma_unlink_common() to __vma_unlink()
+* mm: mmap: Fix general protection fault in unlink_file_vma()
+* asm-generic/tlb: provide MMU_GATHER_TABLE_FREE
+* asm-generic/tlb: rename HAVE_MMU_GATHER_NO_GATHER
+* asm-generic/tlb: rename HAVE_RCU_TABLE_FREE
+* asm-generic/tlb: add missing CONFIG symbol
+* asm-gemeric/tlb: remove stray function declarations
+* asm-generic/tlb: avoid potential double flush
+* mm/mmu_gather: invalidate TLB correctly on batch allocation failure and flush
+* mm: release the spinlock on zap_pte_range
+* Revert "mm: release the spinlock on zap_pte_range"
+* mm: remove redundant assignment of entry
+* mm: mmu_gather: remove __tlb_reset_range() for force flush
+* arm64: tlbflush: Ensure start/end of address range are aligned to stride
+* arm64: mm: enable per pmd page table lock
+* asm-generic/tlb: Remove tlb_table_flush()
+* asm-generic/tlb: Remove tlb_flush_mmu_free()
+* asm-generic/tlb: Remove CONFIG_HAVE_GENERIC_MMU_GATHER
+* asm-generic/tlb: Remove arch_tlb*_mmu()
+* asm-generic/tlb: Introduce CONFIG_HAVE_MMU_GATHER_NO_GATHER=y
+* asm-generic/tlb, arch: Invert CONFIG_HAVE_RCU_TABLE_INVALIDATE
+* asm-generic/tlb, ia64: Conditionally provide tlb_migrate_finish()
+* asm-generic/tlb: Provide generic tlb_flush() based on flush_tlb_mm()
+* asm-generic/tlb, arch: Provide generic tlb_flush() based on flush_tlb_range()
+* asm-generic/tlb, arch: Provide generic VIPT cache flush
+* asm-generic/tlb, arch: Provide CONFIG_HAVE_MMU_GATHER_PAGE_SIZE
+* asm-generic/tlb: Provide a comment
+* arm64: tlbi: Set MAX_TLBI_OPS to PTRS_PER_PTE
+* arm64: tlb: Rewrite stale comment in asm/tlbflush.h
+* arm64: tlb: Avoid synchronous TLBIs when freeing page tables
+* arm64: tlb: Adjust stride and type of TLBI according to mmu_gather
+* arm64: tlb: Remove redundant !CONFIG_HAVE_RCU_TABLE_FREE code
+* arm64: tlbflush: Allow stride to be specified for __flush_tlb_range()
+* arm64: tlb: Justify non-leaf invalidation in flush_tlb_range()
+* arm64: mm: implement arch_faults_on_old_pte() on arm64
+* arm64: mm: Add ISB instruction to set_pgd()
+* arm64: tlb: Ensure we execute an ISB following walk cache invalidation
+* Revert "arm64: Remove unnecessary ISBs from set_{pte,pmd,pud}"
+* arm64: mm: avoid redundant READ_ONCE(*ptep)
+* arm64: mm: Don't wait for completion of TLB invalidation when page aging
+* arm64: pgtable: Implement p[mu]d_valid() and check in set_p[mu]d()
+* arm64: Remove unnecessary ISBs from set_{pte,pmd,pud}
+* arm64: mm: drop addr parameter from sync icache and dcache
+* arm64: mm: Use READ_ONCE/WRITE_ONCE when accessing page tables
+* arm64: tlb: Add DSB ISHST prior to TLBI in __flush_tlb_[kernel_]pgtable()
+* arm64: tlb: Use last-level invalidation in flush_tlb_kernel_range()
+* arm64: tlb: Provide forward declaration of tlb_flush() before including tlb.h
+* MAINTAINERS: Add entry for MMU GATHER AND TLB INVALIDATION
+* mm/memory: Move mmu_gather and TLB invalidation code into its own file
+* mm: update comment describing tlb_gather_mmu
+* asm-generic/tlb: Track which levels of the page tables have been cleared
+* asm-generic/tlb: Guard with #ifdef CONFIG_MMU
+* mm: mmu_notifier fix for tlb_end_vma
+* asm-generic/tlb: Track freeing of page-table directories in struct mmu_gather
+* arm64: mremap speedup - Enable HAVE_MOVE_PMD
+* mm: Introduce arch_validate_flags()
+* mm/mremap: start addresses are properly aligned
+* mm/mremap: calculate extent in one place
+* mm/mremap: it is sure to have enough space when extent meets requirement
+* mm: remove unnecessary wrapper function do_mmap_pgoff()
+* mm: mmap: merge vma after call_mmap() if possible
+* mm/mmap: optimize a branch judgment in ksys_mmap_pgoff()
+* mm/mmap.c: close race between munmap() and expand_upwards()/downwards()
+* mm: use false for bool variable
+* mm: mmap: fix a typo in comment "compatbility"->"compatibility"
+* userfaultfd: fix remap event with MREMAP_DONTUNMAP
+* mm: Fix MREMAP_DONTUNMAP accounting on VMA merge
+* mm/vma: make vma_is_accessible() available for general use
+* mm/mremap: add MREMAP_DONTUNMAP to mremap()
+* mm: mmap: add trace point of vm_unmapped_area
+* mmap: remove inline of vm_unmapped_area
+* mm/mremap: Add comment explaining the untagging behaviour of mremap()
+* mm: Avoid creating virtual address aliases in brk()/mmap()/mremap()
+* mm/mmap.c: get rid of odd jump labels in find_mergeable_anon_vma()
+* x86/vdso: Handle faults on timens page
+* mm/mmap.c: make vma_merge() comment more easy to understand
+* mm/mmap.c: use IS_ERR_VALUE to check return value of get_unmapped_area
+* mm/mmap.c: rb_parent is not necessary in __vma_link_list()
+* mm/mmap.c: extract __vma_unlink_list() as counterpart for __vma_link_list()
+* mm/mmap.c: __vma_unlink_prev() is not necessary now
+* mm/mmap.c: prev could be retrieved from vma->vm_prev
+* mm/mmap.c: remove a never-triggered warning in __vma_adjust()
+* mm: untag user pointers in mmap/munmap/mremap/brk
+* augmented rbtree: add new RB_DECLARE_CALLBACKS_MAX macro
+* mm/mmap.c: refine find_vma_prev() with rb_last()
+* x86/mpx, mm/core: Fix recursive munmap() corruption
+* mm,mremap: bail out earlier in mremap_to under map pressure
+* mm: fix some typos in mm directory
+* mm/mmap.c: remove some redundancy in arch_get_unmapped_area_topdown()
+* mm: speed up mremap by 20x on large regions
+* mm/mmap.c: remove verify_mm_writelocked()
+* mm: mmap: Allow for "high" userspace addresses
+* mm: brk: downgrade mmap_sem to read when shrinking
+* mm: mremap: downgrade mmap_sem to read when shrinking
+* mm: unmap VM_PFNMAP mappings with optimized path
+* mm: unmap VM_HUGETLB mappings with optimized path
+* mm: mmap: zap pages with read mmap_sem in munmap
+* mm: use helper functions for allocating and freeing vm_area structs
+* mremap: remove LATENCY_LIMIT from mremap to reduce the number of TLB shootdowns
+* mm: kmemleak: Don't die when memory allocation fails
+* Port fuse passthrough support for kernel (#35)
+* Per cpu configurations changes  (#33)
+* Disable logging in binder and general improvements  (#34)
+* BACKPORT: binder: change error code from postive to negative in binder_transaction
+* BACKPORT: binder: fix freeze race
+* binder: Don't stub out binder_user_error
+* binder: Rate-limit debug and userspace triggered err msgs
+* binder_alloc: Avoid page memory allocation in high memory
+* android: binder: no outgoing transaction when thread todo has transaction
+* binder: Return EFAULT if we fail BINDER_ENABLE_ONEWAY_SPAM_DETECTION
+* binder: tell userspace to dump current backtrace when detected oneway spamming
+* binder: remove redundant assignment to pointer n
+* binder: fix the missing BR_FROZEN_REPLY in binder_return_strings
+* UPSTREAM: binder: add flag to clear buffer on txn complete
+* binder: use atomic_inc for atomic variable incrementation
+* BACKPORT: binder: don't unlock procs while scanning contexts
+* BACKPORT: binder: freeze multiple contexts
+* BACKPORT: binder: introduce the BINDER_GET_FROZEN_INFO ioctl
+* FROMGIT: binder: print warnings when detecting oneway spamming.
+* BACKPORT: binder: implement BINDER_FREEZE ioctl
+* binder_alloc: Disable debug logging by default
+* binder: Stub out debug prints by default
+* binder: Fix log spam caused by interrupted waits
+* binder: Fix log spam caused by interrupted waits
+* binder: disable logging
+* fuse: force new feature on
+* FROMLIST: fuse: Allow non-extending parallel direct writes
+* FROMLIST: fuse: Introduce passthrough for mmap
+* FROMLIST: fuse: Use daemon creds in passthrough mode
+* FROMLIST: fuse: Handle asynchronous read and write in passthrough
+* FROMLIST: fuse: Introduce synchronous read and write for passthrough
+* FROMLIST: fuse: Passthrough initialization and release
+* FROMLIST: fuse: Definitions and ioctl for passthrough
+* FROMLIST: fuse: 32-bit user space ioctl compat for fuse device
+* FROMLIST: fs: Generic function to convert iocb to rw flags
+* BACKPORT: fs: align IOCB_* flags with RWF_* flags
+* UPSTREAM: fs: add RWF_APPEND
+* exec: Add node tampering blacklist function
+* proc: reject "." and ".." as filenames
+* proc: do mmput ASAP for /proc/*/map_files
+* proc: faster /proc/cmdline
+* proc: register filesystem last
+* proc: fix /proc/*/map_files lookup some more
+* fs/proc/proc_sysctl.c: remove redundant link check in proc_sys_link_fill_cache()
+* proc: use set_puts() at /proc/*/wchan
+* proc: check permissions earlier for /proc/*/wchan
+* proc: replace seq_printf by seq_put_smth to speed up /proc/pid/status
+* proc: optimize single-symbol delimiters to spead up seq_put_decimal_ull
+* proc: replace seq_printf on seq_putc to speed up /proc/pid/smaps
+* proc: add seq_put_decimal_ull_width to speed up /proc/pid/smaps
+* fs/proc/task_mmu.c: do not show VmExe bigger than total executable virtual memory
+* mm: consolidate page table accounting
+* mm: introduce wrappers to access mm->nr_ptes
+* mm: account pud page tables
+* proc: account "struct pde_opener"
+* proc: move "struct pde_opener" to kmem cache
+* fs/proc: use __ro_after_init
+* proc: faster open/close of files without ->release hook
+* proc: move /proc/sysvipc creation to where it belongs
+* proc: do less stuff under ->pde_unload_lock
+* proc: get rid of task lock/unlock pair to read umask for the "status" file
+* procfs: optimize seq_pad() to speed up /proc/pid/maps
+* procfs: add seq_put_hex_ll to speed up /proc/pid/maps
+* arm64: crypto: add NEON accelerated XOR implementation
+* power: supply: Classify Battery Monitor Systems as batteries
+* cpuidle: lpm-levels: Remove debug event logging
+* block: disable I/O stats accounting by default
+* drm/msm/sde: Remove register write debug logging
+* Add support for input cpu boosting. (#32)
+* strix: Regenerate and save
+* devfreq_boost: Run boost kthreads on big CPU cluster
+* arm64: dts: sm8150: Force GPU idle timeout to 58 ms
+* arm64: dts: sm8150: Add full CPU frequency tables
+* simple_lmk: Run reclaim kthread on big CPU cluster
+* cpu_input_boost: Mark boost kthread as performance critical
+* disp: msm: Affine important kthreads to the prime CPU cluster
+* drm: Affine IRQ to the prime CPU cluster
+* msm: kgsl: Affine IRQ and worker kthread to the big CPU cluster
+* cpu_input_boost: Rework display state awareness logic for OnePlus 7 devices
+* cpu_input_boost: Ensure proper policy updates for prime cluster
+* cpu_input_boost: Allow configuration of each cluster's minimum idle frequency
+* cpu_input_boost: Allow configuration of each cluster's minimum frequency
+* cpu_input_boost: Expose compile-time settings as module parameters
+* cpu_input_boost: Update SCREEN_AWAKE bit conditional
+* cpu_input_boost: Allow configuration of sm8150's prime cluster
+* cpu_input_boost: Introduce driver for event-based CPU boosting
+* Allow setting schedutil up rate and down rate (#31)
+* cpufreq: task_is_booster -> task_is_zygote
+* cpufreq: schedutil: fix check for stale utilization values
+* cpufreq: schedutil: Expose default configuration options and apply init protection
+* cpufreq: schedutil: Don't skip freq update when limits change
+* cpufreq: schedutil: clear cached_raw_freq when invalidated
+* cpufreq: schedutil: Don't set next_freq to UINT_MAX
+* cpufreq: schedutil: Fix iowait boost reset
+* FROMLIST: sched: Make iowait_boost optional in schedutil
+* Allow setting minimum frequency for schedutil (#28)
+* Various code improvements ( #29 )
+* Allow setting and using dev freq for boosting custom events  (#30)
+* fixup: pass correct parameters for kcalloc
+* defconfig: Set min freqs for CPU
+* cpu_min_freq: Simple driver allowing to set per cluster minimum frequency when screen is on.
+* treewide: Use array_size() in sock_kmalloc()
+* treewide: Use array_size() in vzalloc_node()
+* treewide: Use array_size() in vzalloc()
+* treewide: Use array_size() in vmalloc()
+* treewide: devm_kzalloc() -> devm_kcalloc()
+* treewide: devm_kmalloc() -> devm_kmalloc_array()
+* treewide: kvzalloc() -> kvcalloc()
+* treewide: kvmalloc() -> kvmalloc_array()
+* treewide: kzalloc_node() -> kcalloc_node()
+* treewide: kzalloc() -> kcalloc()
+* treewide: kmalloc() -> kmalloc_array()
+* treewide: Use struct_size() for devm_kmalloc() and friends
+* treewide: Use struct_size() for vmalloc()-family
+* treewide: Use struct_size() for kmalloc()-family
+* UPSTREAM: device: Use overflow helpers for devm_kmalloc()
+* BACKPORT: mm: Use overflow helpers in kvmalloc()
+* UPSTREAM: mm: Use overflow helpers in kmalloc_array*()
+* UPSTREAM: Convert v4l2 event to struct_size
+* UPSTREAM: Convert virtio_console to struct_size
+* scatterlist: Don't allocate sg lists using __get_free_page
+* UPSTREAM: include/linux/slab.h: add kmalloc_array_node() and kcalloc_node()
+* adreno_tz: Fix GPU target frequency calculation for high refresh rates
+* PM / devfreq: Make the monitor workqueue high priority
+* drm_atomic: disable frame commit boosts on AOD
+* defconfig: Enable devfreq boost
+* devfreq_boost: Rework display state awareness logic for OnePlus 7 devices
+* kernel: Boost DDR bus for a short amount of time when zygote forks
+* drm: Boost DDR bus upon running an atomic ioctl
+* devfreq: Introduce devfreq boost driver
+* Add cpumasks for big, LITTLE, and prime CPU clusters (#27)
+* Change thermal from user_space to step_wise (#26)
+* Various spinlock related improvements (#25)
+* Enable simple LMK and switch to it (#24)
+* tty: Fixed regression in irq
+* strix: Regenerate and save
+* defconfig: Enable CONFIG_EXFAT_FS
+* Exfat drivers support for the kernel (#23)
+* Switch to a much more efficiant work queues (#22)
+* Allow changing vibration strength in userspace (#21)
+* Fod specific changes for A12 (#20)
+* kernel: Add tri-cluster API to affine IRQs and kthreads to fast CPUs
+* defconfig: Set cpu mask
+* cpumask: Add cpumasks for big, LITTLE, and prime CPU clusters
+* thermal: msm_lmh_dcvs: fix a lockdep splat
+* thermal: core: Skip update disabled thermal zones after suspend
+* thermal: Return zero on success for qmi_tmd_send_state_request
+* thermal: step_wise: Clear mitigation on reaching clear threshold
+* thermal: step_wise: Optimize mitigation evaluation
+* thermal: step_wise: Handle the temperature stable trend
+* drivers: thermal: Don't qualify thermal polling as high priority
+* arm64: dts: Switch to `step_wise` thermal governor
+* locking/mcs: Use smp_cond_load_acquire() in MCS spin loop
+* arm64: locking: Replace ticket lock implementation with qspinlock
+* strix: Regenerate and save
+* locking/mutex: Optimize __mutex_trylock_fast()
+* locking/rwsem: Implement a new locking scheme
+* locking/rwsem: Remove rwsem_wake() wakeup optimization
+* locking/rwsem: Prevent unneeded warning during locking selftest
+* locking/rwsem: Optimize rwsem structure for uncontended lock acquisition
+* locking/rwsem: Enhance DEBUG_RWSEMS_WARN_ON() macro
+* locking/rwsem: Add debug check for __down_read*()
+* locking/rwsem: Micro-optimize rwsem_try_read_lock_unqueued()
+* locking/rwsem: Move rwsem internal function declarations to rwsem-xadd.h
+* locking/rwsem: Move owner setting code from rwsem.c to rwsem.h
+* locking/rwsem: Relocate rwsem_down_read_failed()
+* locking/rwsem: Optimize down_read_trylock()
+* locking/rwsem: Remove rwsem-spinlock.c & use rwsem-xadd.c for all archs
+* locking/rwsem: Exit read lock slowpath if queue empty & no writer
+* locking/rwsem: Remove arch specific rwsem files
+* locking/rwsem: Make owner store task pointer of last owning reader
+* locking/rwsem: Fix up_read_non_owner() warning with DEBUG_RWSEMS
+* locking/atomics: Explicitly include CONFIGs for atomic64_t type
+* locking/rwsem: Add DEBUG_RWSEMS to look for lock/unlock mismatches
+* locking/rwsem: Add down_read_killable()
+* preempt: Move PREEMPT_NEED_RESCHED definition into arch code
+* arm64: cmpxchg: Include linux/compiler.h in asm/cmpxchg.h
+* arm64: move percpu cmpxchg implementation from cmpxchg.h to percpu.h
+* arm64: Implement thread_struct whitelist for hardened usercopy
+* locking/atomics/arm64: Replace our atomic/lock bitop implementations with asm-generic
+* locking/atomics, asm-generic/bitops/lock.h: Rewrite using atomic_fetch_*()
+* locking/atomics, asm-generic/bitops/atomic.h: Rewrite using atomic_*() APIs
+* arm64: cmpxchg: Include build_bug.h instead of bug.h for BUILD_BUG
+* arm64: preempt: Provide our own implementation of asm/preempt.h
+* locking/spinlocks: Remove an instruction from spin and write locks
+* locking/spinlocks: Clean up comment and #ifndef for {,queued_}spin_is_locked()
+* locking/qspinlock: Use smp_store_release() in queued_spin_unlock()
+* defconfig: Update for spinlock
+* locking/qspinlock: Use atomic_cond_read_relaxed() for slowpath spinning
+* locking/qspinlock: Remove unnecessary BUG_ON() call
+* locking/qspinlock_stat: Track the no MCS node available case
+* locking/qspinlock: Handle > 4 slowpath nesting levels
+* locking/pvqspinlock: Extend node size when pvqspinlock is configured
+* locking/qspinlock_stat: Count instances of nested lock slowpaths
+* locking/qspinlock, x86: Provide liveness guarantee
+* locking/qspinlock: Rework some comments
+* locking/qspinlock: Re-order code
+* locking/qspinlock: Add stat tracking for pending vs. slowpath
+* locking/qspinlock: Use try_cmpxchg() instead of cmpxchg() when locking
+* locking/qspinlock: Elide back-to-back RELEASE operations with smp_wmb()
+* locking/qspinlock: Use smp_cond_load_relaxed() to wait for next node
+* locking/qspinlock: Use atomic_cond_read_acquire()
+* locking/barriers: Introduce smp_cond_load_relaxed() and atomic_cond_read_relaxed()
+* Revert "locking/qspinlock: Re-order code"
+* Revert "locking/qspinlock, x86: Provide liveness guarantee"
+* BACKPORT: arm64: locking: Replace ticket lock implementation with qspinlock
+* locking/spinlocks/arm64: Remove smp_mb() from arch_spin_is_locked()
+* arm64: barrier: Implement smp_cond_load_relaxed
+* locking/arch: Remove dummy arch_{read,spin,write}_lock_flags() implementations
+* locking/arch: Remove dummy arch_{read,spin,write}_relax() implementations
+* arm64: lse: Include compiler_types.h and export.h for out-of-line LL/SC
+* locking/atomics/arm64, arm64/bitops: Include <asm-generic/bitops/ext2-atomic-setbit.h>
+* locking/osq: Use optimized spinning loop for arm64
+* strix: Regenerate and save
+* simple_lmk: Thaw victims upon killing them
+* simple_lmk: Make the reclaim thread freezable
+* simple_lmk: Be extra paranoid if tasks can have no pages
+* mm: Increment kswapd_waiters for throttled direct reclaimers
+* buffer: eliminate the need to call free_more_memory() in __getblk_slow()
+* buffer: grow_dev_page() should use __GFP_NOFAIL for all cases
+* buffer: have alloc_page_buffers() use __GFP_NOFAIL
+* mm: vmpressure: Fix rampant inaccuracies caused by stale data usage
+* mm: vmpressure: Fix a race that would erroneously clear accumulated data
+* mm: vmpressure: Ignore costly-order allocations for direct reclaim too
+* simple_lmk: Optimize victim finder to eliminate hard-coded adj ranges
+* simple_lmk: Cacheline-align the victims array and mm_free_lock on SMP
+* simple_lmk: Pass a custom swap function to sort()
+* simple_lmk: Skip victim reduction when all victims need to be killed
+* simple_lmk: Use MIN_FREE_PAGES wherever pages_needed is used
+* simple_lmk: Don't block in simple_lmk_mm_freed() on mm_free_lock
+* mm: vmpressure: Don't export tunables to userspace
+* simple_lmk: Update Kconfig description for VM pressure change
+* simple_lmk: Add !PSI dependency
+* simple_lmk: Print a message when the timeout is reached
+* VFS: use synchronize_rcu_expedited() in namespace_unlock()
+* simple_lmk: Remove unnecessary clean-up when timeout is reached
+* simple_lmk: Hold an RCU read lock instead of the tasklist read lock
+* mm: Don't stop kswapd on a per-node basis when there are no waiters
+* simple_lmk: Consider all positive adjs when finding victims
+* mm: vmpressure: Ignore allocation orders above PAGE_ALLOC_COSTLY_ORDER
+* mm: Don't warn on page allocation failures for OOM-killed processes
+* mm: Adjust tsk_is_oom_victim() for Simple LMK
+* mm: vmpressure: Don't cache the window size
+* mm: vmpressure: Interpret zero scanned pages as 100% pressure
+* mm: vmpressure: Don't exclude any allocation types
+* simple_lmk: Update adj targeting for Android 10
+* simple_lmk: Use vmpressure notifier to trigger kills
+* mm: Stop kswapd early when nothing's waiting for it to free pages
+* simple_lmk: Include swap memory usage in the size of victims
+* simple_lmk: Relax memory barriers and clean up some styling
+* simple_lmk: Place victims onto SCHED_RR
+* simple_lmk: Add a timeout to stop waiting for victims to die
+* simple_lmk: Ignore tasks that won't free memory
+* simple_lmk: Simplify tricks used to speed up the death process
+* simple_lmk: Report mm as freed as soon as exit_mmap() finishes
+* simple_lmk: Mark victim thread group with TIF_MEMDIE
+* simple_lmk: Disable OOM killer when Simple LMK is enabled
+* simple_lmk: Print a message when there are no processes to kill
+* simple_lmk: Remove compat cruft not specific to 4.14
+* simple_lmk: Update copyright to 2020
+* simple_lmk: Don't queue up new reclaim requests during reclaim
+* simple_lmk: Increase default minfree value
+* simple_lmk: Clean up some code style nitpicks
+* simple_lmk: Make reclaim deterministic
+* simple_lmk: Fix broken multicopy atomicity for victims_to_kill
+* simple_lmk: Use proper atomic_* operations where needed
+* simple_lmk: Remove kthread_should_stop() exit condition
+* simple_lmk: Fix pages_found calculation
+* simple_lmk: Introduce Simple Low Memory Killer for Android
+* Revert "RTIC: Move selinux_state to a separate 4k"
+* Revert "selinux: Relocate ss_initialized and selinux_enforcing to separate 4k"
+* fixup! aw8697: Do not allow levels above 3
+* aw8697: add haptic level adjustment
+* drm: msm: sde: Translate zpos property to cust property
+* drm/sde: add some bp hints to hot paths
+* drm: Allow hooking dim when screen goes on
+* drm: Expose power status to userspace
+* drm: Implement panel status check
+* drm: Handle dim for udfps
+* drm/msm: Silence more logspam
+* drm/msm/sde_crtc: Use generated alpha value
+* drm/sde: fix fod for hdb with udfps
+* drm: msm: Refactor fod dimming
+* drm: msm: Rework PLANE_PROP_ALPHA handling
+* gpu: drm: Use power efficient workingqueues
+* wcnss_wlan: queue work on power efficient workingqueues
+* kernel: use power efficient workingqueues
+* msm: msm_bus: Kill transaction logging functionality
+* gpu: msm: Disable adreno driver logging
+* power: supply: Use power efficient workingqueues
+* mm: vmstat: Use more power efficient workingqueues
+* platform: ipa: Use power efficient workingqueues
+* thermal_core: Use power efficient workqueue
+* dragonheart_defconfig: Enable PowerEfficient WQs
+* drm/msm: Fix issues with `__crc_gsi_write_channel_scratch`
+* defconfig: Enable CONFIG_UNICODE
+* oneplus_drv8834: cleanup unused mdmmode
+* drivers/vservices/session: Drop unused transport var
+* drm/msm/dsi-staging: get rid of OnePlus' expensive strcmp() calls
+* sde_crtc: Don't allocate memory dynamically in sde_crtc_atomic_check()
+* arm64: dts: Drop samsung_oneplus_dsc 1080p timings
+* power: smb5-lib: Prevent USB switching when PD is active
+* power: smb5: Hardcode current max to 3000000 when DASH charging
+* ext4: Remove additional tracings added by CAF
+* goodix_fp: get rid of gf_irq_num()
+* goodix_fp: Cleanup & rewire driver for better performance
+* fingerprint: goodix: Compile out navigation function
+* strix: Regenerate and save
+* input: touchscreen: Expose every possible gesture
+* Add rewritten op_touchscreen driver
+* Revert "drivers/input/oneplus_touchscreen: Import OEM changes"
+* kernel: Use the stock sm8150-perf config for /proc/config.gz
+* strix: Regenerate and save
+* defconfig: Drop unused configs
+* treewide/oneplus: massive code removal
+* aw8697: Silence verbose haptics logging
+* treewide/oneplus: fix build without healthinfo/coretech features
+* selinux: don't require auditing
+* selinux: Remove audit dependency
+* trace: Add CONFIG_DISABLE_TRACE_PRINTK option
+* scripts: Don't append "+" to localversion
+* scripts: Refactor & trim kernel version logic
+* dtc: Silence warnings
+* dragonheart_defconfig: enable `CONFIG_ONEPLUS`
+* arm64: Build only oneplus dtbo
+* Makefile: Build techpack
+* defconfig: Allow compressing the built image
+* defconfig: Append DTB to Image
+* defconfig: Expand USB HID game controller support
+* defconfig: Enable CONFIG_LOCALVERSION_AUTO
+* defconfig: Enable QCACLD
+* defconfig: Enable RmNet modules
+* strix: Regenerate and save
+* Revert "DNM: Drop exfat"
+* BACKPORT: exfat: check if cluster num is valid
+* BACKPORT: exfat: reduce block requests when zeroing a cluster
+* BACKPORT: fs: Introduce `sync_blockdev_range()`
+* BACKPORT: exfat: introduce mount option 'sys_tz'
+* BACKPORT: exfat: fix referencing wrong parent directory information after renaming
+* BACKPORT: exfat: do not clear VolumeDirty in writeback
+* BACKPORT: exfat: allow access to paths with trailing dots
+* BACKPORT: exfat: fix missing REQ_SYNC in exfat_update_bhs()
+* BACKPORT: exfat: remove argument 'sector' from exfat_get_dentry()
+* BACKPORT: exfat: move super block magic number to magic.h
+* BACKPORT: exfat: fix i_blocks for files truncated over 4 GiB
+* BACKPORT: exfat: reuse exfat_inode_info variable instead of calling EXFAT_I()
+* BACKPORT: exfat: make exfat_find_location() static
+* BACKPORT: exfat: fix typos in comments
+* BACKPORT: exfat: simplify is_valid_cluster()
+* BACKPORT: exfat: fix incorrect loading of i_blocks for large files
+* BACKPORT: exfat: handle wrong stream entry size in exfat_readdir()
+* BACKPORT: exfat: avoid incorrectly releasing for root inode
+* BACKPORT: exfat: speed up iterate/lookup by fixing start point of traversing cluster chain
+* BACKPORT: exfat: improve write performance when dirsync enabled
+* BACKPORT: exfat: add support ioctl and FITRIM function
+* BACKPORT: exfat: introduce bitmap_lock for cluster bitmap access
+* BACKPORT: exfat: fix erroneous discard when clear cluster bit
+* BACKPORT: exfat: improve performance of exfat_free_cluster when using dirsync mount option
+* BACKPORT: exfat: fix shift-out-of-bounds in exfat_fill_super()
+* BACKPORT: exfat: Avoid allocating upcase table using kcalloc()
+* BACKPORT: exfat: remove useless check in exfat_move_file()
+* BACKPORT: exfat: remove 'rwoffset' in exfat_inode_info
+* BACKPORT: exfat: replace memcpy with structure assignment
+* BACKPORT: exfat: remove useless directory scan in exfat_add_entry()
+* BACKPORT: exfat: eliminate dead code in exfat_find()
+* BACKPORT: exfat: use i_blocksize() to get blocksize
+* BACKPORT: exfat: fix misspellings using codespell tool
+* BACKPORT: exfat: fix use of uninitialized spinlock on error path
+* BACKPORT: exfat: fix pointer error checking
+* BACKPORT: [PATCH] reduce boilerplate in fsid handling
+* BACKPORT: exfat: retain 'VolumeFlags' properly
+* BACKPORT: exfat: optimize exfat_zeroed_cluster()
+* BACKPORT: exfat: add error check when updating dir-entries
+* BACKPORT: exfat: write multiple sectors at once
+* BACKPORT: exfat: remove EXFAT_SB_DIRTY flag
+* BACKPORT: exfat: fix name_hash computation on big endian systems
+* BACKPORT: exfat: fix wrong size update of stream entry by typo
+* BACKPORT: exfat: fix wrong hint_stat initialization in exfat_find_dir_entry()
+* BACKPORT: exfat: fix overflow issue in exfat_cluster_to_sector()
+* fs/exfat: Import OEM changes
+* mm: Introduce kvcalloc()
+* DNM: Drop exfat
+* scripts/dtc: Update to upstream version v1.4.6-21-g84e414b0b5bc
+* dtc: checks: drop warning for missing PCI bridge bus-range
+* scripts/dtc: Update to upstream version v1.4.6-9-gaadd0b65c987
+* scripts/dtc: Update to upstream version v1.4.5-6-gc1e55a5513e9
+* scripts/dtc: Update to upstream version v1.4.5-3-gb1a60033c110
+* scripts/dtc: add fdt_overlay.c and fdt_addresses.c to sync script
+* qcacld-3.0: Remove forced -Werror
+* qcacld-3.0: Do not allow any wakelocks to be held
+* drivers: staging: qca-wifi-host-cmn: Queue delayed work on power efficient workqueues
+* qcacld-3.0: Disable debugging bloat as much as possible
+* qcacld-3.0: Check if auth_tag_len exceeds sizeof(hash)
+* qcacld-3.0: Free a bunch of pkts at once
+* qcacld-3.0: default_defconfig: Disable WLAN_POWER_DEBUG
+* qcacld-3.0: disable stats dump when !WLAN_DEBUG
+* qcacld-3.0: default_defconfig: Disable WLAN loggings
+* qcacld: always force user build
+* qcacld-3.0: Reverse fw-provided mac addr
+* qcacld-3.0: Disable build tagging.
+* qcacld-3.0: Only call hdd_debugfs_process_mib_stats if debugfs is enabled.
+* qcacld-3.0: default_defconfig: Tone down debugging.
+* qcacld-3.0: Fix regulatory domain country names.
+* qcacld-3.0: Nuke rx_wakelock code entirely.
+* qcacld-3.0: Defer HDD initialization.
+* qcacld-3.0: Discard wlan_boot sysfs code on !CONFIG_MODULES.
+* qcacld-3.0: Initialize variables to avoid errors during compilation.
+* qcacld-3.0: Do not manually re-enable -Wmaybe-uninitialized.
+* qcacld-3.0: Always force user build.
+* qcacld: nuke Kconfig-based configuration entirely
+* drivers: staging: Include qcacld-3.0 source
+* techpack: data: Drop Android.mk inclusion
+* techpack: Drop Android.mk
+* techpack: rmnet_shs: Fix CFI violation in packet assignment
+* techpack: rmnet_perf: Fix CFI violation in packet deaggregation
+* techpack: build rmnet extensions
+* techpack: audio: Remove redundant -Werror flags
+* techpack: audio: Silence useless log spam
+* techpack: audio: Do not export all the variables
+* techpack/audio: tfa9894: Disable timestamp injection
+* techpack: audio: Remove build timestamps
+* techpack: explicitly initialize hdr
+* techpack: minor clean-up
+* techpack: Hardcode modules list
+* ASoC: sm8150: Split sa8155 driver into separate config option
+* techpack/pinctrl-lpi: initialise at late_initcall
+* techpack: remove .gitignore
+* techpack: audio: Build modules inside kernel
+* Set correct techpack header install directory
+* techpack: audio: Build tfa9894
+* techpack: audio: Fix elliptic path
+* techpack: audio: Correct symlinks
+* Makefile: Drop dynamic build for oneplus specific KBUILD
+* techpack/audio: Add 'techpack/audio/' from commit '0d67fbe1f0d0d7ddc27452073c45a7915b7ab6cb'
+* techpack/audio: Import tfa9894 and elliptic driver
+* mm: Import OEM changes
+* include: Import OEM changes
+* fs/proc: Import OEM changes
+* drivers/vm_fragment_monitor: Import OEM changes
+* drivers/vibrator: Import OEM changes
+* drivers/tri_state_key: Import OEM changes
+* drivers/step_motor: Import OEM changes
+* drivers/param_read_write: Import OEM changes
+* drivers/oneplus: Import OEM changes
+* drivers/oem_debug: Import OEM changes
+* drivers/input/oneplus_touchscreen: Import OEM changes
+* drivers/input/fingerprint: Import OEM changes
+* drivers/infrared_proximity: Import OEM changes
+* coretech/uxchain: Import OEM changes
+* coretech/im: Import OEM changes
+* treewide: Drop CONFIG_TPD
+* strix: Import OEM changes
+* opslalib: Import OEM changes
+* net: Import OEM changes
+* mm: Import OEM changes
+* lib: Import OEM changes
+* kernel: Import OEM changes
+* init: Import OEM changes
+* include: Import OEM changes
+* include/oneplus: Import OEM changes
+* include/linux: Import OEM changes
+* fs: Import OEM changes
+* drivers: Import OEM changes
+* drivers/thermal: Import OEM changes
+* drivers/soc: Import OEM changes
+* drivers/power: Import OEM changes
+* drivers/platform: Import OEM changes
+* drivers/nfc: Import OEM changes
+* drivers/misc: Import OEM changes
+* drivers/media/platform/msm: Import camera stack from OEM
+* drivers/leds: Import OEM changes
+* drivers/irqchip: Import OEM changes
+* drivers/input: Import OEM changes
+* drivers/iio: Import OEM changes
+* drivers/gpu: Import OEM changes
+* drivers/firmware: Import OEM changes
+* drivers/esoc: Import OEM changes
+* drivers/devfreq: Import OEM changes
+* drivers/cpuidle: Import OEM changes
+* drivers/cpufreq: Import OEM changes
+* drivers/clk: Import OEM changes
+* drivers/char: Import OEM changes
+* drivers/bus: Import OEM changes
+* drivers/base: Import OEM changes
+* drivers/android: Import OEM changes
+* block: Import OEM changes
+* coretech: Import OEM changes
+* coretech/uxcore: Import OEM changes
+* coretech/tpd: Import OEM changes
+* coretech/smartboost: Import OEM changes
+* coretech/memplus: Import OEM changes
+* coretech/defrag: Import OEM changes
+* arch: Import OEM changes
+* arch/arm64/boot: Import dtsi from OEM
+
+device/oneplus/common
+
+vendor/oneplus/sm8150-common
+
+android/hardware/qcom/display
+* sdm: mark FOD pressed layer by setting a bit on ZPOS
+
+android/hardware/qcom/audio
+
+vendor/oneplus/oneplus7
