@@ -1,27 +1,3 @@
-Source side changes:
-* Fixed system bars visibility in updater and gamespace.
-* Fixed media actions button border not being visible without background artwork.
-* Aligned song and artist name text in media notification.
-* Fixed wrong colors in app error dialog button text.
-* New wallpaper.
-* Added sim toolkit back.
-* Blacklisted CneApp from location privacy indicators.
-* Added missing settings overlays for oos icon pack.
-* Synced with upstream gmscompat patches. 
-* Fixed alarm icon visibility in status bar.
-* Fixed inactive volume rows color in light theme.
-* Fixed auto update check in updater.
-* Fixed Updater showing up for admin and work profile.
-* Added option to hide privacy indicators while gaming.
-* Updated translations. 
-
-Device side:
-
-* Updated blobs from 11.0.9.1
-* Add OOSCam
-* Fixed DeviceSettings showing up for both admin and work profile. Also fixed touchscreen gestures not working when using work profile.
-* Fixed certain touchscreen gestures not performing their actions while device is dozing.
-
 Source side changes
 
 vendor/flamingo
