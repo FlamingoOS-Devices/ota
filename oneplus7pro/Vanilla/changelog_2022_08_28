@@ -1,0 +1,352 @@
+Source side changes
+
+vendor/flamingo
+* vendor: Add CUSTOM_SECURITY_PATCH prop
+* flamingo: Bump version to 1.1
+* fix: path of gen_manifest script
+* overlay: vanilla: enable non interactive long press power gestures
+* fix: update ota download url
+* vendor: soong: Add target_alternative_futex_waiters
+* vendor: soong: Fix derps in https://github.com/Flamingo-OS/vendor_flamingo/commit/f145853eb359c52c111d244f52260857531aa76e https://github.com/Flamingo-OS/vendor_flamingo/commit/b862e5debab8bd39835204b8c7068e7b61f06c32
+
+build/make
+* core: Downgrade spl to 5th july
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+* Merge e0ca6dc1418e3a6008281c48518808a3ca934a25 on remote branch
+* Merge tag 'LA.QSSI.12.0.r1-08600-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+* Merge a027f10dbdb2e5e7ee3e85dbc516cfb2571a13d0 on remote branch
+* Merge tag 'LA.QSSI.12.0.r1-08500-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+
+build/soong
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/build/soong into HEAD
+* Merge 7cb85d61f86ca7cde7ed78b45e88fd085f71ef77 on remote branch
+
+manifest
+* system: Track more packages from clo
+* manifest: Update to refs/tags/LA.QSSI.12.0.r1-08700-qssi.0
+* manifest: Update to refs/tags/LA.QSSI.12.0.r1-08600-qssi.0
+* manifest: fix derp
+* manifest: track external/tinyxml from aosp revision `android-11.0.0_r46`
+* flamingo: track `vendor/qcom/opensource/commonsys/packages/apps/Bluetooth` from our org
+* manifest: Update to refs/tags/LA.QSSI.12.0.r1-08500-qssi.0
+
+hardware/libhardware
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/libhardware into HEAD
+* Merge 17997de5b63944fb772ba513c0e1fb41f773eb45 on remote branch
+
+frameworks/base
+* [RESTRICT AUTOMERGE]DisplayManager: Make sure RampAnimator sets property in linear space.
+* Use exact brightnesses values for comparison.
+* PixelPropsUtils: Update raven fingerprint
+* DeviceInfoUtils: Read security patch from ro.flamingo.build_security_patch
+* dynsystem: Fix memory leak
+* DSU service: Log insufficient storage space error
+* DSU service: Pipeline the installation task to improve performance
+* DSU service: Show which partition is being installed in notification
+* DSU service: Weighted progress bar
+* dynsystem.SparseInputStream: Implement read(buf, off, len)
+* dynsystem: Enlarge default shared memory size and allow size override
+* DSU installation service: Add event log tags
+* Fix unwanted sign-extention when converting byte -> int
+* DSU: Only try to install on sdcard if the filesystem in use is vfat
+* Keyguard: allow large clock on tablets
+* Keyguard: don't use large clock on landscape
+* SystemUI: update smartspace for qpr3
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into A12.1
+* AuthService: Add support for workaround side fps props
+* Merge 48fbc7fb4aae5ddb2d9f537813fdf78785577c76 on remote branch
+* SystemUI: NetworkTrafficMonitor: use a single mutex
+* SettingsProvider: validate and backup combined signal icons settings
+* SystemUI: PrivacyItemController: register settings observer for all users and update on user change
+* SystemUI: StatusBarIconControllerImpl: reload settings on user switch
+* SystemUI: MobileSignalController: register 4G icon settings observer for all users
+* SystemUI: BatteryMeterViewController: register settings observer for all users and reload settings on user change
+* SystemUI: refactor network traffic monitor and reload settings on user switch
+* SystemUI: GameSpaceServiceDelegate: reload settings on user switch
+* SystemUI: edgelight: use io thread for reading settings and reload settings on user change
+* SystemUI: inject CoroutineScope
+* services: PhoneWindowManager: use proper userhandle when acquiring torch gesture setting
+* SystemUI: Update Chinese translations (#10)
+* base: relocate alertslider ui and configs to device repo
+* DeviceKeyManager: do not clear keyhandlers on user switch
+* SystemUI: FPSInfoService: extend LifecycleService and fix overlay not being visible in secondary user
+* SystemUI: tiles: set proper long click intent for livedisplay tiles
+* DeviceKeyManager: update docs and allow unregistering keyhandlers
+* base: drop setting keys for ts haptic feedback and alertslider
+* base: alertslider: shift priority mode order and fix dialog
+* Merge tag 'LA.QSSI.12.0.r1-08500-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into HEAD
+* base: define enums for alert slider modes and positions
+* base: service based device key handler implementation
+* SystemUI: AmbientDisplayTile: fix state in secondary users and cleanup
+
+packages/apps/ThemePicker
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/ThemePicker into HEAD
+* Merge ae6f79279e6a18cad729fdc8985fc04b89064691 on remote branch
+
+vendor/qcom/opensource/commonsys-intf/display
+* Merge tag 'LA.QSSI.12.0.r1-08500-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/display-commonsys-intf into HEAD
+
+vendor/qcom/opensource/power
+* power: added powerhint.xml for neo target
+* power : add powerhint file for parrot target
+* power: correct the copyright on powerhint.xml
+* power: Add powerhint for PSM light/medium/deep mode
+* Power : LLCC capped to 933Mhz for camera
+* Revert "Power: Revised tunings for camera open/close"
+* power: Add powerhint.xml for Kailua
+* Modified powerhint tunings for diwali
+* Diwali : Revised tunings for camera
+* Power: Modify power hal tunings for cape target
+* Diwali : Revised tunings for Camera HFR
+* Revised tunings for diwali
+* power: Modify power hal tunings for cape/taro/diwali target
+* Power : Modified powerhint for diwali
+* power: Modify power hal tunings for cape target
+* [Power]: Added powerhint changes for Fillmore
+* [Power]: Added powerhint changes for Fillmore
+* power: Add poweR hal tunings for cape target
+* Power : Add tunings for HWDecode cases.
+* Power: Disable Core Control for Camera Cases
+* [Waipio]: Update the Bus DCVS Opcodes for Camera Cases
+* [Waipio] Update CPU and DDR settimgs for camera cases
+
+vendor/codeaurora/commonsys/telephony
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/codeaurora/telephony into HEAD
+* Merge ece108d9c0a6d35542f4193267b5fd5de3bd2589 on remote branch
+
+packages/services/Telecomm
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/services/Telecomm into HEAD
+* Merge 9f9e2cf01c09c359cdf31a3b5ea8d03ab1656583 on remote branch
+
+device/flamingo/sepolicy
+* common: define service context for device key manager service
+* common: address some selinux denials
+
+frameworks/native
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+* Merge a736de747c060a2c28d6b2e34d6ae7b34e57f2c6 on remote branch
+
+system/core
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/core into HEAD
+* Merge 532a15715323a07c66f039e93eb8f313562cc697 on remote branch
+* Merge tag 'LA.QSSI.12.0.r1-08500-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/core into HEAD
+
+system/sepolicy
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/sepolicy into HEAD
+* Merge 84e30b00a2c9ebb794d956535cb4491399c666e7 on remote branch
+
+packages/apps/Settings
+* Settings: nuke statusbar vibrate icon control
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+* Settings: fix russian translations
+* Settings: Add Russian translation and fix translation origin strings.xml (#4)
+* Merge 27e440c4a52c76a83b44dd441f1335696ff4ada6 on remote branch
+* Settings: use proper userhandle when applying torch gesture setting
+* Settings: add Preference entries for flamingo settings and swipe gesture
+
+bootable/recovery
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/bootable/recovery into HEAD
+* Merge a5c67fa1dc8fa2edebbe329a23ba1a78be387ac7 on remote branch
+
+packages/modules/adb
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/adb into HEAD
+* Merge 839b2e08405da11e5f81e3cbb9b8516bd1209ef4 on remote branch
+
+bionic
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/bionic into HEAD
+* Merge 4c7af761e8f338fc39327f1de2eab513d1a51f7a on remote branch
+* libc: arm64: optimize memcpy
+* libc: arm64: add integer memcpy/memmove from arm-optimized-routines
+* Don't even try to allocate 2GiB on LP32.
+* Fix old python2 test issue.
+* Always free after getline().
+* Simplify the implementation of get_nproc().
+* fread: cope with >2GiB totals.
+* Adjust the calculation method of pc
+* Rewrite function definitions with identifier lists
+* Sync libm with upstream freebsd.
+* Switch to the more common idiom for scripts in genrules.
+* seccomp: allow stat() for ubsan.
+* Mangle the pointers stored in PointerData.
+* Remove unnecessary static variable.
+* Remove unused function.
+* Fix it to call the lambda function
+* Remove the KSM hack in mmap().
+* libc: Add TARGET_ALTERNATIVE_FUTEX_WAITERS
+
+packages/apps/FlamingoSettings
+* FlamingoSettings: Add Russian translation (#6)
+* FlamingoSettings: enable combined signal icons setting for all users
+* FlamingoSettings: enable location privacy indicator by default
+* FlamingoSettingsActivity: add flamingo settings and swipe gestures via preference
+
+packages/modules/Permission
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Permission into HEAD
+* Merge 29bd2cb258cc7beccb3799262c59bb043c181c8f on remote branch
+
+frameworks/av
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+* Merge e77848da21af12097b06232843b3e860780878ba on remote branch
+* Merge tag 'LA.QSSI.12.0.r1-08600-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+* Merge 6e31543233619693bb5ab44b9ec7233704ec8a6f on remote branch
+* (FixUp)libcameraservice: add TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB (#2)
+
+vendor/support
+* compose: allow specifying a userhandle for binding service
+* compose: upgrade dependencies
+
+packages/apps/MatlogX
+* MatlogX: Update Russian translation (#4)
+* MatlogX: upgrade dependencies
+
+packages/apps/Launcher3
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Launcher3 into HEAD
+* Merge 8b03eb480f1722ddb21b093602a3393ed337bf86 on remote branch
+
+packages/apps/Updater
+* UpdateChecker: don't use >= for comparing build dates
+* Updater: Update Chinese translations (#7)
+* Updater: Update Chinese translations (#6)
+* SettingsScreen: hide auto reboot delay preference if auto reboot is disabled
+* Updater: launch other components with proper userhandle
+* UpdateInstallerService: use default dispatcher for timer coroutines and reboot on loop termination
+* Updater: Update Russian translation (#5)
+* UpdateInstallerService: add a delay of 1s between each iteration of timer loop
+* Updater: set max priority for update finished / failed notifications
+* SettingsScreen: use integerArrayResource for delay values array
+* Updater: allow auto rebooting after update
+* Updater: upgrade dependencies
+* Updater: Update Chinese translations (#4)
+* Updater: handle zip file VIEW intents for local upgrade
+
+packages/providers/DownloadProvider
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/providers/DownloadProvider into HEAD
+* Merge aabb8f2ba4bc358e9f16c6983d41f3a8a03b667f on remote branch
+
+vendor/qcom/opensource/commonsys-intf/bluetooth
+* Merge tag 'LA.QSSI.12.0.r1-08500-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/bluetooth-commonsys-intf into HEAD
+
+device/qcom/common
+* system: update to LA.QSSI.12.0.r1-08300-qssi.0
+* common: Automatically add apk/jar/vintf fragments to PRODUCT_PACKAGES
+* bt: Remove guards for FM interface
+* common: Add initial support for 5.10 targets
+* bt: Build common packages
+* Revert "system: display: drop unused libtinyxml"
+* bt: Disable BT A2DP AAC whitelist
+* gps: Define backup NTP server property
+* common: Build vndservicemanager
+* audio: Build Qualcomm common audio overlay
+* perf: yupik: Use max frequency for main 2 second app launch boost
+* perf: Do not allow restricted tasks to run on big cores
+* vendor: init: Stop all qcrilds on APQ target
+* system: permissions: Remove com.qualcomm.qti.presenceappSub2 from whitelist
+
+packages/apps/GameSpace
+* GameSpace: upgrade dependencies
+* GameMoveOverlayManager: set more private flags
+* GameModeOverlayManager: add flags to show overlay in all user's windows
+* GameSpace: enable ringer mode tile for all
+
+packages/apps/EmergencyInfo
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/EmergencyInfo into HEAD
+* Merge 82bbdacf2374f979d1bdf03f90530c31a16c65c5 on remote branch
+
+packages/modules/Connectivity
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Connectivity into HEAD
+* Merge 6b41fa2a4fc7ce3de4ddecd5e1a8236c69ffd43b on remote branch
+
+packages/modules/Wifi
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Wifi into HEAD
+* Merge 6c3dd286cea3a64d8a94e08946892ae855aa72ba on remote branch
+* Merge tag 'LA.QSSI.12.0.r1-08600-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Wifi into HEAD
+* Merge e9f4c454d004f1f18a188c40e1d2790225bbf546 on remote branch
+
+vendor/qcom-opensource/packages/apps/Bluetooth
+* Merge tag 'LA.QSSI.12.0.r1-08600-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth into HEAD
+* Merge 4ce9718fed0e3bc6beeb0c09b31de388876508ee on remote branch
+* Revert "BC: Auto connect to all group members"
+
+vendor/qcom/opensource/commonsys/system/bt
+* Revert "Client side AIDL parcelable extn changes (LC3Q & AA-R3)"
+
+hardware/interfaces
+* audio: Set up correct defaults for 32bit service
+
+device/oneplus/oneplus7pro
+* guacamole: Adapt sb height to june
+* overlay: relocate alert slider overlays to a new rro
+
+device/oneplus/sm8150-common
+* sm8150-common: add missing coroutines dependency
+* DeviceSettings: Update Chinese translations (#4)
+* sm8150-common: Drop checkpoint_gc
+* sm8150-common: DeviceSettings: Add summary for Alertslider
+* DeviceSettings: set and use proper key for footer preference
+* camera_helper: properly create alertdialogs
+* camera_helper: fix popup dialog for secondary users
+* sm8150-common: drop unused alert slider overlay and address app selinux denials
+* DeviceSettings: update keys for dynamically updated preferences
+* sepolicy: allow alertslider_app to read extcon state
+* sm8150-common: Adjust for recent tri state key changes
+* DeviceSettings: commonise alert slider and touchscreen gestures handling
+* camera_helper: rewrite in kt and use IKeyHandler interface
+* sm8150-common: Add TARGET_ALTERNATIVE_FUTEX_WAITERS
+* DeviceSettings: use io thread for writing vibrator strength
+* DeviceSettings: Use a more generic way to tell if we have a popup camera
+* DeviceSettings: DeviceSettingsFragment: use a generic check for vibrator category
+
+kernel/oneplus/sm8150
+* Merge branch '12-inline' of github.com:npv12/strix_kernel_oneplus_sm8150 into HEAD
+* scsi: ufs: Fix a bug in ufshcd_system_resume()
+* scsi: ufs: Fix pm_runtime count in reset flow
+* Revert "block: Make q_usage_counter also track legacy requests" [7/7]
+* Revert "block: Convert RQF_PREEMPT into REQ_PREEMPT" [6/7]
+* Revert "block: pass 'op' to blk_queue_enter()" [5/7]
+* Revert "percpu-refcount: introduce __percpu_ref_tryget_live" [4/7]
+* Revert "blk-mq: return if queue is frozen via current blk_freeze_queue_start" [3/7]
+* Revert "block: support PREEMPT_ONLY"
+* Revert "SCSI: set block queue at preempt only when SCSI device is put into quiesce" [1/7]
+* Revert "msm: camera: icp: Enable hang dump on failure"
+* power_supply: don't allocate attrname
+* power: battery: Remove pl_awake_work() function
+* Revert "power: qpnp-smb5: Report TIME_TO_FULL_NOW"
+* Revert "power: fg-gen4: Report TIME_TO_FULL_NOW property"
+* power: reset: msm: Remove unused variable and function
+* power: reset: msm: do warm resets only on panic and disable download mode
+* power: reset: msm: Always perform a warm reboot
+* power: supply: fix mismerge from oos
+* Merge pull request #56 from npv12/12-block
+* block: cfq-iosched: Port samsung optimizations from SM-N986B
+* ANDROID: block: cfq: Disable logging if trace is not enabled
+* UPSTREAM: cfq: Annotate fall-through in a switch statement
+* BACKPORT: block: use ktime_get_ns() instead of sched_clock() for cfq and bfq
+* block,cfq: Set cfq_back_penalty to 1
+* cfq: clear queue pointers from cfqg after unpinning them in cfq_pd_offline
+* block: set slice_idle to 0 on cfq
+* cfq-iosched: fix the setting of IOPS mode on SSDs
+* block: Make CFQ default to IOPS mode on SSDs
+* cfq-iosched: Apply RedHat suggested tunings for fast storage
+* cfq-iosched: Implement Read-only macro for entry attribute
+
+device/oneplus/common
+* AlertSliderDialog: switch back to secure system overlay
+* AlertSlider: start service as system user
+* common: add missing coroutines dependency
+* AlertSlider: Update Icons
+* common: drop common.mk
+* AlertSlider: import dialog impl from fwb
+* TouchScreenGestureHandler: use UserHandle.SYSTEM instead of CURRENT for broadcasts / activity starts
+* AlertSlider: KeyHandler: do not vibrate / show dialog for state restoration
+* AlertSlider: use a channel for handling position events and fix state restore
+* AlertSlider: use IO dispatcher for restoring state
+* TouchScreenGestureHandler: refactor
+* AlertSlider: switch to local setting keys
+* touchscreengestures: Have default values for gestures
+* AlertSlider: Restore state on boot
+* common: pull in TouchScreenGestureHandler from sm8150-common
+* common: UEvent based alertslider handling and pull in related settings from sm8150-common
+* common: drop tri-state-handler and overlay
+
+android/hardware/qcom/display
+* sdm: mark FOD pressed layer by setting a bit on ZPOS

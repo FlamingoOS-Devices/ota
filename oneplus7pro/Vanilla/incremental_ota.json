@@ -1,0 +1,11 @@
+{
+    "version": "1.1",
+    "date": "1661680674000",
+    "download_sources": {
+        "OneDrive": "https://downloads.e11z.net/d/flamingo/A12.1/oneplus7pro/Vanilla/FlamingoOS-v1.1-oneplus7pro-user-Official-Vanilla-20220828-1603-incremental.zip"
+    },
+    "file_name": "FlamingoOS-v1.1-oneplus7pro-user-Official-Vanilla-20220828-1603-incremental.zip",
+    "file_size": "122927883",
+    "sha_512": "8c7988c5e39524a43eb845fccc11e8cbb96e4fe97ca302fa68b08c4cb93a956309846f46989e71e1aa012bb219b2f79890bc02fee3df959a0d94bd6b44cc57b8",
+    "pre_build_incremental": "eng.neo.20220813.022140"
+}
