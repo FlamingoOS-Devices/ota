@@ -1,0 +1,215 @@
+Source side changes
+
+vendor/flamingo
+* vendor: Add CUSTOM_SECURITY_PATCH prop
+* flamingo: Bump version to 1.1
+* fix: path of gen_manifest script
+
+build/make
+* core: Downgrade spl to 5th july
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+* Merge e0ca6dc1418e3a6008281c48518808a3ca934a25 on remote branch
+
+build/soong
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/build/soong into HEAD
+* Merge 7cb85d61f86ca7cde7ed78b45e88fd085f71ef77 on remote branch
+
+manifest
+* system: Track more packages from clo
+* manifest: Update to refs/tags/LA.QSSI.12.0.r1-08700-qssi.0
+
+hardware/libhardware
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/libhardware into HEAD
+* Merge 17997de5b63944fb772ba513c0e1fb41f773eb45 on remote branch
+
+frameworks/base
+* [RESTRICT AUTOMERGE]DisplayManager: Make sure RampAnimator sets property in linear space.
+* Use exact brightnesses values for comparison.
+* PixelPropsUtils: Update raven fingerprint
+* DeviceInfoUtils: Read security patch from ro.flamingo.build_security_patch
+* dynsystem: Fix memory leak
+* DSU service: Log insufficient storage space error
+* DSU service: Pipeline the installation task to improve performance
+* DSU service: Show which partition is being installed in notification
+* DSU service: Weighted progress bar
+* dynsystem.SparseInputStream: Implement read(buf, off, len)
+* dynsystem: Enlarge default shared memory size and allow size override
+* DSU installation service: Add event log tags
+* Fix unwanted sign-extention when converting byte -> int
+* DSU: Only try to install on sdcard if the filesystem in use is vfat
+* Keyguard: allow large clock on tablets
+* Keyguard: don't use large clock on landscape
+* SystemUI: update smartspace for qpr3
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into A12.1
+* AuthService: Add support for workaround side fps props
+* Merge 48fbc7fb4aae5ddb2d9f537813fdf78785577c76 on remote branch
+* SystemUI: NetworkTrafficMonitor: use a single mutex
+
+packages/apps/ThemePicker
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/ThemePicker into HEAD
+* Merge ae6f79279e6a18cad729fdc8985fc04b89064691 on remote branch
+
+device/qcom/kernelscripts
+
+device/qcom/sepolicy/vndr
+
+external/fastrpc
+
+vendor/qcom/opensource/commonsys-intf/display
+
+vendor/qcom/opensource/power
+
+vendor/codeaurora/commonsys/telephony
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/codeaurora/telephony into HEAD
+* Merge ece108d9c0a6d35542f4193267b5fd5de3bd2589 on remote branch
+
+packages/services/Telecomm
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/services/Telecomm into HEAD
+* Merge 9f9e2cf01c09c359cdf31a3b5ea8d03ab1656583 on remote branch
+
+vendor/qcom/opensource/vibrator
+
+device/flamingo/sepolicy
+
+frameworks/native
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+* Merge a736de747c060a2c28d6b2e34d6ae7b34e57f2c6 on remote branch
+
+system/core
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/core into HEAD
+* Merge 532a15715323a07c66f039e93eb8f313562cc697 on remote branch
+
+system/sepolicy
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/sepolicy into HEAD
+* Merge 84e30b00a2c9ebb794d956535cb4491399c666e7 on remote branch
+
+device/qcom/vendor-common
+
+packages/apps/Settings
+* Settings: nuke statusbar vibrate icon control
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+* Settings: fix russian translations
+* Settings: Add Russian translation and fix translation origin strings.xml (#4)
+* Merge 27e440c4a52c76a83b44dd441f1335696ff4ada6 on remote branch
+
+bootable/recovery
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/bootable/recovery into HEAD
+* Merge a5c67fa1dc8fa2edebbe329a23ba1a78be387ac7 on remote branch
+
+system/update/engine
+
+packages/modules/adb
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/adb into HEAD
+* Merge 839b2e08405da11e5f81e3cbb9b8516bd1209ef4 on remote branch
+
+bionic
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/bionic into HEAD
+* Merge 4c7af761e8f338fc39327f1de2eab513d1a51f7a on remote branch
+
+art
+
+packages/apps/FlamingoSettings
+* FlamingoSettings: Add Russian translation (#6)
+
+packages/modules/Permission
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Permission into HEAD
+* Merge 29bd2cb258cc7beccb3799262c59bb043c181c8f on remote branch
+
+hardware/lineage/interfaces
+
+frameworks/av
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+* Merge e77848da21af12097b06232843b3e860780878ba on remote branch
+
+vendor/support
+* compose: allow specifying a userhandle for binding service
+
+vendor/lawnchair
+
+packages/apps/MatlogX
+* MatlogX: Update Russian translation (#4)
+
+packages/apps/Launcher3
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Launcher3 into HEAD
+* Merge 8b03eb480f1722ddb21b093602a3393ed337bf86 on remote branch
+
+vendor/themes
+
+frameworks/libs/systemui
+
+packages/apps/Updater
+* UpdateChecker: don't use >= for comparing build dates
+* Updater: Update Chinese translations (#7)
+* Updater: Update Chinese translations (#6)
+* SettingsScreen: hide auto reboot delay preference if auto reboot is disabled
+* Updater: launch other components with proper userhandle
+* UpdateInstallerService: use default dispatcher for timer coroutines and reboot on loop termination
+* Updater: Update Russian translation (#5)
+* UpdateInstallerService: add a delay of 1s between each iteration of timer loop
+
+packages/providers/DownloadProvider
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/providers/DownloadProvider into HEAD
+* Merge aabb8f2ba4bc358e9f16c6983d41f3a8a03b667f on remote branch
+
+vendor/qcom/opensource/commonsys-intf/bluetooth
+
+vendor/qcom/opensource/data-ipa-cfg-mgr
+
+device/qcom/common
+
+packages/apps/GameSpace
+
+packages/apps/EmergencyInfo
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/EmergencyInfo into HEAD
+* Merge 82bbdacf2374f979d1bdf03f90530c31a16c65c5 on remote branch
+
+upload/bot
+* parser: stop checking for url correctedness while releasing:
+
+packages/modules/Connectivity
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Connectivity into HEAD
+* Merge 6b41fa2a4fc7ce3de4ddecd5e1a8236c69ffd43b on remote branch
+
+packages/modules/Wifi
+* Merge tag 'LA.QSSI.12.0.r1-08700-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Wifi into HEAD
+* Merge 6c3dd286cea3a64d8a94e08946892ae855aa72ba on remote branch
+
+vendor/qcom-opensource/packages/apps/Bluetooth
+
+vendor/qcom/opensource/commonsys/system/bt
+* Revert "Client side AIDL parcelable extn changes (LC3Q & AA-R3)"
+
+hardware/interfaces
+* audio: Set up correct defaults for 32bit service
+
+packages/apps/FlamingoSystemUI
+* FlamingoSystemUI: overlay component factory
+* FlamingoSystemUI: initial SystemUI extension
+
+
+Device side changes
+
+
+device/oneplus/oneplus7
+* oneplus7: Ship OOSGallery on GApps builds only
+* oneplus7: Drop Graphene Camera
+* oneplus7:audio: Reduce speaker volume
+
+device/oneplus/sm8150-common
+* sm8150-common: add missing coroutines dependency
+
+kernel/oneplus/sm8150
+* Merge branch '12-inline' of github.com:npv12/strix_kernel_oneplus_sm8150 into HEAD
+
+device/oneplus/common
+* AlertSliderDialog: switch back to secure system overlay
+* AlertSlider: start service as system user
+* common: add missing coroutines dependency
+
+vendor/oneplus/sm8150-common
+
+android/hardware/qcom/display
+
+android/hardware/qcom/audio
+
+vendor/oneplus/oneplus7
