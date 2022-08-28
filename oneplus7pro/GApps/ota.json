@@ -1,10 +1,10 @@
 {
-    "version": "1.0",
-    "date": "1660083041000",
+    "version": "1.1",
+    "date": "1661665881000",
     "download_sources": {
-        "OneDrive": "https://downloads.e11z.net/d/flamingo/A12.1/oneplus7pro/GApps/FlamingoOS-v1.0-oneplus7pro-user-Official-GApps-20220810-0451-full.zip"
+        "OneDrive": "https://downloads.e11z.net/d/flamingo/A12.1/oneplus7pro/GApps/FlamingoOS-v1.1-oneplus7pro-user-Official-GApps-20220828-1134-full.zip"
     },
-    "file_name": "FlamingoOS-v1.0-oneplus7pro-user-Official-GApps-20220810-0451-full.zip",
-    "file_size": "1522891732",
-    "sha_512": "5ee0b89006d3ab524ad574d08c40151ec04a7d1eca83b4278b4dfb6d997c4e23983664f7d90ca01d49d1ca0e7c2e0b176514d01c2daad775d48352e9499234f6"
+    "file_name": "FlamingoOS-v1.1-oneplus7pro-user-Official-GApps-20220828-1134-full.zip",
+    "file_size": "1539287130",
+    "sha_512": "5f1f7493f842c54bac8e2b04c2a43a0f13f3b66ec722a0e69ad2a84d1f4cb407867046279b1989dbc6406e31f2b05b2bda3a352aff9187a3e332f86a0e519bf1"
 }
