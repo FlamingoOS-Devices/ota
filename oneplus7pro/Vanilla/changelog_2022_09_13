@@ -1,0 +1,1040 @@
+Source side changes
+
+vendor/flamingo
+* envsetup: update revision
+* overlay: SystemUI: force dark theme on global actions dialog
+* vendor: overlay ui audio
+* envsetup: add helper function to merge caf
+* scripts: move in scripts from build/tools to scripts folder
+* scripts: update to A13 branch
+* overlay: settings: drop support for showing nearby devices from Play in vanilla builds
+* overlay: exempt some system packages from location privacy indicator
+* config: relocate settings privapp whitelist to FlamingoSettings
+* overlay: disable aosp battery percentage settings
+* Revert "flamingo: sign builds separately"
+* target: drop systemui privapp whitelist
+* overlay: allow lower night light temperatures
+* overlay: keep recent tasks for more time in memory
+* overlay: use MD2 icon for missed call notification
+* overlay: update ic_doc_folder drawable to MD2
+* overlay: increase rounded corner radii to match Pixel style
+* flamingo: sign builds separately
+* Revert "flamingo: nuke Apps and GmsCompat from vanilla builds until gmscompat bringup"
+
+build/make
+* Merge tag 'LA.QSSI.13.0.r1-05700-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+
+build/soong
+
+manifest
+* flamingo: clean up manifest
+* clo: track commonsys-intf from clo
+* flamingo: update vendor tag to LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0
+* Revert "manifest: track our fork of DocumentsUI"
+* Revert "manifest: track our fork of MediaProvier"
+* flamingo: fork lmkd
+* flamingo: track packages/services/telecomm
+* manifest: track back colorkt and themelib
+* manifest: update README
+* manifest: proton: track SimpleDeviceConfig
+* flamingo: track repos needed for recovery
+* manifest: track our fork of DocumentsUI
+* manifest: track our fork of Bluetooth module
+* manifest: track our fork of NetworkStack
+* manifest: track our fork of MediaProvier
+* manifest: track our fork of fw/opt/net/wifi
+* manifest: track back our fork of Settings
+* manifest: track back Wifi module and DownloadProvider
+* manifest: track back Connectivity and Permission module
+* manifest: track A12.1 branch of kernelscripts
+* manifest: don't track EmergencyInfo anymore
+* manifest: track back libcore, GmsCompat, Launcher3 and SettingsIntelligence
+* flamingo: track repainter service
+
+frameworks/base
+* SystemUI: QuickQSPanelController: update slider visibility when panel is attached
+* Revert "SystemUI: allow toggling haptic feedback on pressing udfps view [1/2]"
+* SystemUI: Enable session-based media actions for all apps
+* base: Add Chinese translations (#12)
+* SystemUI: BurnInProtectionController: offset less aggressively
+* SystemUI: Remove navbar inset for UDFPS BiometricPrompt
+* udfps: Trigger onFingerDown with regular action down events too
+* udfps: Change window type to TYPE_DISPLAY_OVERLAY
+* udfps: Make pressed udfp view configurable
+* udfps: Restore illumination dot for global hbm
+* SystemUI: import pixel display interface
+* Merge tag 'LA.QSSI.13.0.r1-05700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into HEAD
+* SystemUI: include smartspace library
+* gmscompat: remove a conflicting permission from GSF
+* gmscompat: improve telephony state listener shim
+* improve compatibility with revoked INTERNET in DownloadManager
+* gmscompat: add a missing permission check for cell info requests
+* gmscompat: prevent crashes in getRunningAppProcesses() shim
+* gmscompat: don't report spurious DeadSystemRuntimeException exceptions
+* gmscompat: conditionally disable PromoFeature in enpromo
+* bugfix: automatic notification permission request breaks in some cases
+* add additional AudioManager gmscompat shims
+* gmscompat: Android 13 shims, part 3
+* gmscompat: conditionally stub out LocationManager#requestLocationUpdates()
+* fix DevicePolicyManager#logoutUser() never succeeding
+* gmscompat: more Android 13 shims
+* gmscompat: pre-grant POST_NOTIFICATIONS to GmsCompatApp
+* mark UserHandle#get{Uid, UserId} as module SystemApi
+* gmscompat: shims for Android 13
+* gmscompat: refactoring for Android 13
+* gmscompat: forward uncaught exceptions in GMS to GmsCompatApp
+* add an option to show the details of an application error to the user
+* gmscompat: support for installation of Google Chrome and its variants
+* gmscompat: improve compatibility with Nearby Share
+* gmscompat: handle updating temp power allowlist in PowerExemptionManager
+* improve compatibility of INTERNET special runtime permission
+* app-side infrastructure for special runtime permissions
+* infrastructure for spoofing self permission checks
+* SettingsLib: allow Permission APEX to use ActionButtons and MainSwitch
+* DeviceIdleJobsController: don't ignore whitelisted system apps
+* infrastructure for privileged eSIM management apps that depend on GMS
+* gmscompat: add compatibility layer for unprivileged GMS
+* infrastructure for system_server extensions
+* make sure PackageInstaller UI returns a result
+* don't crash apps that try to access the "NETWORK" location provider
+* improve PendingIntent security check compatibility
+* appop: Save discrete app op history for more permissions
+* add special runtime permission for other sensors
+* make INTERNET into a special runtime permission
+* support new special runtime permissions
+* stop auto-granting location to system browsers
+* Show USB icon in notification instead of generic system icon
+* SystemUI: Avoid NPE in volume dialog
+* VolumePanel: Pass touch outside of volume panel
+* Volume panel: avoid multiple animations on touch spam
+* SystemUI: VolumeDialogImpl: Change bg tint for inactive rows
+* SystemUI: Show notification row when it's unliked to ringer volume
+* VolumeDialog: Display default row when active row is notification
+* SystemUI: Make the volume dialog expandable
+* SystemUI: runtime configurable audio panel location
+* VolumeDialogImpl: Don't hide the default stream when adjusting the music stream
+* VolumeDialogImpl: Respect multiple visible rows in landscape
+* base: ChooserActivity: Don't show image edit button on multiple targets
+* base: allow toggling torch by double/long pressing power button
+* base: volume key music control [1/2]
+* InsetsStateController: Replace ArrayMap with HashMap for performance
+* ColorUtils: Fix out-of-gamut Oklab blending
+* graphics: Blend ARGB colors using Oklab
+* WallpaperColors: Use CIELAB for light/dark wallpaper detection
+* Screenshot: Speed up actions expansion animation
+* Screenshot: Reduce screenshot dismiss delay to 3 seconds
+* base: add combined signal icons setting keys
+* [SQUASH]SystemUI: Implement burn-in protection for status/navbar
+* base: add support for GameSpace
+* base: Add support for per-app volume [2/3]
+* base: introduce app lock [1/4]
+* SystemUI: Add colors to assistant animation
+* DeviceInfoUtils: Read security patch from ro.flamingo.build_security_patch
+* Keyguard: allow large clock on tablets
+* Keyguard: don't use large clock on landscape
+* SystemUI: statusbar: fix empty space in statusbar with hidden clock
+* Require CONFIG_HID_PLAYSTATION for DualSense key layout
+* SystemUI: Fix alarm icon
+* SettingsLib: allow translating access point preference summary
+* base: styles: Use user fonts for Material UI themes
+* VolumeDialogImpl: Don't vibrate when volume dialog is not visible
+* AppErrors: Respect appsNotReportingCrashes for ANRs
+* Revert "Remove dependency on IME subtype from TSMS"
+* Sharesheet: Display two rows of max ranked targets
+* LayoutInflater: Opportunistically create views directly for performance
+* SystemServiceRegistry: Replace ArrayMap with HashMap for performance
+* LocalServices: Replace ArrayMap with HashMap for performance
+* ThemedResourceCache: Replace ArrayMap with HashMap for performance
+* pputil: Stop spoofing playstore
+* DEBUG: Turn off some debugging we don't need.
+* keystore: Block key attestation for SafetyNet
+* SettingsLib: Update 4G+ icon to Silk design as well (#3)
+* SystemUI: Add left padding for keyguard slices
+* SystemUI: Add statusbar NFC icon
+* SystemUI: Add tuner switch for statusbar wifi standard
+* SystemUI: Add roaming indicator to statusbar tuner
+* SystemUI: Add VPN to the icon blacklist in tuner
+* SystemUI: Adapt tuner prefs to S settings style
+* SystemUI: Bringup statusbar icons tuner [1/2]
+* base: Disable WiFi/Hotspot standard numbering
+* Revert "Disable feature flag for Provider Model"
+* Revert "Disable provider model feature in DP"
+* base: exempt some packages from location privacy indicator
+* SystemUI: PowerUI: guard a debug log
+* base: allow hiding apps from launcher [1/2]
+* ColorStateList: Switch to ZCAM for lightness modulation
+* graphics: Add ZCAM implementation with sRGB interface
+* SystemUI: brightness slider customisations [1/2]
+* [SQUASH] base: Add three-fingers-swipe to screenshot [1/2]
+* base: add public setting keys for monet tunables
+* SystemUI: do not block any statusbar icons
+* SystemUI: Remove nav bar background in QS customizer
+* monet: Fix overly low chroma for tones below 90
+* SystemUI: allow disabling qs on secure lockscreen[1/2]
+* SystemUI: BatteryMeterViewController: register settings observer for all users and reload settings on user change
+* base: SystemUI: Fix circle battery QS tinting
+* BatteryMeterView: Show a bolt ⚡when charging
+* base: Allow choosing whether to show % inside battery icon [1/2]
+* BatteryMeterView: Remove the icon view if we are not using it
+* SystemUI: Bring back good ol' circle battery style
+* BatteryMeterView: Allow disabling QS battery estimates [1/2]
+* base: PowerMenu advanced reboot toggle
+* Paint: Enable subpixel text positioning by default
+* fwb: Incall vibration options [1/3]
+* [SQUASH] SystemUI: old style mobile data indicators [1/2]
+* [SQUASH] base: Allow using 4G icon instead of LTE [1/2]
+* base: Add navbar layout inversion tuning [1/2]
+* zygote: Enable USAP by default for S.
+* SystemUI: QSTileImpl: bail out early in handleLongClick if getLongClickIntent retuend null
+* AutoBrightness: Add support for one shot auto-brightness
+* [SQUASH] SystemUI: Make "Require unlocking to use sensitive QS tiles" optional [1/2]
+* [SQUASH]base: Allow scheduling always on display [1/2]
+* [SQUASH]QuickStatusBarHeader: Add date & clock click actions
+* SystemUI: PeopleSpaceWidgetManager: don't spam logcat
+* SystemUI: allow toggling haptic feedback on pressing udfps view [1/2]
+* SystemUI: Allow customizing footer text [1/2]
+* base: Allow toggling QS footer text [1/2]
+* VolumeDialog: notifyVisible after the volume panel is fully hidden
+* SystemUI: Require unlocking to use Internet quick tile
+* AuthService: Add support for workaround side fps props
+* SystemUI: add edge light customizations[1/2]
+* QuickStatusBarHeader: don't disable estimate mode for centered notch devices
+* [SQUASH] SystemUI: Forward-port notification counters [1/2]
+* base: add API for disabling gestural navigation
+* base: Choose which ringer modes to cycle with the gesture [1/2]
+* [SQUASH]base: Add option to cycle through ringer modes [1/2]
+* [SQUASH]base: Allow choosing a custom vibration pattern [1/3]
+* base: Add vibration patterns from OOS [1/3]
+* Phone ringtone setting for Multi SIM device [1/3]
+* services: fonts: use a simple sha512 hash based file verification system
+* SystemUI: Update keyguard clock metrics for GSans Clock font
+* Camera: Don't crash when trying to disable shutter sound
+* Allow sending vendor- or device-specific commands to the camera HAL.
+* SystemUI: allow changing the length of gesture navbar[1/2]
+* base: TtsEngines: fix yet another NPE
+* TtsEngines: avoid crashes caused by null engine name
+* SystemUI: Redraw display cutout on overlay changes
+* styles: Use user fonts for Material UI themes
+* base: allow hiding navbar[1/3]
+* base: Add unlinked ringtone and notification volumes
+* fonts: Use variable font for Roboto Regular
+* telephony: show ICCID by default for all
+* Allow adjusting screen density to smaller sizes.
+* Allow to suppress notifications sound/vibration if screen is ON [1/2]
+* SystemUI: ScreenshotController: allow disabling ss sound while following ringer mode
+* SystemUI: Remove unused resources
+* Add deep sleep info to uptime preference
+* base: add option to enable AOD on charging only [1/2]
+* PackageInstaller: show current/new version on sideload
+* SystemUI: Use DT2W setting also to wake from AOD
+* base: Double tap to sleep on lockscreen and statusbar [1/2]
+* base: introduce network traffic monitor
+* PackageManager: allow build-time disabling of components
+* [SQUASH]BatteryService: add dash charging support
+* LockscreenCharging: squashed (1/3)
+* camera: Allow selected camera apps to skip unconfigure
+* core: PinSet: fixup and improve code
+* Cache pin algorithms in PinSet
+* Cache KeyStoreService
+* (Point) Only calculate sin and cos once
+* base: set scrolling friction to 0.006f
+* base: use a double click effect for charging if there is no amplitude control support
+* Screenshot: Add delete action chip intent
+* SettingsLib: Update LTE+ icon as per new Silk design
+* Fingerprints: Increase MAX_FAILED_ATTEMPTS
+* Biometrics: Allow disabling of fingerprint cleanups
+* Screenrecord: Update custom settings dialog drawables
+* Screenrecord: Add an option to record for longer
+* Screenrecord: Save and load set preferences
+* Screenrecord: Make low quality bitrate scalable per device
+* Screenrecord: add blinking stop dot and low quality options
+* Screenrecord: Add back delete action for the notification.
+* screenrecord: Show dialog on bottom
+* screenrec: Save recordings in ScreenRecords
+* Makes the loading "spinner" animation smoother
+* base: SystemUI: Allow user to add/remove QS with one click
+* Fallback to global actions if assistant is not available
+* SystemUI: Allow overlaying max notification icons
+* SettingsProvider: Enable auto brightness by default
+* Fixes crash/race condition when destroyActivity
+* wm: Passing a new ArraySet instance to avoid crash
+* DragSurface: destroy surfacecontrol in view site
+* MountService: ensure VolumeRecord with UUID exists before modifying
+* frameworks: Fix null pointer Issue
+* PMS and WMS deadlock when uninstalling APP
+* os: Process: Fix wrong code in isThreadInProcess
+* The surface hang up when screen on and screen off
+* aapt: add check for untranslatable "string-array"s
+* aapt: Use a std::map instead of a SortedVector
+* aapt: Speed up the style pruning
+* Enable KEY_WFC_SPN_FORMAT_IDX_INT universally
+* aapt2: silence positional arguments warnings
+* CarrierConfigManager: enable LTE+ icon by default
+* Guard in short-circuit evaluations for stringSplit methods.
+* Camera: Don't throw exceptions when value pairs have spaces in them
+* Increase Zenmode max hour limit from 12 to 24
+* Reduce log verbosity: Don't spam logcat
+* KernelCpuUidTimeReader: Decrease log level on non-debug builds
+* Make Build.TYPE and Build.FINGERPRINT consistent for apps
+* Check for null callerPackage in getStorageEncryptionStatus
+* SystemUI: checkin FlamingoSystemUI
+* SystemUI: ScreenshotController: return null in getForegroundAppLabel() if mTaskComponentName is null
+* SystemUI: inject stock qs tiles
+* pputil: update raven props to august
+* base: add FLAMINGO metrics constant
+* [SQUASH]base: Introduce PixelPropsUtils
+* aapt: Default to 0 compression ratio
+* [SQUASH]SystemUI: Show bluetooth battery level when available
+* SystemUI: Reduce scrim color animation duration to 375 ms
+* PackageInfo: Optimize ApplicationInfo creation
+* SystemUI: Require unlocking to use sensitive QS tiles
+* services: SystemServer: remove redundant startService for lineage hardware service
+* services: lineage: publish binder service only at onStart phase and use super class context
+* SystemUI: handle camera launch gesture from keyhandler
+* base: Add Touch HIDL support
+
+packages/apps/ThemePicker
+
+device/qcom/sepolicy/vndr
+
+vendor/qcom/opensource/power
+
+packages/services/Telecomm
+
+vendor/qcom/opensource/vibrator
+
+device/flamingo/sepolicy
+
+frameworks/native
+* CompositionEngine: Request device composition for the Udfps touched layer
+* surfaceflinger: Add support for Udfps extension lib
+* Merge tag 'LA.QSSI.13.0.r1-05700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+* protect step sensors with OTHER_SENSORS permission for targetSdk<29 apps
+* require OTHER_SENSORS permission for sensors
+
+system/core
+
+packages/apps/Settings
+* Settings: sound_settings: keep volume panel position pref above zen mode
+* add toggle for the privileged eSIM management
+* do not allow disabling GmsCompat app
+* add link to Sandboxed Google Play settings
+* add option to always randomize MAC
+* Settings: Allow choosing volume panel position [2/2]
+* Settings: allow toggling torch by double/long pressing power button[2/2]
+* Settings: tether: do not set shutdown timeout if <=0
+* Settings: support per-app volume [3/3]
+* Settings: disable vibrate icon preference
+* Settings: remove security status group if empty
+* Settings: convert hotspot timeout preference to a list preference
+* SoftAp: add client manager
+* SoftAp: add support for setting shutdown timeout
+* Settings: add TextView for summary into SeekBarDialogPreference
+* WiFi: Remove country code checking.
+* SoftAp: add Hidden SSID preference
+* Settings: add a preference to battery optimization page
+* Settings: Fix loading iconpack-based Wellbeing icon
+* Settings: use Glif themed button bar
+* Settings: default to GlifV3Theme
+* Settings: Long press to copy wifi password
+* Settings: Remove divider from Battery Manager
+* [SQUASH] Settings: Gestures: Add option to cycle through ringer modes [2/2]
+* [SQUASH] Settings: Add vibration patterns from OOS with custom vibration patterns[3/3]
+* [SQUASH] Settings: introduce refresh rate preferences
+* Settings: Add preference for one shot auto-brightness
+* fingerprint: hide link icon when there's no link
+* Settings: Improve code for time spent in app
+* [SQUASH]Settings: Allow scheduling always on display [2/2]
+* Settings: gestures: remove duplicate pick up pref
+* Phone ringtone setting for Multi SIM device [2/3]
+* Settings: BasebandVersionPreferenceController: trim baseband version
+* Settings: allow changing the length of gesture navbar[2/2]
+* Settings: Add missing icons in Network and Internet
+* Settings: allow hiding navbar[3/3]
+* Settings: AppInfoDashboardFragment: fix a NPE and improve code
+* Settings: Improve link ring & notification volume switch
+* Settings: Add switch for linked ring and media notification volumes
+* AppInfo: Only add Playstore action if Playstore is installed
+* Allow to suppress notifications sound/vibration if screen is ON [2/2]
+* Settings: Hide unsupported USB modes automatically
+* AppInfo: Add time spent in app from Wellbeing
+* Settings: remove the double divider in "Store" category in "App info" page
+* Add package name to installed app details
+* Settings: add option to enable AOD on charging only [2/2]
+* Settings: Incall vibration option [3/3]
+* Settings: complete the AvatarViewMixin implementation
+* Settings: remove color mode preference if none declared in overlay
+* Settings: align user avatar with homepage title
+* InstalledApp: show link to Google Play
+* Open app when clicking on icon in App Info
+* Settings: PowerUsageSummary: open advanced usage on header click
+* Settings: added developer info and version info
+* Remove feedback and bug report stuff
+* Settings: Protect sensitive info on About device
+* DevelopmentSettings: Disable automatic updates
+* Settings: Disable Google Play system update check
+* Settings: introduce app lock [3/4]
+* Settings: checkin flamingo settings
+* Settings: Disable WiFi/Hotspot standard numbering.
+* Settings: Fixup start padding for battery usage graph
+* Revert^3 "Update animation for fingerprint edu page"
+
+bootable/recovery
+* recovery: Drop unused SDCARD_ROOT
+* recovery: drop logic to extract date
+* fixup! version info in recovery
+* recovery: rewrite slot switch logic using bootcontrol APIs
+* recovery: add support for changing slots
+* fastboot: Prefer ro.boot.hardware.revision for hw-revision
+* fastboot: Hide bootloader/baseband/hw versions if empty
+* recovery: Correct touch position with overscan
+* volume_manager: Move bind/mount failure from ERROR to WARNING
+* recovery: Allow comma separated codename assertions
+* recovery.cpp: Fix typo when unmounting system
+* recovery: Allow separating device asserts with a colon too
+* recovery: make wiping dynamic partitions work
+* Add controller support
+* recovery: Add ability to unmount system
+* recovery: Support writing to Virtual A/B partitions
+* recovery: Allow going back in rescue party menu
+* recovery: Don't print mount errors when checking for encryption
+* recovery: Hide unmountable volumes from selection
+* recovery: Implement a volume manager
+* applypatch: Update recovery only when enabled in Updater settings
+* minui: Allow skipping EV_REL input devices.
+* recovery: allow A/B updater to downgrade
+* recovery: Allow bypassing signature verification on non-release builds
+* recovery: Handle LINEAGE_VERSION_APPEND_TIME_OF_DAY in ver_date
+* recovery: Always use the text menu for rescue party
+* recovery: Draw header lines with less padding
+* recovery: Map logical partitions before installation
+* recovery: Remove the "Format system partition" menu on A/B devices
+* recovery_ui: Tell the user they're actually formatting
+* recovery: use ensure_volume_unmounted in format_volume
+* recovery: Add runtime checks for A/B vs traditional updates
+* recovery: Add "Enable ADB" to advanced options
+* recovery: Print the active slot
+* recovery: Display recovery version
+* recovery: Draw the help message below the menu on non-touch devices
+* recovery: Clarify help text
+* recovery: Set the INFO color to the recovery/fastboot light color
+* recovery: apply new design to menu padding, color and arrow
+* recovery: Stop showing fastbootd logo for devices without it
+* recovery: add new recovery and fastbootd logos
+* recovery: compute displayable item count while drawing
+* recovery: Dejank the menus
+* recovery: split in submenus
+* recovery: calibrate touchscreen
+* recovery: New install/progress animation
+* recovery: touch UI
+* recovery: simple graphical ui
+* recovery: Mark as Lineage Recovery
+* recovery: allow opting-in to fastbootd
+* recovery: sdcard is data/media/0
+* recovery: symlink /sbin for script compatibility
+* recovery: init: mount pstore fs
+* recovery: make /etc/fstab only include entries that match the detected fs type
+* recovery: Puke out an /etc/fstab so stuff like busybox/toybox is happy
+* recovery: Get a proper shell environment in recovery
+* recovery: Provide caching for sideload files
+* Don't allow formatting & mounting system on user builds
+* recovery: Also hide rescue mode from non eng builds
+* recovery: Only show tests in eng builds
+* recovery: Expose reboot to recovery option
+* recovery: Enable the menu for User builds
+* recovery: Add wipe system partition option
+* recovery_utils: add support for unmounting entire volumes
+* recovery: Don't consider manual install aborts as errors
+* recovery: Provide sideload cancellation
+* recovery: Allow device-specific recovery modules
+* recovery: Blank screen on init
+* recovery: ui: Support hardware virtual keys
+* recovery: ui: Minor cleanup for touch code
+* recovery: ui: Default to touch enabled
+* Bring back file-based OTA edify functions
+
+system/libziparchive
+
+external/e2fsprogs
+
+external/mksh
+
+external/gptfdisk
+
+bionic
+
+art
+
+packages/apps/FlamingoSettings
+* ThemeOverlayPreferenceController: handle pm API deprecations
+* Revert "FlamingoSettings: add udfps haptic feedback preference"
+* FlamingoSettings: Update Chinese translations (#7)
+* FlamingoSettings: update qs settings summary
+* FlamingoSettings: drop screen off udfps
+* FlamingoSettings: add left volume perf string
+* FlamingoSettings: add torch gesture pref strings
+* FlamingoSettings: drop obsolete settings
+* FlamingoSettings: update combined signal icons preference
+* FlamingoSettings: add per-app volume pref string
+* FlamingoSettings: add battery stats reset permission
+* FlamingoSettings: add additional privapp whitelist
+* FlamingoSettings: add ringer mode gesture pref strings
+* FlamingoSettings: add softap client manager pref strings
+* FlamingoSettings: add hotspot timeout pref strings
+* FlamingoSettings: add hidden ssid pref strings
+* FlamingoSettings: add wifi password copy toast strings
+* FlamingoSettings: Add some missing lottie animations
+* FlamingoSettings: update dummy lottie animation to avoid crash
+* FlamingoSettings: add custom vibration pattern pref strings
+* FlamingoSettings: add refresh rate pref strings
+* FlamingoSettings: add one shot ab pref strings
+* FlamingoSettings: add AOD schedule pref strings
+* FlamingoSettings: add navbar length pref strings
+* FlamingoSettings: add navbar visibility pref strings
+* FlamingoSettings: add unlinked ring pref string
+* FlamingoSettings: add linked volume stream pref strings
+* FlamingoSettings: update screen on notification sound title string
+* FlamingoSettings: add silent screen on notifications pref string
+* FlamingoSettings: Add missing illustration for camera gesture
+* FlamingoSettings: add per app screen time pref strings
+* FlamingoSettings: Bring in missing lottie animations
+* FlamingoSettings: add aod on charge pref strings
+* FlamingoSettings: add incall vibration pref string
+* FlamingoSettings: Add missing gesture and battery animations
+* FlamingoSettings: add play store link string
+* FlamingoSettings: add rom and developer info strings
+* FlamingoSettings: add protected device info pref string
+* FlamingoSettings: exclude google src files
+* FlamingoSettings: add gmscompat and storage scopes strings
+
+packages/modules/Permission
+
+frameworks/av
+* Merge tag 'LA.QSSI.13.0.r1-05700-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+* Camera: Skip stream size check for whitelisted apps.
+* libcameraservice: add TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB
+* av: Add support per-app volume [1/3]
+
+vendor/support
+* support: AppListFragment: handle pm API deprecations
+* compose: upgrade AGP and dependencies
+* workflows: switch to A13 branch
+
+packages/apps/MatlogX
+
+packages/apps/Launcher3
+
+vendor/themes
+* overlays: oos: Import stock oos settings icons
+
+packages/apps/Updater
+* Updater: Add Portuguese Brazilian language (#8)
+
+packages/providers/DownloadProvider
+
+vendor/qcom/opensource/data-ipa-cfg-mgr
+
+device/qcom/common
+* vendor: update to LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0
+* system: update to LA.QSSI.13.0.r1-05800-qssi.0
+* vendor: init: init.qcom.post_boot: Enable support for Gaming variant.
+* vendor: bt: Build android.hardware.bluetooth.audio@2.1 again
+* init: Fix taro folder structure
+* overlay: wifi:  Fix typos
+* vendor: init: Fix "Invalid section keyword found" on ueventd
+* vendor: telephony: build missing interface for cne
+* vendor: bt: Switch BtAudio to AIDL
+* qcom: wlan: Enable support for IEEE80211AX.
+
+packages/apps/GameSpace
+* GameSpace: update for 13
+* GameSpace: Add Portuguese Brazilian Language (#15)
+
+hardware/qcom/media
+
+upload/bot
+* document_processor: update git branch reference
+* bot: fix generated download links
+
+packages/modules/Connectivity
+
+libcore
+
+packages/modules/Wifi
+
+packages/apps/SettingsIntelligence
+
+vendor/qcom-opensource/packages/apps/Bluetooth
+* Merge tag 'LA.QSSI.13.0.r1-05700-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth into HEAD
+
+vendor/qcom/opensource/commonsys/system/bt
+* bt: Guard Advanced Audio Feature function
+* Merge tag 'LA.QSSI.13.0.r1-05700-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/system/bt into HEAD
+
+packages/apps/FlamingoSystemUI
+* KeyguardZenAlarmViewController: replace deprecated referential equality check with structural equality check
+* FlamingoSystemUI: set proper package for ErrorReportActivity
+* FlamingoSystemUI: Add Chinese translations (#3)
+* SystemUI: Add HBM provider for UDFPS on Pixel devices
+* udfps: Implement default udfps hbm provider
+* SystemUI: Forward-port smartspace to Android 13
+* SystemUI: Implement Reverse-engineered Smartspace
+* ErrorReportActivity: handle deprecations
+* FlamingoSystemUI: inline logD function
+* FlamingoSystemUI: add activity to handle app errors
+* FlamingoSystemUI: only block call strength sb icon
+* EnhancedEstimates: Get estimates from Device Health Services
+* FlamingoSystemUI: allow toggling combined signal icons
+* HeadsUpTile: simplify accessibility class name acquisition
+* GameSpaceServiceDelegate: use updated packagemanager APIs
+* FlamingoSystemUI: introduce GameSpace
+* FlamingoSystemUI: BrighntessSlider: use OOS icons
+* FlamingoSystemUI: add nfc tuner switch string
+* FlamingoSystemUI: add roaming tuner switch string
+* FlamingoSystemUI: add vpn tuner switch string
+* FlamingoSystemUI: add wifi standar tuner switch strings
+* FlamingoSystemUI: add tuner string resources
+* FlamingoSystemUI: add string resource for longer screenrecording option
+* FlamingoSystemUI: add screenrecord stopdot and quality option string resources
+* FlamingoThemeOverlayController: override getAccent*() and getNeutral*() methods
+* FlamingoThemeOverlayController: observe monet settings and reload theme on change
+* SystemUI: theme: Expose theme engine parameters as settings
+* SystemUI: theme: Override modulated dark QS background color
+* SystemUI: Use colorkt-based dynamic theme engine for Monet
+* FlamingoSystemUI: add advanced reboot strings
+* FlamingoSystemUI: introduce heads up tile
+* FlamingoSystemUI: FPSInfoService: extend LifecycleService and fix overlay not being visible in secondary user
+* FlamingoSystemUI: FPSInfoService: get statusbar insets ignoring visibility
+* FlamingoSystemUI: cleanup fps info tile and service
+* FlamingoSystemUI: rewrite FPSInfoService in kt from scratch and bind service with tile
+* FlamingoSystemUI: FPS Info Overlay & Tile
+* FlamingoSystemUI: set proper height and width for vibrate icon drawable
+* FlamingoSystemUI: match brightness slider track height with the progress drawable
+* FlamingoSystemUI: use google sans font for lockscreen clock
+* FlamingoSystemUI: Long press Caffeine for infinite duration
+* FlamingoSystemUI: CaffeineTile: Eggtimer
+* FlamingoSystemUI: add string resources for delete action notification
+* FlamingoSystemUI: add privapp whitelist
+* [SQUASH]SystemUI: Introduce DataSwitchTile
+* FlamingoSystemUI: Fix uneven DND icon padding in status bar
+* AODTile: use an enum class to represent modes and refactor
+* AODTile: update long click intent to match with Settings
+* AODTile: disable when power save mode is on
+* AODTile: Open LS display settings on long click
+* AODTile: cycle through AOD states
+* AODTile: Add back config check for aod available
+* AODTile: add option to enable AOD on charging only [1/2]
+* FlamingoSystemUI: add qs AOD tile
+* FlamingoSystemUI: Add anti flicker tile
+* FlamingoSystemUI: Add LiveDisplay tile
+* FlamingoSystemUI: mark all tiles as final
+* FlamingoSystemUI: Add Sound tile
+* FlamingoSystemUI: Add Sync QS Tile
+* FlamingoSystemUI: enable NFC tile
+* [SQUASH] FlamingoSystemUI: Add AmbientDisplay tile
+* FlamingoSystemUI: add caffeine qs tile
+* FlamingoSystemUI: add string resources for ss delete chip
+* FlamingoSystemUI: overlay qs customiser string
+* FlamingoSystemUI: export sources instead of overriding system ui
+* FlamingoSystemUI: introduce refresh rate tile
+* [SQUASH]FlamingoSystemUI: add reading mode tile
+* FlamingoSystemUI: provide our custom tile config
+* FlamingoSystemUI: add proper copyrights
+* FlamingoSystemUI: properly set optimize flags
+
+frameworks/opt/net/wifi
+* add support for always generating new random MAC
+
+packages/modules/NetworkStack
+* avoid reusing DHCP state for full MAC randomization
+
+packages/modules/Bluetooth
+* export BluetoothAdapter#getLeState() as system API
+* gmscompat
+* add BluetoothAdapter#getConnectionStateLeAware()
+
+system/libhidl
+* libhidlmemory: mark as recovery_available
+
+system/memory/lmkd
+* lmkd: Remove process record after it is killed by lmkd watchdog
+* Remove kill_one_process tracepoint from lmkd
+* lmkd : Fixed running wrong for Go devices when use_minfree_levels is TRUE
+* lmkd: Fix the text of the warning when pthread_setschedparam fails
+* lmkd: set normal scheduling policy for reaper threads
+* lmkd: Fix a comparison operation with uninitialized variable.
+* lmkd: Fix potential null dereference in hook call
+* lmkd: Add hooks to LMKD
+
+hardware/qcom/display
+* vendor-freeze: Move few commonsys-intf libs to commonsys
+* display: Drop LOCAL_COPY_HEADERS usage
+* sdm: get around client compositioning for FOD pressed layer
+* hwc_session: move a break
+* Fix -Wunreachable-code-loop-increment
+* [android11-qpr1-release] gralloc: Bump allocator priority to 100.
+* sdm: mark FOD pressed layer by setting a bit on ZPOS (Re-pick)
+* gralloc: Fix RAW10/12 buffer alignment for trinket
+* Add C2D_FORMAT_BT601_FULLRANGE to C2D_FORMAT_MODE
+* Add C2D_COLOR_FORMAT_420_TP10 to C2D_YUV_FORMAT
+* Don't build lights module if vendor supplies it
+
+hardware/qcom/audio
+* audio: Remove ndk_platform backend. Use the ndk backend.
+* Specify version for aidl_interface explicitly
+* Remove log spam when placing power hint call
+* Probe PowerHAL HIDL first
+* Support Power HAL AIDL service
+* audio: Drop LOCAL_COPY_HEADERS usage
+* ssr: Fix building with OSS materials
+* configs: atoll: Disable DLKM.
+* configs: msmsteppe: Disable DLKM
+* configs: msmnile: Disable DLKM
+* hal: Support the audio amplifier hook
+* audio: Skip libhdmipassthru on OSS builds
+* Add missing includes.
+* audio: don't ignore extra CFLAGS at the end of the Makefile
+
+
+Device side changes
+
+
+device/oneplus/oneplus7pro
+
+device/oneplus/sm8150-common
+* sm8150-common: add and enable SSR stack
+* overlay: Add Chinese translations for charging indications (#5)
+* sm8150-common: Allow fingerprint to read and write to sysfs_livedisplay_tuneable
+* sm8150-common: sepolicy: address some selinux denials
+* sm8150-common: sepolicy: Migrate to `vendor_` prefixed contexts
+* sm8150-common: sepolicy: Relabel livedisplay HAL to hal_lineage_livedisplay_qti
+* sm8150-common: livedisplay: Fix racy init
+* sm8150-common: livedisplay: Switch to hardware/oneplus components
+* sm8150-common: livedisplay: Rework the way we handle display modes
+* sm8150-common: livedisplay: Don't write to DCI_P3 node on boot_completed
+* sm8150-common: livedisplay: Reset display mode prop on modeID == 0
+* sm8150-common: livedisplay: Implement IAntiFlicker interface
+* sm8150-common: livedisplay: Uprev to 2.1
+* sm8150-common: livedisplay: Sync with sm8250-common
+* sm8150-common: Add vintf fragments for all local Lineage HALs
+* sm8150-common: livedisplay: Remove libhidltransport deps
+* sm8150-common: livedisplay: Drop unnecessary nullptr checks
+* sm8150-common: livedisplay: Use modules from common implementation
+* sm8150-common: livedisplay: Update .clang-format and reformat all source files
+* sm8150-common: livedisplay: Clean up DisplayModes
+* sm8150-common: livedisplay: Sync PictureAdjustment impl with common repo
+* sm8150-common: livedisplay: Add SunlightEnhancement
+* sm8150-common: livedisplay: msm8998 -> msmnile
+* sm8150-common: Import initial livedisplay tree
+* sm8150-common: drop display mode
+* deps: track hals from our git
+* sm8150-common: Enable Audio Support for Hearing Aids central support
+* sm8150-common: Disable LE audio related profiles
+* sm8150-common: Update LE Audio profile properties to match spec and implementation
+* sm8150-common: Enable bluetooth profiles with system_ext.prop
+* sm8150-common: Align ASHA prop with BluetoothProperties
+* sm8150-common: Added new vendors for Bluetooth config migration
+* Revert "sm8150-common: switch to android.hardware.thermal@2.0-service.qti"
+* sm8150-common: fix duplicate sysprop assignment
+
+kernel/oneplus/sm8150
+* Merge branch '12-inline' of github.com:npv12/strix_kernel_oneplus_sm8150 into 12
+* Merge branch '12-fod' of github.com:npv12/strix_kernel_oneplus_sm8150 into 12
+* Merge branch '12-mlgru' of github.com:npv12/strix_kernel_oneplus_sm8150 into 12
+* Merge tag 'LA.UM.9.1.r1-12300-SMxxx0.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0 into 12
+* Merge tag 'LA.UM.9.1.r1-12300-SMxxx0.0' of https://git.codelinaro.org/clo/la/kernel/msm-4.14 into 12
+* [FORWARDPORT/ADAPT] drm/msm: keep dim_layer and HBM more in sync
+* Revert "strix: disable slmk"
+* Merge branch 'android-4.14-stable' of https://android.googlesource.com/kernel/common into 12
+* simple_lmk: increase vmpressure threshold
+* Revert "mm: oom_kill: reap memory of a task that receives SIGKILL"
+* drm: kill dim on successful auth
+* Revert "drm: Handle dim for udfps"
+* Revert "drm: Implement panel status check"
+* Revert "drm: Expose power status to userspace"
+* Revert "drm: Allow hooking dim when screen goes on"
+* Merge 4.14.292 into android-4.14-stable
+* Merge branch 'android-4.14-stable' of https://android.googlesource.com/kernel/common into 12
+* Merge "Merge 3db3f3bf05a8 ("atm: idt77252: fix use-after-free bugs caused by tst_timer") into android-mainline" into android-4.14-stable
+* Merge "Merge f5e61d9b4a69 ("scsi: sg: Allow waiting for commands to complete on removed device") into android-mainline" into android-4.14-stable
+* Merge "Merge 4.14.291 into android-4.14-stable" into android-4.14-stable
+* Merge 3db3f3bf05a8 ("atm: idt77252: fix use-after-free bugs caused by tst_timer") into android-mainline
+* Merge f5e61d9b4a69 ("scsi: sg: Allow waiting for commands to complete on removed device") into android-mainline
+* Merge 4.14.291 into android-4.14-stable
+* Merge 6597441b8640 ("x86/olpc: fix 'logical not is only applied to the left hand side'") into android-mainline
+* Merge 23f6160461c8 ("remoteproc: qcom: wcnss: Fix handling of IRQs") into android-mainline
+* Merge fc4de8009fd6 ("RDMA/hfi1: fix potential memory leak in setup_base_ctxt()") into android-mainline
+* Merge 48cca38787e3 ("fs: check FMODE_LSEEK to control internal pipe splicing") into android-mainline
+* Merge 6c4e435b8d91 ("selftests: timers: clocksource-switch: fix passing errors from child") into android-mainline
+* Merge 9d5fec6ba2e4 ("arm64: fix oops in concurrently setting insn_emulation sysctls") into android-mainline
+* usb/gadget: fixup kernel/common mismerge from May
+* strix: Regenerate and save
+* Merge tag 'v4.14.292' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into 12
+* Linux 4.14.292
+* net: neigh: don't call kfree_skb() under spin_lock_irqsave()
+* kprobes: don't call disarm_kprobe() for disabled kprobes
+* netfilter: conntrack: NF_CONNTRACK_PROCFS should no longer default to y
+* s390/hypfs: avoid error message under KVM
+* neigh: fix possible DoS due to net iface start/stop loop
+* mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse
+* ftrace: Fix NULL pointer dereference in is_ftrace_trampoline when ftrace is dead
+* fbdev: fb_pm2fb: Avoid potential divide by zero error
+* HID: hidraw: fix memory leak in hidraw_release()
+* media: pvrusb2: fix memory leak in pvr_probe
+* Bluetooth: L2CAP: Fix build errors in some archs
+* kbuild: Fix include path in scripts/Makefile.modpost
+* x86/bugs: Add "unknown" reporting for MMIO Stale Data
+* x86/cpu: Add Tiger Lake to Intel family
+* s390/mm: do not trigger write fault when vma does not allow VM_WRITE
+* arm64: map FDT as RW for early_init_dt_scan()
+* mm: Force TLB flush for PFNMAP mappings before unlink_file_vma()
+* md: call __md_stop_writes in md_stop
+* mm/hugetlb: fix hugetlb not supporting softdirty tracking
+* asm-generic: sections: refactor memory_intersects
+* loop: Check for overflow while configuring loop
+* btrfs: check if root is readonly while setting security xattr
+* ixgbe: stop resetting SYSTIME in ixgbe_ptp_start_cyclecounter
+* net: Fix a data-race around sysctl_somaxconn.
+* net: Fix a data-race around netdev_budget_usecs.
+* net: Fix a data-race around netdev_budget.
+* net: Fix a data-race around sysctl_net_busy_read.
+* net: Fix a data-race around sysctl_net_busy_poll.
+* net: Fix a data-race around sysctl_tstamp_allow_data.
+* ratelimit: Fix data-races in ___ratelimit().
+* net: Fix data-races around weight_p and dev_weight_[rt]x_bias.
+* netfilter: nft_payload: do not truncate csum_offset and csum_type
+* netfilter: nft_payload: report ERANGE for too long offset and length
+* netfilter: ebtables: reject blobs that don't provide all entry points
+* net: ipvtap - add __init/__exit annotations to module init/exit funcs
+* bonding: 802.3ad: fix no transmission of LACPDUs
+* rose: check NULL rose_loopback_neigh->loopback
+* af_key: Do not call xfrm_probe_algs in parallel
+* xfrm: fix refcount leak in __xfrm_policy_check()
+* pinctrl: amd: Don't save/restore interrupt status and wake status bits
+* parisc: Fix exception handler for fldw and fstw instructions
+* audit: fix potential double free on error path from fsnotify_add_inode_mark
+* simple_lmk: Set the victims to the highest priority
+* simple_lmk: lower vmpressure trigger threshold
+* mm: multi-gen LRU: set min_ttl to 5000ms by default
+* mm: multi-gen LRU: export min_ttl unsatisfied counter to sysfs
+* mm: multi-gen LRU: log when min_ttl is unsatisfied
+* mm: multi-gen LRU: call simple LMK if enabled
+* simple_lmk: expose simple_lmk_trigger()
+* strix: disable slmk
+* strix: enable mlgru
+* mglru: fixes
+* FROMLIST: mm: multi-gen LRU: debugfs interface
+* FROMLIST: mm: multi-gen LRU: thrashing prevention
+* FROMLIST: mm: multi-gen LRU: kill switch
+* FROMLIST: mm: multi-gen LRU: support page table walks
+* FROMLIST: mm: multi-gen LRU: optimize multiple memcgs
+* FROMLIST: mm: multi-gen LRU: exploit locality in rmap
+* FROMLIST: mm: multi-gen LRU: minimal implementation
+* FROMLIST: mm: multi-gen LRU: groundwork
+* FROMLIST: mm: x86: add CONFIG_ARCH_HAS_NONLEAF_PMD_YOUNG
+* FROMLIST: mm: x86, arm64: add arch_has_hw_pte_young()
+* BACKPORT: include/linux/mm_inline.h: fold page_lru_base_type() into its sole caller
+* UPSTREAM: mm: VM_BUG_ON lru page flags
+* BACKPORT: mm: add __clear_page_lru_flags() to replace page_off_lru()
+* BACKPORT: mm/swap.c: don't pass "enum lru_list" to del_page_from_lru_list()
+* UPSTREAM: mm/swap.c: don't pass "enum lru_list" to trace_mm_lru_insertion()
+* BACKPORT: mm: don't pass "enum lru_list" to lru list addition functions
+* BACKPORT: include/linux/mm_inline.h: shuffle lru list addition and deletion functions
+* BACKPORT: mm/vmscan.c: use add_page_to_lru_list()
+* BACKPORT: mm: use self-explanatory macros rather than "2"
+* BACKPORT: mm: remove superfluous __ClearPageActive()
+* BACKPORT: mm/swapcache: support to handle the shadow entries
+* UPSTREAM: mm/vmscan.c: use update_lru_size() in update_lru_sizes()
+* UPSTREAM: arm64: cpufeature: introduce helper cpu_has_hw_af()
+* UPSTREAM: mm: replace list_move_tail() with add_page_to_lru_list_tail()
+* arm64: dts: sm8150: Specify `rng-seed` node
+* Upstream kernel from 190 to 291 (#57)
+* fix: Add missing headers to gen_headers_arm
+* strix: Regenerate and save
+* Merge tag 'v4.14.291' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* strix: Regenerate and save
+* defconfig: disable QCOM_EARLY_RANDOM
+* extcon: Allocate blocking_notifier_head after registering the device
+* linux/overflow: add missing functions from ack
+* early_random: include linux/random.h to fix compile
+* Merge branch 'android-4.14-stable' of https://android.googlesource.com/kernel/common into wip
+* Merge tag 'v4.14.282' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.281' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.280' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.279' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.278' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.277' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.276' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Revert "arm64: mm: implement arch_faults_on_old_pte() on arm64"
+* arm64: Add missing arm64_update_smccc_conduit
+* Merge tag 'v4.14.275' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.274' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.273' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.272' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.271' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.270' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.269' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.268' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.267' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.266' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.265' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.264' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.263' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.262' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.261' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.260' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.259' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.258' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.257' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.256' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.255' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.254' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.253' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.252' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.251' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.250' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.249' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.248' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.247' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.246' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.245' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.244' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.243' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.242' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.241' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.240' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.239' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.238' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.237' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.236' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.235' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.234' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.233' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.232' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.231' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.230' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.229' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.228' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.227' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.226' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.225' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.224' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.223' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.222' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.221' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.220' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.219' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.218' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.217' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.216' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.215' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.214' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.213' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.212' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.211' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.210' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.209' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.208' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.207' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.206' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.205' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.204' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.203' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.202' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.201' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.200' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.199' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.198' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.197' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.196' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.195' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* treewide: drop `IRQD_PERF_CRITICAL`
+* Merge tag 'v4.14.194' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.193' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge tag 'v4.14.192' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Merge 117cd61ffafac44ec276d60f74c8f1559a79715a on remote branch
+* Merge 2716194c4dd5e975fcdad5e31d0071c5bf802e76 on remote branch
+* Merge tag 'v4.14.191' of git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux into wip
+* Revert "msm: vidc: fix msm_comm_get_vidc_buffer fd race issue"
+* Merge tag 'LA.UM.9.1.r1-12200-SMxxx0.QSSI13.0' of https://git.codelinaro.org/clo/la/platform/vendor/opensource/audio-kernel into 12
+* Merge tag 'LA.UM.9.1.r1-12200-SMxxx0.QSSI13.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/wlan/fw-api into 12
+* Merge tag 'LA.UM.9.1.r1-12200-SMxxx0.QSSI13.0' of https://git.codelinaro.org/clo/la/kernel/msm-4.14 into 12
+* Merge branch 'aosp-new/upstream-f2fs-stable-linux-4.14.y' of https://git.codelinaro.org/clo/la/kernel/msm-4.14 into 12
+* cleanup: unused `POWER_SUPPLY_PROP_BATTERY_HEALTH` and `press_pwr`
+* strix: add back `CONFIG_ARMV8_DEPRECATED`
+* defconfig: enable cpu freq times
+* Revert "qcacld-3.0: Disable debugging bloat as much as possible"
+* Revert "touchscreen: Correct names for gesture nodes"
+* scsi: ufs: Fix a bug in ufshcd_system_resume()
+* scsi: ufs: Fix pm_runtime count in reset flow
+* Revert "block: Make q_usage_counter also track legacy requests" [7/7]
+* Revert "block: Convert RQF_PREEMPT into REQ_PREEMPT" [6/7]
+* Revert "block: pass 'op' to blk_queue_enter()" [5/7]
+* Revert "percpu-refcount: introduce __percpu_ref_tryget_live" [4/7]
+* Revert "blk-mq: return if queue is frozen via current blk_freeze_queue_start" [3/7]
+* Revert "block: support PREEMPT_ONLY"
+* Revert "SCSI: set block queue at preempt only when SCSI device is put into quiesce" [1/7]
+* Revert "msm: camera: icp: Enable hang dump on failure"
+* power: battery: Remove pl_awake_work() function
+* Revert "power: qpnp-smb5: Report TIME_TO_FULL_NOW"
+* Revert "power: fg-gen4: Report TIME_TO_FULL_NOW property"
+* power: reset: msm: Always perform a warm reboot
+* arm64: Change .weak to WEAK
+* arm64: lib: memory utilities optimization
+* BACKPORT: crypto: arm64/aes-modes - get rid of literal load of addend vector
+* crypto: arm64/aes-blk - add 4 way interleave to CBC-MAC encrypt path
+* crypto: arm64/aes-blk - add 4 way interleave to CBC encrypt path
+* crypto: arm64/aes-blk - remove configurable interleave
+* crypto: arm64/aes-blk - move kernel mode neon en/disable into loop
+* arm64: Disable -fwhole-program for vDSO
+* UPSTREAM: ARM64: vdso32: Install vdso32 from vdso_install
+* FROMLIST: arm64: Build vDSO with -ffixed-x18
+* ANDROID: turn on VCT access from 32-bit applications
+* vdso32: Invoke clang with correct path to GCC toolchain
+* FROMLIST: arm64: vdso32: Use full path to Clang instead of relying on PATH
+* ANDROID: clock_gettime(CLOCK_BOOTTIME,) slows down >20x
+* ANDROID: CROSS_COMPILE_ARM32 must work if CONFIG_COMPAT_VDSO
+* FROMLIST: BACKPORT: [PATCH 6/6] arm64: Wire up and expose the new compat vDSO
+* FROMLIST: [PATCH 5/6] arm64: compat: 32-bit vDSO setup
+* FROMLIST: [PATCH 4/6] arm64: compat: Add a 32-bit vDSO
+* FROMLIST: BACKPORT: [PATCH 3/6] arm64: Refactor vDSO init/setup
+* FROMLIST: [PATCH 2/6] arm64: elf: Set AT_SYSINFO_EHDR in compat processes
+* FROMLIST: [PATCH 1/6] arm64: compat: Use vDSO sigreturn trampolines if available
+* FROMLIST: lib: vdso: add support for time
+* FROMLIST: [PATCH] arm64: compat: Expose offset to registers in sigframes
+* FROMLIST: [PATCH v5 12/12] lib: vdso: do not expose gettimeofday, if no arch supported timer
+* FROMLIST: [PATCH v5 11/12] lib: vdso: Add support for CLOCK_BOOTTIME
+* FROMLIST: [PATCH v5 10/12] arm64: vdso: replace gettimeofday.S with global vgettimeofday.C
+* FROMLIST: [PATCH v5 09/12] arm: vdso: move vgettimeofday.c to lib/vdso/
+* FROMLIST: [PATCH v5 08/12] arm: vdso: Add ARCH_CLOCK_FIXED_MASK
+* FROMLIST: [PATCH v5 07/12] arm: vdso: disable profiling
+* FROMLIST: [PATCH v5 06/12] arm: vdso: add support for clock_getres
+* FROMLIST: [PATCH v6 05/12] arm: vdso: Add support for CLOCK_MONOTONIC_RAW
+* FROMLIST: [PATCH v5 04/12] arm: vdso: do calculations outside reader loops
+* FROMLIST: [PATCH v5 03/12] arm: vdso: inline assembler operations to compiler.h
+* FROMLIST: [PATCH v5 02/12] arm: vdso: add include file defining __get_datapage()
+* FROMLIST: [PATCH v5 01/12] arm: vdso: rename vdso_datapage variables
+* FROMLIST: [PATCH v3 3/3] arm64: compat: Add CONFIG_KUSER_HELPERS
+* FROMLIST: [PATCH v3 2/3] arm64: compat: Split the sigreturn trampolines and kuser helpers (assembler sources)
+* FROMLIST: [PATCH v3 1/3] arm64: compat: Split the sigreturn trampolines and kuser helpers (C sources)
+* Revert "ARM: vdso: Remove dependency with the arch_timer driver internals"
+* Revert "arm64: vdso: Fix clock_getres() for CLOCK_REALTIME"
+* Makefile: force usage of LLVM IAS
+* Makefile: Avoid setting any optimisation flag when linking with LLD
+* ANDROID: clang: update to 12.0.7
+* gen_headers: Add missing f2fs headers
+* Change the subprocess argument to fix the build issue
+* Use environment variable to find unifdef tool
+* kernel_headers: Explicitly run headers_install under 'sh'
+* Android.bp: allow system to use generated kernel headers
+* Revert "headers_lib: rename Android.bp"
+
+device/oneplus/common
+
+vendor/oneplus/sm8150-common
+
+android/hardware/qcom/display
+
+android/hardware/qcom/audio
+
+vendor/oneplus/oneplus7pro
