@@ -1,11 +1,11 @@
 {
-    "version": "2.0",
-    "date": "1663100268000",
-    "download_sources": {
-        "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/oneplus7pro/Vanilla/FlamingoOS-v2.0-oneplus7pro-user-Official-Vanilla-20220914-0234-incremental.zip"
-    },
-    "file_name": "FlamingoOS-v2.0-oneplus7pro-user-Official-Vanilla-20220914-0234-incremental.zip",
-    "file_size": "594515810",
-    "sha_512": "a41f4c05211074847d2305f9d25b6b5b8bdfa9c3ac5c169b50fb61588bc7c71334c134d30e53b29de209042d11587dbf3a36b33890381747ba73da963c53a40a",
-    "pre_build_incremental": "eng.neo.20220828.152847"
+  "version": "2.2",
+  "date": "1668260578000",
+  "download_sources": {
+    "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/oneplus7pro/Vanilla/FlamingoOS-v2.2-oneplus7pro-user-Official-Vanilla-20221112-1633-incremental.zip"
+  },
+  "file_name": "FlamingoOS-v2.2-oneplus7pro-user-Official-Vanilla-20221112-1633-incremental.zip",
+  "file_size": "177882683",
+  "sha_512": "f9860948ee92b5381a75fd6ddf560a1574849fbe70d9bd976a05f22957126f41e642c07edeaf8c7048cc4a83f87177eb0e22583b20510d9eb3f6fc59fcee6ed4",
+  "pre_build_incremental": "eng.neo.20221009.203618"
 }
