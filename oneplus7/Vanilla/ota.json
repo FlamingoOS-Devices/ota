@@ -1,10 +1,10 @@
 {
-    "version": "2.1",
-    "date": "1665335279000",
-    "download_sources": {
-        "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/oneplus7/Vanilla/FlamingoOS-v2.1-oneplus7-user-Official-Vanilla-20221009-1726-full.zip"
-    },
-    "file_name": "FlamingoOS-v2.1-oneplus7-user-Official-Vanilla-20221009-1726-full.zip",
-    "file_size": "1119941788",
-    "sha_512": "11012f212ec2ae26e5eb6e5697572321da822c2501a02a20a495d6a897b941d7ecd59a59951fa0cc9e17501ed109bb332f1a23fc0168ddff35a339ef928e8f43"
+  "version": "2.2",
+  "date": "1668227323000",
+  "download_sources": {
+    "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/oneplus7/Vanilla/FlamingoOS-v2.2-oneplus7-user-Official-Vanilla-20221112-0447-full.zip"
+  },
+  "file_name": "FlamingoOS-v2.2-oneplus7-user-Official-Vanilla-20221112-0447-full.zip",
+  "file_size": "1102568571",
+  "sha_512": "09269a8da3c0ac07ca6edd8230d482123ee3033be0c9954c5b31d0f26c2c27c36e88f3e4a7456a0d4f1b7717083dc7c0fffd518173eea3fc86831f30a8c369d9"
 }
