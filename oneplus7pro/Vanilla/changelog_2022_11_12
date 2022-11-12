@@ -1,3 +1,121 @@
+## vendor_qcom_opensource_vibrator ##
+aidl: Simplify soc check and drop prop dep
+Revert "vibrator: Remove libsoc_helper dependency"
+
+## packages_modules_Connectivity ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Connectivity into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
+Merge c81b8c56894797f2d83f9622ba580088e66b023c on remote branch
+Snap for 9144696 from 6a9b8e905d05cd856bcb02d640f0dae16a319167 to t-keystone-qcom-release
+Merge t-mpr-2022-10
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Connectivity into HEAD
+
+## hardware_libhardware ##
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+Merge 77bceb0beb3de931bc3296db2a9104cc8d75c50f on remote branch
+Snap for 9095507 from b2d6cc121298e34a4fdceca3081ae56742ff8d50 to t-keystone-qcom-release
+[dynamic_sensor] correctly interpret HID data
+
+## device_qcom_common ##
+Revert "vendor: bt: Switch BtAudio to AIDL"
+system: perf: Enable pre-rendering feature on all targets
+vendor: perf: Set beluga props for parrot
+Revert "Revert "common: perf: Enable the pre-rendering feature.""
+system: overlay: Remove supports BLE peripheral mode overlay
+vendor: init: init: early_boot: add socid for Divar Gaming
+common: add qccsyshal 1.2 to compat matrix
+common: add qccsyshal 1.1 to compat matrix
+vendor: init: Remove vendor.ril-daemon commands
+vendor: display: Build AIDL Lights HAL for 5.10
+wlan: Enable 802.11ax for holi and taro
+vendor: init: Upgrade diwali config to LA.VENDOR.1.0.r1-16000-WAIPIO.QSSI13.0
+vendor: perf: Update taro configs to LA.VENDOR.1.0.r1-16000-WAIPIO.QSSI13.0
+vendor: bt: Build libldacBT packages
+
+## vendor_qcom_opensource_power ##
+power: Allow device specific hooks for setMode, isModeSupported
+power: Add support for tap-to-wake feature control
+
+## vendor_qcom_opensource_usb ##
+enableUsbDataSignal: Handle failures in optional sysfs gracefully
+usb: Allow overriding device/controller names
+Update USB HAL to V1.3 implementation
+
+## frameworks_libs_modules-utils ##
+gmscompat: support intercepting SynchronousResultReceiver exceptions
+
+## system_sepolicy ##
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/sepolicy into HEAD
+
+## hardware_interfaces ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/interfaces into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
+Merge 0fb4327bccd1c209b508c0669c716802e3bcc6fd on remote branch
+btaudio: aidl: Support offloading all LDAC qualities
+Snap for 9144696 from 31f4cea0d933d213f3304c634a5e55fb2b634b91 to t-keystone-qcom-release
+Merge t-mpr-2022-10
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/interfaces into HEAD
+
+## vendor_oneplus_sm8150-common ##
+sm8150-common: Switch to prebuilt libtinycompress
+
+## vendor_qcom_opensource_commonsys-intf_bluetooth ##
+product: Set default the Bluetooth class of device
+product: move bluetooth properties to /vendor
+
+## external_gptfdisk ##
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+
+## frameworks_opt_net_wifi ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/opt/net/wifi into HEAD
+Merge c1b5a44e66486c6e884083c85277cef914fea4d2 on remote branch
+Snap for 9156544 from 57a5f895c7bca442bfc1c160eff1f0a59678a5ed to t-keystone-qcom-release
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/opt/net/wifi into HEAD
+Reload wifi configs if we're connected but have no configs
+Merge cfa3ede57710b1d26d25b131b5018c1655343994 on remote branch
+
+## device_qcom_sepolicy_vndr ##
+generic: msmnile: Add some misc wakeup nodes for msmnile
+Revert "sepolicy_vndr: suppress xdsp denial."
+sepolicy_vndr: legacy: Label QTI USB HAL
+sepolicy_vndr: qva: Update QTI USB HAL to v1.3
+
+## bootable_recovery ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/bootable/recovery into HEAD
+Merge 6af32c394fdb4ec4712f009e43a81deea00f8a8d on remote branch
+Snap for 9160906 from 3e45d8fe1711d3df2b1af9f42df230380fce4911 to t-keystone-qcom-release
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/bootable/recovery into HEAD
+Merge 49f1e68d83b92d539b0daea7cee98a4a73c10683 on remote branch
+[automerger] Adding support for SDExpress card in Recovery mode on anorak am: 5ecf463246
+Adding support for SDExpress card in Recovery mode on anorak
+
+## packages_modules_Permission ##
+sscopes: bugfix: don't deny app-ops that are allowed by default
+sscopes: bugfix: storage permissions prompt wasn't skipped in some cases
+sscopes: update UI note about storage permission state
+sscopes: deny all storage permissions when sscopes get enabled
+remove stray > characters and fix style for one
+sscopes: clarify description of what Storage Scopes does
+sscopes: support Android 13's image picker
+sscopes: switch to the new GosPackageState.Editor API
+sscopes: bugfix: permission request dialog sometimes wasn't dismissed
+sscopes: make sure new storage permissions are revoked
+sscopes: compatibility with Android 13's split storage permissions
+support spoofing results of permission requests
+link Storage Scopes from the storage runtime permission request dialog
+link Storage Scopes from App info -> Permissions -> Files and media
+Storage Scopes configuration UI
+handle APP_ALL_FILES_ACCESS_PERMISSION and MANAGE_MEDIA intents
+gmscompat: don't restart processes after OTHER_SENSORS gets granted
+gmscompat: skip app restart after permission grant in some cases
+
+## packages_services_Telecomm ##
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/services/Telecomm into HEAD
+
+## device_qcom_kernelscripts ##
+kernel_definitions: Find all possible dtbs
+kernel_definitions: use LLVM's integrated assembler
+
 ## vendor_flamingo ##
 flamingo: bump to v2.2
 version: October SPL time
@@ -6,9 +124,107 @@ manifest_merger: commit staged changes from merge conflict resolution before pus
 scripts: commit changes before pushing
 manifest_merger: push manifest at last and misc cleanup
 scripts: rewrite manifest merge scripts in rust
+overlay: drop bromite support in gapps
+spl: bump to september
+merge_caf: multithread push as well
+flamingo: Bump version to 2.1
+chore: use number of threads based on core count
+merge_caf: multithread for efficiency
+merge_caf: use remove_project from all possible xml files
+Revert "props: Disable remote keyguard animation until it's fixed"
+flamingo: build chromium browser
+flamingo: switch to our chromium WebView build
+mergecaf: push manifest too while pushing other repos
+mergecaf: pass in all args to py script
+mergecaf: update working dir
+vendor: Add CUSTOM_SECURITY_PATCH prop
+envsetup: update revision
 
-## external_gptfdisk ##
+## packages_apps_ThemePicker ##
+themepicker: override with our vendor/themes
+Revert "ThemePicker: Import pixel themes stub package"
+
+## packages_apps_MatlogX ##
+workflow: use api token off gitlab
+MatlogX: workflows: use gitlab repo for upload
+
+## vendor_qcom-opensource_packages_apps_Bluetooth ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
+Merge ac4a708e592c8bf2548e411fc009e61c31942527 on remote branch
 Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+Merge 7f66d645494d5967e4e860cf08609353dcce7cc4 on remote branch
+HFP: Cache call state for future when LE-A media is streaming
+Merge "HFP: Call audio during SHO from HFP to BAP is properly routed." into bt-sys.lnx.13.0
+Merge "ADM: Broadcast peer device when current device of group disconnected." into bt-sys.lnx.13.0
+Merge "BtInCallService: Disconnection tone wait time is removed." into bt-sys.lnx.13.0
+Merge "Return active call device when QC LE audio is enabled" into bt-sys.lnx.13.0
+ADM: Broadcast peer device when current device of group disconnected.
+HFP: Call audio during SHO from HFP to BAP is properly routed.
+Merge "LE-A: Control BAP_CALL connection from shell for PTS" into bt-sys.lnx.13.0
+LE-A: Control BAP_CALL connection from shell for PTS
+Ignore setActiveDevice request if mShoActive is true
+Fix for voice SHO between two  LE Audio devices
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth into HEAD
+Merge "ble advertisement: permission check and pass own_address_type to native stack" into bt-sys.lnx.13.0
+LeAudio: keep LeAudio active while only one EB of Group is disconnected
+HFP: Align to SDK APIs properly in HeadsetService.
+Merge "Bluetooth: porting ipccachedata code" into bt-sys.lnx.13.0
+Merge de645828105d82ad836a9e9dbb974db6620cde65 on remote branch
+BtInCallService: Disconnection tone wait time is removed.
+Send CLCC response immediately when no calls are present
+Check if subscriber number is same as number in CLCC response
+Bluetooth: porting ipccachedata code
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth into HEAD
+Merge "Don't set voice profile inactive for leagcy devices when switching media output" into bt-sys.lnx.13.0
+Merge "Attempt outgoing HID host reconnection for only A2DP device" into bt-sys.lnx.13.0
+ble advertisement: permission check and pass own_address_type to native stack
+Merge "Attempt outgoing HID host reconnection"
+Merge "Bluetooth: add license BSD-3-Clause-Clearwq"
+Attempt outgoing HID host reconnection
+Bluetooth: add license BSD-3-Clause-Clearwq
+Phonepolicy: Fix policies for CSIP profile
+Attempt outgoing HID host reconnection for only A2DP device
+Bluetooth: Catch SecurityException exception
+Merge efc43550c6d167c64906a8e0c7c8d136c6fa96d6 on remote branch
+HFP: Align to SDK APIs properly in HeadsetService.
+Don't set voice profile inactive for leagcy devices when switching media output
+Return active call device when QC LE audio is enabled
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth into HEAD
+MAP: Add locale support for MAP advance related notifications.
+BC: Auto connect to all group members
+
+## frameworks_native ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+make a callback on OTHER_SENSORS permission denials
+Merge 4ab8ed8417535a498c2efd4f63237a96f465047b on remote branch
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+Merge 265bb70435fd0e73e5c96d8f59a4740b30f83b73 on remote branch
+Snap for 9155060 from 91f0772922d66f2a063271c883e86e914c75388f to t-keystone-qcom-release
+sf: Get latest vsync period from HWC
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+Merge 142eb744dc838d3bd32543f05ac6eea2a3130c3f on remote branch
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+Revert "libgui: add VpsExtension in SurfaceControl"
+Snap for 9079126 from a9606caaa8fb687162c64c95ad015a519f2dc151 to t-keystone-qcom-release
+Merge ccd4222dc775be6aa0f1e30212defcbd2a1e5dfd on remote branch
+Merge "sf: Switch to smomo fps after a number of consecutive frames" into t-keystone-qcom-dev
+sf: Switch to smomo fps after a number of consecutive frames
+Fix the shadow problem caused by layer parent switching
+libbinder: O_CLOFORK
+[Optimization] It's no need to start the dispatch cycle going if the outbound queue was not previously empty.
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+
+## packages_apps_FlamingoSystemUI ##
+FlamingoSystemUI: move ErrorReportActivity to com.android.systemui package
+Revert "SystemUI: Use colorkt-based dynamic theme engine for Monet"
+Revert "SystemUI: theme: Override modulated dark QS background color"
+Revert "SystemUI: theme: Expose theme engine parameters as settings"
+Revert "FlamingoThemeOverlayController: observe monet settings and reload theme on change"
+Revert "FlamingoThemeOverlayController: override getAccent*() and getNeutral*() methods"
+FlamingoSystemUI: register battery observer in main thread
+KeyguardMediaViewController: Fix music indication not showing on doze/aod
+FlamingoSystemUI: refresh livedisplay tiles on init intent
 
 ## manifest ##
 system: update to LA.QSSI.13.0.r1-07600.02-qssi.0
@@ -21,46 +237,17 @@ flamingo: track cts from clo
 system: update to LA.QSSI.13.0.r1-07200.02-qssi.0
 system: update to LA.QSSI.13.0.r1-07200-qssi.0
 manifest: regen manifests
-
-## device_qcom_kernelscripts ##
-kernel_definitions: Find all possible dtbs
-
-## bootable_recovery ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/bootable/recovery into HEAD
-Merge 6af32c394fdb4ec4712f009e43a81deea00f8a8d on remote branch
-Snap for 9160906 from 3e45d8fe1711d3df2b1af9f42df230380fce4911 to t-keystone-qcom-release
-
-## hardware_libhardware ##
-Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
-Merge 77bceb0beb3de931bc3296db2a9104cc8d75c50f on remote branch
-
-## frameworks_av ##
-Merge tag 'LA.QSSI.13.0.r1-07600.02-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
-
-## device_qcom_common ##
-Revert "vendor: bt: Switch BtAudio to AIDL"
-system: perf: Enable pre-rendering feature on all targets
-vendor: perf: Set beluga props for parrot
-
-## packages_apps_ThemePicker ##
-themepicker: override with our vendor/themes
-Revert "ThemePicker: Import pixel themes stub package"
-
-## bionic ##
-arm64: use llvm's builtins for lround/lroundf/llround/llroundf.
-arm64: use llvm's builtins for copysign() and copysignf().
-arm64: fix fesetround().
-arm64: simplify the fenv implementation a bit.
-
-## system_core ##
-init: Don't spoof SafetyNet properties in recovery mode
-
-## build_make ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
-
-## frameworks_native ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+manifest: Update to refs/tags/LA.QSSI.13.0.r1-07100.01-qssi.0
+flamingo: track our fork of qcom/opensource/usb
+system: update to LA.QSSI.13.0.r1-07100-qssi.0
+Revert "flamingo: clean up manifest"
+manifest: track systemui lib from clo
+manifest: switch to A13 branch for kernelscripts
+manifest: Update to refs/tags/LA.QSSI.13.0.r1-07000-qssi.0
+manifest: untrack chromium-webview
+manifest: track prebuilts from gitlab org
+manifest: track GmsCompatConfig from gos
+manifest: Update to refs/tags/LA.QSSI.13.0.r1-06400.01-qssi.0
 
 ## packages_apps_FlamingoSettings ##
 FlamingoSettings: Update Chinese translations (#10)
@@ -69,108 +256,30 @@ FlamingoSettings: add sscopes string resources
 FlamingoSettings: add string resources for OTHER_SENSORS permission preference
 Revert "FlamingoSettings: add monet engine preferences"
 FlamingoSettings: switch to settings based privacy indicator settings
+FlamingoSettings: add Russian translation (#9)
+AppLockSettingsPC: use DashboardFragment as the type for host
+FlamingoSettings: applock: early return in setChecked if backing field has the same value
+Settings: Add a toggle for anti flicker mode in LiveDisplay settings
+FlamingoSettings: add switch preferences for privacy indicators
+FlamingoSettings: drop sscopes strings
+FlamingoSettings: add nav bar inversion preference controller and string resources
+FlamingoSettings: drop unused strings and utility functions
+FlamingoSettings: update miscellaneous settings summary
+AppLockPackageConfigFragment: allow launching app from app icon
+FlamingoSettings: merge hidden app settings with applock
+FlamingoSettings: applock: fix unlock prompt disappearing when trying to open apps
+FlamingoSettings: update notification redaction preference summary
+FlamingoSettings: use a new task stack for app lock fragments
+applock: adapt for API changes
 
-## packages_apps_Settings ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+## packages_apps_GameSpace ##
+workflow: use api token off gitlab
+GameSpace: Add Russian translation (#14)
+GameSpace: workflows: use gitlab repo for upload
 
-## frameworks_base ##
-DeviceKeyHandler: refactor and allow filtering events based on device id
-PixelPropsUtils: use a HashSet as the data structure for packagesToChange*
-pputil: cleanup spoofed apps
-pputil: update raven to cheetah
-
-## vendor_oneplus_sm8150-common ##
-sm8150-common: Switch to prebuilt libtinycompress
-
-## frameworks_opt_net_wifi ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/opt/net/wifi into HEAD
-Merge c1b5a44e66486c6e884083c85277cef914fea4d2 on remote branch
-Snap for 9156544 from 57a5f895c7bca442bfc1c160eff1f0a59678a5ed to t-keystone-qcom-release
-
-## packages_apps_FlamingoSystemUI ##
-FlamingoSystemUI: move ErrorReportActivity to com.android.systemui package
-Revert "SystemUI: Use colorkt-based dynamic theme engine for Monet"
-Revert "SystemUI: theme: Override modulated dark QS background color"
-Revert "SystemUI: theme: Expose theme engine parameters as settings"
-Revert "FlamingoThemeOverlayController: observe monet settings and reload theme on change"
-Revert "FlamingoThemeOverlayController: override getAccent*() and getNeutral*() methods"
-
-## device_oneplus_sm8150-common ##
-camera_helper: update KeyHandler for fwb changes
-sm8150-common: Switch to prebuilt libtinycompress
-sm8150-common: Disable STATE_DOZE_SUSPEND
-sm8150-common: rootdir: Fix permissions for /dev/input/event4
-DeviceSettings: Update Russian translation (#6)
-
-## upload_bot ##
-chore: fix dl links and changlog url
-try config file in /etc too
-add a dockerfile
-fix download url
-feat: add ability to read from env
-create a procfile
-kill app if no configs found
-script: go mod tidy
-feat: send release post to update channel
-init readme
-release: correct string from uploading to downloading
-chore: use maintainers id for support group
-feat: add a LICENSE
-drop changes:
-Revert "DNM: revert some stuffs for tests"
-feat: finish up release post gen
-database: add support to fetch maintainers
-databse: add support to fetch support group
-release: update msg before validation
-use markdown for last send
-release: delete msg after completion
-ota: convert time to millis
-DNM: revert some stuffs for tests
-chore: store and use urls from deployed backend
-release: make upload url dynamic
-chore: add back checks for full OTA
-fix: pushing of OTA
-fix: logs
-ota: make url dynamic
-chore: pass along entire device info
-
-## device_oneplus_common ##
-TouchScreenGestureHandler: adapt KeyHandler for fwb changes
-
-## hardware_interfaces ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/interfaces into HEAD
-Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
-Merge 0fb4327bccd1c209b508c0669c716802e3bcc6fd on remote branch
-btaudio: aidl: Support offloading all LDAC qualities
-
-## packages_modules_Bluetooth ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Bluetooth into HEAD
-Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
-Merge 4e1a38b36ea7c31dc9655644d059fc40b760227b on remote branch
-Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
-Merge 0c279f4b72189aa7c969d7366c3654d1fe45b38f on remote branch
-Snap for 9160906 from b44d2b3b1a89ac146a39231cdc885cb588da5787 to t-keystone-qcom-release
-Merge "Bluetooth: Add CsClient profile methods to Adapter" into t-keystone-qcom-dev
-
-## vendor_qcom-opensource_packages_apps_Bluetooth ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth into HEAD
-Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
-Merge ac4a708e592c8bf2548e411fc009e61c31942527 on remote branch
-Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
-Merge 7f66d645494d5967e4e860cf08609353dcce7cc4 on remote branch
-
-## system_memory_lmkd ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/memory/lmkd into HEAD
-
-## packages_modules_Connectivity ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Connectivity into HEAD
-Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
-Merge c81b8c56894797f2d83f9622ba580088e66b023c on remote branch
-
-## vendor_qcom_opensource_commonsys_system_bt ##
-Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/system/bt into HEAD
-Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
-Merge bdb2b726307531646e80f97c7fffe71bc9314a75 on remote branch
+## vendor_support ##
+main: drop app list fragment, cleanup dependencies
+support: switch to gitlab repo for uploading artifacts
 
 ## packages_modules_Wifi ##
 Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Wifi into HEAD
@@ -181,4 +290,503 @@ Snap for 9171958 from 12257c6a8760d54c0b974c2a2e908a02cdb173b5 to t-keystone-qco
 Merge "wifi: select the candidate security params heuristically" into t-keystone-qcom-dev
 Snap for 9170958 from c97c9655c9aecaf4f2389a740daace9004fcfe5f to t-keystone-qcom-release
 Merge changes I0918636c,Id1c3a983 into t-keystone-qcom-dev
+wifi: fix NPE when getBridgedApInstances returns null
+wifi: fix bridged AP can't be downgrade
+Fix NPE from IfaceCreationData lists
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Wifi into HEAD
+Snap for 9124580 from c9d043be71e3c6dd6a28809ff214b73ab05c14ca to t-keystone-qcom-release
+Merge "Wifi: disconnectOnlyOnInitialIpReachability for IP_REACHABILITY_FAILURE" into t-keystone-qcom-dev
+Snap for 9119712 from 4930855404829ac24f310013f37b343a2d59269a to t-keystone-qcom-release
+Merge 5afc0e6ed607ceeae109c4ed9c3930570b443cb3 on remote branch
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Wifi into HEAD
+Catch null WifiConfiguration in reportConnectionAttemptEnd
+gmscompat: remove stubs that are now handled by GmsCompatConfig
+Snap for 9083973 from 2059e09a0054eb724ee3bf6377d3fa51211cbf1f to t-keystone-qcom-release
+Merge changes from topic "am-00c9cc17-86e0-4b24-8760-fa3f0b6981e7" into t-keystone-qcom-dev
+Merge d9206eafe129a2238df5f4c16157abcb2fda2938 on remote branch
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Wifi into HEAD
+Snap for 9067516 from eeab3a12b04bae335517b74762c19713d666fea5 to t-keystone-qcom-release
+Merge t-mpr-2022-09
 
+## build_soong ##
+Define AArch32 soong variable
+Treat kotlin-annotations the same as kotlin-stdlib
+
+## art ##
+Update boot image and system server profiles [M10C10P80S0], RESTRICT AUTOMERGE (Since these are profiles for T release only)
+RESTRICT AUTOMERGE
+Cleanup libart-compiler version script
+avoid "> >" in demangled names
+Hide internal libart-compiler symbols
+ART: Change hash table load factors in images to 0.6.
+
+## device_oneplus_oneplus7pro ##
+oneplus7pro: force 90hz at lower brightness
+
+## device_oneplus_sm8150-common ##
+camera_helper: update KeyHandler for fwb changes
+sm8150-common: Switch to prebuilt libtinycompress
+sm8150-common: Disable STATE_DOZE_SUSPEND
+sm8150-common: rootdir: Fix permissions for /dev/input/event4
+DeviceSettings: Update Russian translation (#6)
+
+## packages_apps_Launcher3 ##
+Launcher: Use font configs instead hardcoded fonts
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Launcher3 into HEAD
+Merge 0d7da49e42dec4c7bbed46b71fea4dcf0ee958cd on remote branch
+Snap for 9144696 from 5da01709499e2e2dba5358db8aaed082dc85cd47 to t-keystone-qcom-release
+Launcher3: Add a toggle to disable hotseat searchbar
+Merge t-mpr-2022-10
+AssistantIconView|QsbLayout: fixup and improve code
+Launcher3: device_profiles: catch up to 13
+
+## packages_modules_Bluetooth ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Bluetooth into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
+Merge 4e1a38b36ea7c31dc9655644d059fc40b760227b on remote branch
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+Merge 0c279f4b72189aa7c969d7366c3654d1fe45b38f on remote branch
+Snap for 9160906 from b44d2b3b1a89ac146a39231cdc885cb588da5787 to t-keystone-qcom-release
+Merge "Bluetooth: Add CsClient profile methods to Adapter" into t-keystone-qcom-dev
+Snap for 9144696 from 9711335e81396d8c3ba834e5e3257e3bcaa3ec9d to t-keystone-qcom-release
+Bluetooth: Add CsClient profile methods to Adapter
+Merge t-mpr-2022-10
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Bluetooth into HEAD
+Merge 6b93b1e84f5d6b6f05589812922f5383810f98ff on remote branch
+gmscompat: add back BluetoothDevice#getMetadata() stub
+gmscompat: remove stubs that are now handled by GmsCompatConfig
+Revert "add BluetoothAdapter#getConnectionStateLeAware()"
+Revert "export BluetoothAdapter#getLeState() as system API"
+Snap for 9077027 from b2317922c1e36bbf4d33b1897ec4b4bf47f6061a to t-keystone-qcom-release
+Add null check for BLE advertisement package name
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Bluetooth into HEAD
+Snap for 9067516 from 70c7f4b9131a1f9934adfa6dc1b12c5f2e7b16b3 to t-keystone-qcom-release
+Merge "Merge t-mpr-2022-09" into t-keystone-qcom-dev
+Merge "BluetoothAdapter: Check bit mask of profile with long type" into t-keystone-qcom-dev
+Merge t-mpr-2022-09
+
+## vendor_themes ##
+stub: Update color bundles from raven TP1A.220624.021
+stub: Add translatable="false" tag to bundle_name_*
+stub: Add translatable="false" tag to color_bundles
+stub: Import color section resources
+Add initial stub apk for themes
+
+## bionic ##
+arm64: use llvm's builtins for lround/lroundf/llround/llroundf.
+arm64: use llvm's builtins for copysign() and copysignf().
+arm64: fix fesetround().
+arm64: simplify the fenv implementation a bit.
+string: Replace explicit nops with alignment
+Fix it to call the lambda function
+libc: arm64: Merge MTE versions of strcpy/stpcpy/strcmp/strncmp
+Use builtins for fma/fmax/fmin/nearbyint/rint/round/trunc on 32-bit ARM
+Revert "Revert "arm64: Use builtin for nearbyintf/nearbyint""
+libc: arm64: optimize memcpy
+libc: arm64: add integer memcpy/memmove from arm-optimized-routines
+aarch64: Increase small and medium cases for memcpy
+string: Cleanup memset
+libc: Import cortex-strings strlen for A7/A15/A53/A53.A57/Denver/Krait
+libc: arm: Optimise memchr for NEON-enabled processors
+
+## packages_apps_Updater ##
+workflow: use api token off gitlab
+Updater: workflows: use gitlab repo for upload
+
+## system_core ##
+init: Don't spoof SafetyNet properties in recovery mode
+Revert "Format formattable partitions if mount fails"
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/core into HEAD
+
+## device_oneplus_common ##
+TouchScreenGestureHandler: adapt KeyHandler for fwb changes
+TouchScreenGestureHandler: handle API deprecations
+Revert "fingerprint: clean-up to reflect newer kernel changes"
+
+## system_memory_lmkd ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/memory/lmkd into HEAD
+lmkd: remove priority setting for the kill target
+lmkd: measure free swap as available and easily reclaimable memory
+lmkd: Fix UAF caused by calling pid_remove() from the watchdog thread
+Merge 35892b54b984affaea31137e04557a167fb7c5ce on remote branch
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/memory/lmkd into HEAD
+Merge commit '5e353e0f8cedb720b609df744465c68c31ca2ada' into ks-aosp.lnx.13.0.r1-rel
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/memory/lmkd into HEAD
+Snap for 9083973 from d59fea13be66f88020fbfd3a6e15732f4dccadd4 to t-keystone-qcom-release
+lmkd: Ignore file cache during critical or super critical event
+lmkd: Ignore file cache during critical or super critical event
+Snap for 9069229 from 289cdf1f0865853e3d038ab1f4268f29a5f37369 to t-keystone-qcom-release
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/memory/lmkd into HEAD
+lmkd: Print considered nr_cache pages in debug logs
+
+## build_make ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+build_image: Allow disabling custom inode count calculation
+Merge 479f4f9aa31b714c80113030898f5073b19ced5d on remote branch
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+Merge 005751ac09efa20c9713e0979672539b4211eb8c on remote branch
+Make change and version bump to TKQ1.221013.002
+Make change and version bump to TKQ1.221013.001
+Make change and version bump to TKQ1.221011.002
+Make change and version bump to TKQ1.221011.001
+Make change and version bump to TKQ1.221010.002
+Make change and version bump to TKQ1.221010.001
+Make change and version bump to TKQ1.221009.001
+Make change and version bump to TKQ1.221007.002
+Make change and version bump to TKQ1.221007.001
+Make change and version bump to TKQ1.221006.002
+Make change and version bump to TKQ1.221006.001
+Make change and version bump to TKQ1.221005.002
+Make change and version bump to TKQ1.221005.001
+Make change and version bump to TKQ1.221004.001
+Merge t-mpr-2022-10
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+Make change and version bump to TKQ1.221003.001
+Make change and version bump to TKQ1.221002.001
+Make change and version bump to TKQ1.220930.002
+Make change and version bump to TKQ1.220930.001
+Make change and version bump to TKQ1.220929.002
+Merge 794e26a8e425b3a276c0ac2f7faebfb192e34578 on remote branch
+Make change and version bump to TKQ1.220929.001
+Make change and version bump to TKQ1.220928.001
+Add AVDT_NUM_SEPS to bluetooth config.
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+Make change and version bump to TKQ1.220927.002
+Make change and version bump to TKQ1.220927.001
+Make change and version bump to TKQ1.220925.001
+Make change and version bump to TKQ1.220923.001
+Make change and version bump to TKQ1.220922.001
+Make change and version bump to TKQ1.220920.001
+Make change and version bump to TKQ1.220919.001
+Merge 22225514ac36da7fce71ed4436b0ff67893843d2 on remote branch
+Make change and version bump to TKQ1.220918.001
+Make change and version bump to TKQ1.220916.001
+Make change and version bump to TKQ1.220915.002
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+Merge changes from topic "am-bfc9b5b6-0054-41f7-b43f-ec9dbd57febd" into t-keystone-qcom-dev
+Make change and version bump to TKQ1.220915.001
+Make change and version bump to TKQ1.220914.002
+Merge t-mpr-2022-09
+Make change and version bump to TKQ1.220914.001
+
+## packages_apps_Settings ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+switch OBB toggle to the new GosPackageState.Editor API
+add Android/obb access toggle to "Install unknown apps" screen
+add Storage Scopes link to the "App info" screen
+[TMP]Settings: add missing lc3 codec preference title and summary
+add a toggle for auto-grants of OTHER_SENSORS permission
+Merge 3779c5b80e84e9a0d85dad760e3e98f92d3ab99c on remote branch
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+Merge c6ca45f9f4335f2d0a693b8da35f08a7efd326d4 on remote branch
+Snap for 9171958 from 02dfe88bd1f1a10caaa0e2594ef0abdc9d7e8069 to t-keystone-qcom-release
+Merge "Add check for invalid subscription Id" into t-keystone-qcom-dev
+Add check for invalid subscription Id
+Snap for 9157131 from 9d4ec08188f118851e890964ad64e1507f706bec to t-keystone-qcom-release
+Merge "Broadcast UI: Use legacy Broadcast UI while PTS test" into t-keystone-qcom-dev
+Snap for 9155060 from dc3d9dfd90590395a5216005c7681468de388355 to t-keystone-qcom-release
+Merge "wifi: NetworkRequest support for gbk ssid" into t-keystone-qcom-dev
+Merge "Remove modem count check to show the C-IWLAN toggle" into t-keystone-qcom-dev
+Merge tag 'LA.QSSI.13.0.r1-07100.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+wifi: NetworkRequest support for gbk ssid
+Snap for 9144696 from 42ccb58278813d8eeffcb0d806c09ba0560650fc to t-keystone-qcom-release
+SecuritySettings: properly remove security status header
+Settings: relocate app lock preference to advanced security settings
+Merge t-mpr-2022-10
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+PowerMenuSettings|GestureSettings: override search index providers preference controllers generator as well
+Settings: check in nav bar inversion preference
+Settings: move pill length gesture to other controls category
+BiometricFragment: respect background authentication request in source prompt info
+Broadcast UI: Use legacy Broadcast UI while PTS test
+Snap for 9123943 from fd5cbfaac63feaf2fac354d08d6198952676b545 to t-keystone-qcom-release
+Merge 60ef99fe4a44a74b5ed506378a1b4d79ffeca181 on remote branch
+wifi: NetworkRequest support for gbk ssid
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+Remove modem count check to show the C-IWLAN toggle
+don't allow disabling GmsCompat config
+Use data registration state to update summary
+Merge baf0dca022eb3bc68d30dac664eb4cf2d1d0fd2b on remote branch
+Snap for 9074301 from e5f938c607c63eee99d7b01ab44af061415939c6 to t-keystone-qcom-release
+Merge "SAP: fix Dual Band display issue in Enhanced Open security" into t-keystone-qcom-dev
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+Snap for 9067516 from 95e7a8fbe38709d178ebe93e56d7937104841c00 to t-keystone-qcom-release
+Merge "Merge t-mpr-2022-09" into t-keystone-qcom-dev
+SAP: fix Dual Band display issue in Enhanced Open security
+Settings: add Spatial Audio toggle ON/OFF support for BLE devices
+Merge t-mpr-2022-09
+
+## vendor_qcom_opensource_commonsys_system_bt ##
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/system/bt into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
+Merge bdb2b726307531646e80f97c7fffe71bc9314a75 on remote branch
+Replace BTM_DEF_LOCAL_NAME with the new stable sysprop value
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+bt: Fix undeclared identifier with Clang 14
+Merge e517b923f066cbf42461e4b73854ddfdf9f379ed on remote branch
+BT Snoop: Add profilesfiltered advance snoop property
+Add debug logging for hci events received
+AHIM: Enhanced logs to know codec params passed to MM.
+BT-Stack: Force PTS is supporting LE-Audio UUID.
+bt: set idle timeout to 3s for L2CAP_ATT CID, if smp bond is failed
+LEAudio: Map correct channel location for Stereo HS CIS stream
+Merge "Fix out of bound read in read_report_descriptor_ccc_cb" into bt-sys.lnx.13.0
+Fix out of bound read in read_report_descriptor_ccc_cb
+BT Qual changes for GATT Robust caching
+Fixes for DB out of sync scenario for Robust caching
+Revert "Revert "Revert "Client side AIDL parcelable extn changes (LC3Q & AA-R3)"""
+Revert "A2dp: Added code for sending proper error codes."
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/system/bt into HEAD
+Revert "Revert "Client side AIDL parcelable extn changes (LC3Q & AA-R3)""
+Ble: Handling Default address while starting advertisement
+ble advertisement address type parameter
+Merge "LeAudio: map correct channel location of earbud with CIS stream" into bt-sys.lnx.13.0
+GATT: Clear pending operations after disconnection
+Merge "AVRCP: Fix potential buffer overflow"
+LeAudio: map correct channel location of earbud with CIS stream
+GAP: Addressing the fix in the adv audio db map (1/2)
+GAP: Ignoring the createbond if already bonding is in progress
+Merge f4948072e3e1caa1f635d9d39583a7de252b72c3 on remote branch
+AHIM: Added change to fetch latency from remote
+avoid remote_delay_report integer overflow
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/system/bt into HEAD
+Merge "Check L2CAP size only for start packet" into bt-sys.lnx.13.0
+Merge "DO NOT MERGE Ensure hci command status event has sufficient packet length" into bt-sys.lnx.13.0
+DO NOT MERGE Ensure hci command status event has sufficient packet length
+L2CAP: Check length for packet before connection complete
+Check L2CAP size only for start packet
+AVRCP: Fix potential buffer overflow
+AVRCP: Fix potential buffer overflow
+Merge "sdp: Fix overflow in SDP_AddAttributeToRecord"
+Merge "Security: Add boundary check when reading SDP attribute response packet"
+Merge "Ensure that Numeric Comparison pairing is not treated as Just Works pairing."
+Merge "bt-stack: add license comment"
+Added the copyright markings
+sdp: Fix overflow in SDP_AddAttributeToRecord
+Security: Add boundary check when reading SDP attribute response packet
+Ensure that Numeric Comparison pairing is not treated as Just Works pairing.
+bt-stack: add license comment
+Added the copyright markings
+Error code for UART FLOW OFF adding in QSSI
+Merge c3aab6c2e4ec809af57f15f1897a3fae1fa62e38 on remote branch
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/system/bt into HEAD
+GAP: Addressing the fix in the adv audio db map (1/2)
+
+## frameworks_av ##
+Merge tag 'LA.QSSI.13.0.r1-07600.02-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+media: refactor compress audio recording.
+Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
+Merge 8148fcb228afa728259b8c3960e136fea0a2a362 on remote branch
+Based on property enforce haptic intensity to None
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+Merge 2db9a6e30d9b21c2efbcbfd4e39d0d08024c7444 on remote branch
+Snap for 9171958 from eabed73ec037773d29596f52f3dfa335f5a1de17 to t-keystone-qcom-release
+Merge "NuPlayer: clear mHasVideo flag once video is flushed/eos" into t-keystone-qcom-dev
+Merge "NuPlayer: control preroll more precisely" into t-keystone-qcom-dev
+libstagefright: omx: Add support for loading prebuilt ddp and ac4 decoder lib
+Merge tag 'LA.QSSI.13.0.r1-07100.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+Snap for 9146094 from bb397d33ce2c6846d43e972b711d4c62cfd21976 to t-keystone-qcom-release
+Merge "Camera: Removing cachedump call to miminimize delay during close."
+Camera: Avoid unnecessary close of buffer release fence fds
+Camera: Removing cachedump call to miminimize delay during close.
+Snap for 9144696 from 4d60e5aca4d184b2c2b94f71f2c0026a32a2f25b to t-keystone-qcom-release
+Merge "Updated max rotational velocity of head tracking to 0.8 rad/s for smooth auto-recentering" into t-keystone-qcom-dev
+Merge "Camera: Avoid unnecessary close of buffer release fence fds" into t-keystone-qcom-dev
+Merge t-mpr-2022-10
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+Snap for 9129231 from ed663083260dafeba59b650333d360a26f50e735 to t-keystone-qcom-release
+Merge "AudioRecord: add set/get Parameters API's" into t-keystone-qcom-dev
+Merge 1c6e8a1e0830abda527ba98d477935e6293a9b4b on remote branch
+Snap for 9118861 from f6fde4d5c5e3ac8bec0f87b12de15186415ab0b7 to t-keystone-qcom-release
+Merge "Based on property enforce haptic intensity to None" into t-keystone-qcom-dev
+Based on property enforce haptic intensity to None
+Updated max rotational velocity of head tracking to 0.8 rad/s for smooth auto-recentering
+NuPlayer: control preroll more precisely
+Snap for 9095507 from f28b49756b24af3cf186d263e30f29fc0e661ef4 to t-keystone-qcom-release
+Merge changes from topic "@topic:Bug_Fixes @Buganizer:https://issuetracker.google.com/issues/244427875" into t-keystone-qcom-dev
+Merge "Camera: Removing cachedump call to miminimize delay during close." into t-keystone-qcom-dev
+Spatializer: Increase freshness timeout to 120 ms.
+Spatializer: Respect FCC_LIMIT for input masks
+Tune stillness detector for more responsive headtracking
+Spatializer dumpsys: Add parameters and local logs in dumpsys
+Fix race condition in thread creation
+AudioFlinger: avoid doing balance before downmixing
+[HAX]libaudio: relax missing elf symbols check
+NuPlayer: clear mHasVideo flag once video is flushed/eos
+AudioRecord: add set/get Parameters API's
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+
+## kernel_oneplus_sm8150 ##
+Merge branch '12-inline' of github.com:npv12/strix_kernel_oneplus_sm8150 into 12-zram
+Merge branch '12-mlgru' of github.com:npv12/strix_kernel_oneplus_sm8150 into 12-zram
+defconfig: switch zram to lz4
+defconfig: enable lz4
+strix: Regenerate and save
+lockdep: Introduce wait-type checks
+locking: Introduce local_lock()
+zram: experimental patch with entropy calculation
+zram: fix race between zram_reset_device() and disksize_store()
+zram: off by one in read_block_state()
+zram_drv: Reapply baf1f2aef46d09bba1ef82da453330a463f9883b
+zram: stop using ->queuedata
+zram: fix build
+zram: kang from v5.12
+zram: revert back to v4.14 state
+net-tcp: extend tcp_tw_reuse sysctl to enable loopback only optimization
+qcaclcd: disable WLAN_HANG_EVENT
+qcacmn: Disable all of qdf_trace when WLAN_DEBUG is disabled
+qcacld: Disable more debugging and unneeded options
+mm: backing-dev: Take a reference to the bdi in use to prevent UAF
+fs: explicitly unregister per-superblock BDIs
+fs: prevent kernel panic when device is hot-removed
+add toggle for disabling newly added USB devices
+qcacld-3.0: Enable SARV1 to SARV2 conversion feature
+qcacld-3.0: Add function typedefs for roam callbacks
+qcacld-3.0: Update nan_discovery_flush_callback
+qcacld-3.0: Update target_if_nan_event_flush_cb
+qcacld-3.0: Update wma_discard_fw_event
+qcacld-3.0: Update lim_send_action_frm_tb_ppdu_cfg_flush_cb
+qcacld-3.0: Update to match scheduler_msg callback
+qcacmn: Update wmi_discard_fw_event
+qcacmn: Update scheduler_msg callback type
+qcacmn: Revert wlan_serialization_generic_timer_cb
+qcacmn: Revert target_if_vdev_mgr_rsp_timer_cb
+qcacmn: Properly resolve disabled diag procfs
+qcacmn: Fix suspicious string concatenation warning in fwlog
+qcacmn: Remove leftover debug function
+qcacld-3.0: Disable more debugging configs
+ANDROID: mm: Fix page table lookup in speculative fault path
+mm: Fix sleeping while atomic during speculative page fault
+msm: ipa3: increase rmnet_ipa timeout value
+
+## frameworks_base ##
+DeviceKeyHandler: refactor and allow filtering events based on device id
+PixelPropsUtils: use a HashSet as the data structure for packagesToChange*
+pputil: cleanup spoofed apps
+pputil: update raven to cheetah
+Do not dismiss keyguard after SIM PUK unlock
+PixelPropsUtils: update raven fp from October build
+fixup! 07400 merge
+Merge tag 'LA.QSSI.13.0.r1-07400-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into HEAD
+SettingsLib: allow Permission APEX to use ActionButtons and MainSwitch
+gosps: note that (1 << 4) flag is not to be used
+sscopes: bugfix: storage permissions prompt wasn't skipped in some cases
+fixup! control access to Android/obb directory with a GosPackageState flag
+gosps: refactor GosPackageState and improve its performance
+gosps: return internal version in PackageManagerInternal
+gosps: move GosPackageStatePm to com.android.server package
+sscopes: use infrastructure for spoofing app-op checks
+infrastructure for spoofing self app-op checks
+sscopes: prepare to use infrastructure for spoofing app-op checks
+gosps: allow system Launcher to access GosPackageState
+sscopes: add constant for mediaIdToFilePath MediaProvider#call() branch
+gosps: definitions of flags that relax app hardening
+gosps: add a helper class for updating GosPackageState
+sscopes: bugfix: missing check for AOSP 13 storage permissions
+sscopes: stub out the protected WallpaperManager methods
+control access to Android/obb directory with a GosPackageState flag
+infrastructure for the Storage Scopes feature
+support for per-app GrapheneOS-specific persistent state
+SystemUI: ThemeOverlayController: remove colorSchemeIsApplied check before applying overlays
+fixup! Revert "base: add public setting keys for monet tunables"
+gmscompat: don't special-case GmsCompatApp as force-queryable
+gmscompat: add PackageManager.getPackagesForUid() shim
+gmscompat: improve shim for background activity starts
+srt permissions: don't auto-revoke from "hidden" packages
+srt permissions: use parent profile settings for work profile
+gmscompat: ability to override SharedPreferences-backed PhenotypeFlags
+improve wording for sensor access notification
+notify the user when sensors access is denied by OTHER_SENSORS perm
+PackageInstallerUI: an option to skip auto-grant of INTERNET permission
+srt permissions: an ability to skip auto-grants for specific package
+srt permissions: an option to not auto-grant OTHER_SENSORS to user apps
+srt permissions: refactor isSpecialRuntimePermission()
+srt permissions: fix auto granting after package install
+srt permissions: don't auto-grant denied ones when permissions are reset
+srt permissions: improve performance by using a PM snapshot
+ignore pid when spoofing permission checks
+SystemUI: drop colorkt and themelib deps
+Revert "base: add public setting keys for monet tunables"
+Revert "graphics: Add ZCAM implementation with sRGB interface"
+Revert "ColorStateList: Switch to ZCAM for lightness modulation"
+Revert "WallpaperColors: Use CIELAB for light/dark wallpaper detection"
+Revert "graphics: Blend ARGB colors using Oklab"
+Revert "ColorUtils: Fix out-of-gamut Oklab blending"
+Merge tag 'LA.QSSI.13.0.r1-07200.02-qssi.0'
+Merge ba932a43dcc06e35cd0443361745515416224fb7 on remote branch
+Dynamically enable multi-peripheral mode
+Merge tag 'LA.QSSI.13.0.r1-07200-qssi.0'
+SystemUI: CentralSurfacesImpl: register device state callback only after NotificationPanelViewController instance is initialized
+Merge c972c8b6b7d795f9dd2b3343217de8b52c063e3c on remote branch
+SystemUI: KeyguardIndicationController: fix a NPE
+base: allow disabling privacy indicators
+SystemUI: NavigationModeController: make sure settings proxy is initialized before initializing length mode
+gmscompat: sync with GrapheneOS
+SystemUI: BrightnessController: do not update slider from DisplayManager callback if user is changing brightness
+Snap for 9146094 from 40494426338b049d197d68b74a98755a0c217f5d to t-keystone-qcom-release
+SystemUI: fix brigtness mirror not showing up in qqs
+Snap for 9144696 from 6e10d694ee7180bd23e1501cf3232b546703a926 to t-keystone-qcom-release
+Merge "Prevent modifying mAudioPolicies during iteration" into t-keystone-qcom-dev
+SystemUI: CustomTile: add a null check before loadDrawable invocation in default icon
+SettingsLib: Use framework resource for headline font
+graphics: Override system fonts with user-selected overlays
+services: applock: fix data migration and change secure notification parameter name
+base: rewrite device key handler classes with kotlin
+Merge t-mpr-2022-10
+pputil: update to september
+Merge tag 'LA.QSSI.13.0.r1-07100-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into HEAD
+Revert "SystemUI: remove emergency carrier area from ls"
+SystemUI: QuickStatusBarHeader: use proper shade for secondary color of circle battery icon
+SystemUI: TunerActivity: do not override manifest theme
+SystemUI: CastTile: fix a NPE
+core: ProcessState: prevent an NPE from crashing system server
+services: ActiveServices: drop uid check when notifying newly registered callbacks
+services: AppLockConfig: fix a derp in hidePackage()
+gmscompat: don't report CannotDeliverBroadcastException to the user
+gmscompat: hide StatsManager
+base: merge hidden app feature with applock
+Merge fb45f9b6727f08190537455f71c0782134124e76 on remote branch
+Snap for 9118861 from d059a8bc7dbfac5fac6deb82084c8f80ab4efa2d to t-keystone-qcom-release
+services: applock: allow background authentication
+Merge "Dynamically enable multi-peripheral mode" into t-keystone-qcom-dev
+Merge tag 'LA.QSSI.13.0.r1-07000-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into HEAD
+Snap for 9111030 from 5b068bd74db60000083590c64672e922051f1e62 to t-keystone-qcom-release
+Merge "SystemUI: Check whether the selected WFD route is available" into t-keystone-qcom-dev
+Snap for 9110175 from 5c333ae17e70d327834d1a9dbd0b06b7008532b6 to t-keystone-qcom-release
+[automerger skipped] Frameworks: Add LE high priority mode support skipped: e665cf07f9
+base: applock: refactor
+gmscompat: redirect privileged settings APIs to GmsCompatApp
+gmscompat: stub out PermissionController activity starts
+gmscompat: prevent triggering throttling of silent package updates
+gmscompat: add REQUEST_IGNORE_BATTERY_OPTIMIZATIONS permission to GmsCore
+gmscompat: drop buggy support for overriding ProcessStablePhenotypeFlags
+gmscompat: add stub for ContentResolver#acquireContentProviderClient()
+Revert "gmscompat: add stubs for ContentResolver.acquireContentProviderClient"
+Frameworks: Add LE high priority mode support
+Snap for 9095507 from 7fbbc92a20b69bad8334dc744313e1458b975d73 to t-keystone-qcom-release
+gmscompat: remove stubs that are now handled by GmsCompatConfig
+gmscompat: an ability to override {Phenotype,Gservices}Flags
+gmscompat: an ability to stub out remote methods that throw exceptions
+gmscompat: infrastructure for updatable gmscompat configuration
+gmscompat: add stubs for ContentResolver.acquireContentProviderClient
+gmscompat: simplify and broaden ContentResolver#query() stub
+Dynamically enable multi-peripheral mode
+SpatializerHelper: Fix device name translation
+SpatializerHelper: Fix device compatibility with spatial audio
+SpatializerHelper: fix null routing
+AudioService: Fix SpatializerHelper asserts
+AudioService: async rotation/fold update
+AudioService: fix initial spatial audio enable state.
+Spatializer: Fix usb headset
+Spatializer: Fix lost settings after reboot
+SpatializerHelper: fix Settings UI when transaural is not supported
+Merge 0f2cc6587a52451becdb7d236f6050dfbc6240fe on remote branch
+SystemUI: Check whether the selected WFD route is available
+core: Blacklist certain pixel experience system features from Google photos
+Merge tag 'LA.QSSI.13.0.r1-06400.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into HEAD
+Snap for 9067516 from 3ea97ae945afdb81bde6468ae02d99f59b9cd8b3 to t-keystone-qcom-release
+Merge "Merge t-mpr-2022-09" into t-keystone-qcom-dev
+Snap for 9063191 from 3950948540bff25d15e8a9b815b80aab5c788ce5 to t-keystone-qcom-release
+Merge "SystemUI: Display combined carrier names" into t-keystone-qcom-dev
+Merge t-mpr-2022-09
