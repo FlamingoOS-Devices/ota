@@ -1,0 +1,44 @@
+### Source side changes ###
+
+# frameworks_base #
+SystemUI: Add hotspot toggle in QS internet dialog
+pputil: update cheetah props to pass sn
+PackageInstaller: Update Chinese translations (#13)
+SystemUI: VolumeDialogControllerImpl: make sure to load linked notification state as well
+DeviceKeyManager: allow access only to system apps
+
+# hardware_libhardware #
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/libhardware into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/libhardware into HEAD
+
+# manifest #
+system: update to LA.QSSI.13.0.r1-07600.03-qssi.0
+
+# packages_apps_FlamingoSystemUI #
+FlamingoSystemUI: cleanup bluetooth dialog impl
+FlamingoSystemUI: Implement Bluetooth dialog
+
+# packages_apps_Settings #
+Settings: Update Chinese translations (#5)
+
+# packages_modules_Permission #
+Merge pull request #2 from RanTranslations/A13
+Permission: Update Chinese translations
+
+# system_core #
+init: Don't spoof SafetyNet properties in recovery mode
+
+# system_libhidl #
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/libhidl into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/libhidl into HEAD
+
+# vendor_flamingo #
+scripts: manifest_merger: fixup empty commits and conflicts check
+
+# vendor_qcom_opensource_commonsys-intf_bluetooth #
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/bluetooth-commonsys-intf into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/bluetooth-commonsys-intf into HEAD
+
+
+### Device side changes ###
+

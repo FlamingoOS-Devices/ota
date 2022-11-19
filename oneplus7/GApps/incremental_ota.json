@@ -1,11 +1,11 @@
 {
   "version": "2.2",
-  "date": "1668273005000",
+  "date": "1668827365000",
   "download_sources": {
-    "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/oneplus7/GApps/FlamingoOS-v2.2-oneplus7-user-Official-GApps-20221112-1732-incremental.zip"
+    "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/oneplus7/GApps/FlamingoOS-v2.2-oneplus7-user-Official-GApps-20221119-0325-incremental.zip"
   },
-  "file_name": "FlamingoOS-v2.2-oneplus7-user-Official-GApps-20221112-1732-incremental.zip",
-  "file_size": "175250564",
-  "sha_512": "495e4ba82df06cef4dbcccb95a8476eeb5dfa4276b130f5a90f02a1804c12bc10f5eb2800e2c384af3e97016cea791922c0f6a8d5095bf5075e10c84984cf54e",
-  "pre_build_incremental": "eng.harish.20221009.142247"
+  "file_name": "FlamingoOS-v2.2-oneplus7-user-Official-GApps-20221119-0325-incremental.zip",
+  "file_size": "17592073",
+  "sha_512": "ee63b2beb15080f9f9d952b6eb5e47979a089af23feb336eb15ad058a0ff83adb15b474716aaa38714c4f677294cbd620054595741ec952dc8aaf227c96eddd5",
+  "pre_build_incremental": "eng.harish.20221112.171007"
 }
