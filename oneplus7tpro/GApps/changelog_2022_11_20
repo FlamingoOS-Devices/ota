@@ -1,0 +1,151 @@
+### Source side changes ###
+
+# frameworks_base #
+Update Russian translation (#14)
+SystemUI: Set launcher activity name to Launcher3
+SystemUI: Add API for runtime taskbar config
+SystemUI: Add hotspot toggle in QS internet dialog
+pputil: update cheetah props to pass sn
+PackageInstaller: Update Chinese translations (#13)
+
+# hardware_libhardware #
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/libhardware into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/libhardware into HEAD
+
+# manifest #
+flamingo: track frameworks/libs/systemui
+system: update to LA.QSSI.13.0.r1-07600.03-qssi.0
+
+# packages_apps_FlamingoSystemUI #
+FlamingoSystemUI: add russian translations (#4)
+SystemUI: BcSmartspaceView: Allow setting current page
+FlamingoSystemUI: cleanup bluetooth dialog impl
+FlamingoSystemUI: Implement Bluetooth dialog
+
+# packages_apps_Launcher3 #
+Merge pull request #4 from Totozao/A13
+Update russian translation
+InfoBottomSheet: Fix NPE with AppTransitionManager
+Launcher3: Use proper icon provider in LauncherAppState
+Launcher3: Make icon pack support themed icons
+launcher3: update lawnicons
+Launcher3: Fix crash in smartspace targets dump
+Launcher3: Allow hiding top shadow on statusbar
+Launcher3: Do not limit the number of search results
+Launcher3: Add ripple animation to task menu items
+Launcher3: Add a toggle for smartspace
+Launcher3: Open google weather on tapping smartspace
+Launcher3: Implement workspace unlock animation
+Launcher3: Bring back WorkspaceUnlockAnim
+Launcher3: Implement Smartspace
+Launcher3: Just say "System" instead of "Unknown" for app source
+Enable local colors for popup menu items
+LocalColorExtractor: Disable local colors when using system presets
+LocalColorExtractor: Adapt for 12L changes
+Launcher3: Implement LocalColorExtractor using monet theme engine
+Launcher: Actually fix the all apps search bar
+launcher3: Fix rtl layout error
+Fix errorprone warnings that should be errors
+fix: Launcher3 AbsSwipeUpHandler debug_state overflow crash
+Launcher3: Add support for enabling taskbar on phones
+Disable Launcher AIDL_TAG tracing special case
+Launcher3: Fix QSB fill colour in dark theme
+Launcher3: Hotseat: Fix normal QSB width
+Launcher3: Improve search bar header protection
+Launcher3: Use standard launcher method for uninstalling
+Launcher3: Introduce overview scrolling scale animation
+Launcher3: AppsSearchContainerLayout: Avoid NPE
+Launcher3: Disable extra hotseat bottom space
+Launcher3: Avoid NPE in TaskOverlayFactory
+Launcher: Use font configs instead hardcoded fonts
+Launcher3: Add a toggle to disable hotseat searchbar
+AssistantIconView|QsbLayout: fixup and improve code
+launcher3: SystemShortcut: abort uninstall action if package name is null
+Launcher3: Update Russian translations
+quickstep: return if recentsView is null
+Launcher3: Update Chinese translations
+Launcher3: Implement Hotseat searchbar
+Launcher3: Home press on default homescreen -> open drawer
+Launcher3: Add uninstall button to system shortcuts
+Launcher3: Add kill action to app shortcuts popup
+quickstep: RecentsView: add null check for invocations mFirstFloatingTaskView
+Launcher3: Add Chinese translations
+Launcher3: Round search bar in drawer
+Launcher3: show clear all button in recents overview
+Import Lawnicons
+launcher: Add support for themed icons
+Depend on vendor_support
+Revert "Don't allow starting DeveloperOptionsFragment on non-debug builds"
+Launcher3: Add Google Lens scan button to recents
+IconPlatte: Don't crash when the app gives us an invalid color
+Launcher3: Make double tap to sleep gesture optional
+Launcher3: Stability NullPointer issue
+Launcher3: No Calendarwidget 4x4 widget displayed
+Launcher3: Fix NPE with swipe down
+Launcher3: Fix gesture navigation fail to move to bottom
+Settings/IconPack: Dynamically set the icon of the selected pack
+Fix crash in developer settings and notification dots
+[SQUASHED] Launcher3: Add Icon Pack Support from Shade Launcher
+Launcher3: Adapt home settings UI to Android 12 style
+Launcher3: Allow changing app suggestion settings.
+Launcher3: Do not attempt to show promise icon when info is null
+Launcher3: Fix NPE with AppInfoBottomSheet
+SystemShortcuts: fix fc with InfoBottomSheet
+Launcher3: Add AppInfo Bottom Sheet from Shade Launcher
+Launcher3: Double tap on home screen to turn off screen
+Launcher3: Use ThemePicker as wallpaper picker
+Launcher3: Don't show split screen options ...
+Launcher3: Adjust the icon size to the grid size
+Launcher3: Add resource for home screen rotation default
+Launcher3: Reduce app label text size
+Launcher3: Update search icon to match Settings
+Launcher3: Fix search bar UI in All Apps
+Launcher3: Improve search bar UI in All Apps
+Launcher3: Fix all apps header color in dark mode
+Launcher3: Fix Personal/Work profile tab colors in All Apps
+Launcher3: Allow resizing any widget
+Launcher3: add toggle for desktop and drawer labels
+Launcher3: allow disabling workspace edit
+Launcher3: Don't show move layer when editing isn't allowed
+Launcher3: Fix all apps view not dismissing
+Launcher3: Expose themed icon setting in ThemePicker
+Launcher3: Don't discard custom grid on config changes
+Launcher3: Properly expose GridOptionsProvider
+Launcher3: Globally disable debug logging
+Launcher3: Disable QSB on first screen by default
+Launcher3Go: Add Go specific default workspace
+Launcher3: Add 5x6, 5x7 and 6x6 default workspaces
+Launcher3: Replace 4x4 grid option with a 4x5 one
+Launcher3: Update default workspace
+Allow changing feature flags on user builds
+FlamingoLauncher: google feed integration
+Create Custom FlamingoLauncher
+Launcher3: Add 2x2 workspace grid option
+Properly expose GridCustomizationsProvider
+Expose themed icon setting in ThemePicker
+Enable crossfade when changing theme
+disable hard-wired QuickSearchBox widget
+
+# packages_apps_Settings #
+Settings: Update Chinese translations (#5)
+
+# packages_modules_Permission #
+Merge pull request #2 from RanTranslations/A13
+
+# system_core #
+init: Don't spoof SafetyNet properties in recovery mode
+
+# system_libhidl #
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/libhidl into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/system/libhidl into HEAD
+
+# vendor_flamingo #
+scripts: manifest_merger: fixup empty commits and conflicts check
+
+# vendor_qcom_opensource_commonsys-intf_bluetooth #
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/bluetooth-commonsys-intf into HEAD
+Merge tag 'LA.QSSI.13.0.r1-07600.03-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/bluetooth-commonsys-intf into HEAD
+
+
+### Device side changes ###
+
