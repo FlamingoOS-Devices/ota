@@ -1,10 +1,10 @@
 {
   "version": "2.2",
-  "date": "1668337817000",
+  "date": "1668992121000",
   "download_sources": {
-    "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/alioth/GApps/FlamingoOS-v2.2-alioth-user-Official-GApps-20221113-1131-full.zip"
+    "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/alioth/GApps/FlamingoOS-v2.2-alioth-user-Official-GApps-20221121-0131-full.zip"
   },
-  "file_name": "FlamingoOS-v2.2-alioth-user-Official-GApps-20221113-1131-full.zip",
-  "file_size": "1878709005",
-  "sha_512": "3a6126678d6a1b6adccb592dd7dfbd98674c141377cf179c46fb8bbe8567d354565743a1b5d66659b3873693b8feb416a1da8d33c65caef73db0366402f333df"
+  "file_name": "FlamingoOS-v2.2-alioth-user-Official-GApps-20221121-0131-full.zip",
+  "file_size": "1876288028",
+  "sha_512": "07fafc97088995b333f9c03f1a9f039a0ecaea4c8523c98ce09c8289ccbb5b97318fc0d1213bfc57cb11fe2bee38ce2d508d57c941c5b09eba85694625c1b12a"
 }
