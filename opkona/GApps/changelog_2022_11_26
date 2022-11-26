@@ -1,0 +1,73 @@
+### Source side changes ###
+
+# build_make #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/build_repo into HEAD
+
+# frameworks_av #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/av into HEAD
+
+# frameworks_base #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/base into HEAD
+Update Russian translation for SystemUI (#15)
+services: AppLockManagerService: use the og calling uid for target intent
+Update Russian translation (#14)
+
+# frameworks_native #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/frameworks/native into HEAD
+
+# hardware_libhardware #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/hardware/libhardware into HEAD
+
+# manifest #
+system: update to LA.QSSI.13.0.r1-07800.01-qssi.0
+flamingo: track frameworks/libs/systemui
+
+# packages_apps_FlamingoSystemUI #
+FlamingoSystemUI: add russian translations (#4)
+
+# packages_apps_Launcher3 #
+Launcher3: Update Chinese translations (#6)
+fixup! Launcher3: Adapt home settings UI to Android 12 style
+SettingsActivity: hide suggestions pref if unsupported
+Revert "Fix crash in developer settings and notification dots"
+unfuck [SQUASHED] Launcher3: Add Icon Pack Support from Shade Launcher
+Update russian launcher translations (#5)
+Merge pull request #4 from Totozao/A13
+Update russian translation
+
+# packages_apps_Settings #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/apps/Settings into HEAD
+
+# packages_modules_Wifi #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/modules/Wifi into HEAD
+
+# packages_services_Telecomm #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/packages/services/Telecomm into HEAD
+
+# vendor_flamingo #
+envsetup: drop gen json bits
+build: generalise target image generation
+
+# vendor_qcom-opensource_packages_apps_Bluetooth #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0'
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0' of https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth into HEAD
+
+# vendor_qcom_opensource_commonsys_system_bt #
+Merge tag 'LA.QSSI.13.0.r1-07800.01-qssi.0'
+
+
+### Device side changes ###
+
+# device_oneplus_opkona #
+opkona: overlay: Add sRGB color mode
+opkona: instantnoodlep: Update blobs from IN2025_11.F.13
+opkona: instantnoodle: Update blobs from IN2015_11.F.13
+opkona: overlay: Switch back to lineage color modes config
+opkona: Switch to hardware/dolby
+opkona: DeviceExtras: Add russian translation
+opkona: overlay: Allow autobrightness while in doze
+Revert "sm8250-common: Enable multi-sim for devices which support it"
+opkona: Import tui blobs from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
+opkona: Update blobs to LE2101_11.F.16
+opkona: vibrator: Refactor effects again
+
