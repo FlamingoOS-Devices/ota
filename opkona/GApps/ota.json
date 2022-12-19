@@ -1,10 +1,10 @@
 {
-  "version": "2.2",
-  "date": "1669474819000",
+  "version": "2.3",
+  "date": "1671476937000",
   "download_sources": {
-    "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/opkona/GApps/FlamingoOS-v2.2-opkona-user-Official-GApps-20221126-2055-full.zip"
+    "OneDrive": "https://downloads.e11z.net/d/flamingo/A13/opkona/GApps/FlamingoOS-v2.3-opkona-user-Official-GApps-20221220-0048-full.zip"
   },
-  "file_name": "FlamingoOS-v2.2-opkona-user-Official-GApps-20221126-2055-full.zip",
-  "file_size": "1377017638",
-  "sha_512": "d79b1977e62d4821ba60ea21694eadc75eb23efa083d981d2c685ad6f65be0ab0c2f99448608f723686e1f1880f673707e574a943d75cb970086fb15cb3d29b0"
+  "file_name": "FlamingoOS-v2.3-opkona-user-Official-GApps-20221220-0048-full.zip",
+  "file_size": "1377236263",
+  "sha_512": "95433e62c63d77c7cbe7dee9a5255417c78cfdde558f011307e7e32f1eccbb5446fb1c6a7a3c1239818349016f7fd7a33c35b2bdfc06e079a1a0d60827db4d3f"
 }
